@@ -1,0 +1,6 @@
+本地预览
+hexo s
+发布到服务器
+hexo clean
+hexo g
+hexo d
