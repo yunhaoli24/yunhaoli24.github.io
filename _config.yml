@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 学习代码永远在路上
+title: 李云灏的博客
 subtitle: '好好学习，天天向上'
-description: '程序员的踩坑日志'
+description: '学生'
 keywords:
 author: peter
 language: zh-CN
@@ -91,7 +91,7 @@ exclude:
 ignore:
 
 excerpt:
-  depth: 1  #按层来算，也就是按代码块来算
+  depth: 3  #按层来算，也就是按代码块来算
   excerpt_excludes: []
   more_excludes: []
   hideWholePostExcerpts: true

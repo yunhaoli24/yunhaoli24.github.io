@@ -11,7 +11,7 @@ categories:
 ## 下载Anaconda
 
 从清华源下载 Anaconda
-[下载地址](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.02-Windows-x86_64.exe)2020.3版,下载以后可以更新
+[下载地址](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)，选择自己系统的新版下载。
 下载完成后一路next 在这个位置需要添加环境变量，便于以后从cmd访问conda
 选Add Anaconda to my PATH environment variable
 ![](https://cn.bing.com/th?id=OIP.YTj0WPOvdhKaNLQpIwd2NwHaFv&pid=Api&rs=1)
@@ -42,8 +42,6 @@ win+R键，然后输入cmd并回车 在命令行输入
       simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 ```
 保存退出，再次打开cmd
-
-### 安装pip
 
 `pip install pip -U`
 
