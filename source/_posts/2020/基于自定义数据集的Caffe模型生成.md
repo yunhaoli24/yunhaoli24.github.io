@@ -4,7 +4,7 @@ permalink: 基于自定义数据集的Caffe模型生成
 date: 2020-05-27 22:45:33
 tags:
 categories:  
-	- Machine learning
+	- ※Machine learning
 	- Caffe
 ---
 
