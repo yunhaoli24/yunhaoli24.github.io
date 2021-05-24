@@ -107,3 +107,5 @@ deploy:
   type: git
   repository: 
     tencent: root@47.105.65.177:/www/wwwroot/peterli.club/hexoBlog.git
+    github: git@github.com:lealaxy/lealaxy.github.io.git
+  branch: master
