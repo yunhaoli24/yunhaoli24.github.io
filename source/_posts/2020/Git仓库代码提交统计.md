@@ -4,7 +4,7 @@ permalink: Git仓库代码提交统计
 date: 2020-07-07 14:42:02
 tags:
 categories:
-	- ※工具人
+	- 工具人
 	- Git
 ---
 

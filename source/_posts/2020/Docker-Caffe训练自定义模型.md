@@ -4,7 +4,7 @@ permalink: Docker Caffe训练自定义模型
 date: 2020-08-30 20:27:44
 tags:
 categories:
-	- ※Machine learning
+	- Machine learning
 	- Caffe
 ---
 ## docker安装caffe

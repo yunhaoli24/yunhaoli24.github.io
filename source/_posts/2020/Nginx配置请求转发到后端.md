@@ -4,7 +4,7 @@ permalink: Nginx配置请求转发到后端
 date: 2020-06-27 15:51:37
 tags:
 categories:
-	- ※服务部署
+	- 服务部署
 ---
 ### 新建一个nginx server
 

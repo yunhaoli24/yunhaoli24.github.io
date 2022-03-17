@@ -4,7 +4,7 @@ permalink: RoboMaster视觉学习建议
 date: 2020-07-18 18:57:34
 tags:
 categories:
-	- ※RoboMaster
+	- RoboMaster
 ---
 # 视觉学习建议
 ## 目录

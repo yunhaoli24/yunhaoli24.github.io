@@ -4,7 +4,7 @@ permalink: docker笔记
 date: 2021-05-24 21:07:58
 tags:
 categories:
-	- ※Docker
+	- Docker
 ---
 # 笔记
 ## 常用命令

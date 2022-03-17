@@ -4,7 +4,7 @@ permalink: GIt删除大文件
 date: 2020-05-27 22:48:21
 tags:
 categories:
-	- ※工具人
+	- 工具人
 	- Git
 ---
 # GIt从历史记录中删除大文件和查看文件大小

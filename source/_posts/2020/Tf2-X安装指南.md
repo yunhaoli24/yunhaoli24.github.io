@@ -4,7 +4,7 @@ permalink: Tf2.X安装指南
 date: 2020-05-28 10:26:11
 tags:
 categories:
-	- ※Machine learning
+	- Machine learning
 	- TensorFlow2
 ---
 

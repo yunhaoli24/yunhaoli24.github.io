@@ -4,7 +4,7 @@ permalink: YoloV4首发使用体验
 date: 2020-05-27 22:46:31
 tags:
 categories:
-	- ※Machine learning
+	- Machine learning
 	- YOLOV4
 ---
 

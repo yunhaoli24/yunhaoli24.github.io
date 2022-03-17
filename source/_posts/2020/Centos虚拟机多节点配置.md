@@ -4,7 +4,7 @@ permalink: Centosd虚拟机多节点配置
 date: 2020-07-08 21:58:36
 tags:
 categories:
-	- ※Linux
+	- Linux
 ---
 
 # VMware创建虚拟机
