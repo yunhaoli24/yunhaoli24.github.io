@@ -1,6 +1,6 @@
 ---
-title: YoloV4首发使用体验
-permalink: YoloV4首发使用体验
+title: YoloV4使用体验
+permalink: YoloV4使用体验
 date: 2020-05-27 22:46:31
 tags:
 categories:
