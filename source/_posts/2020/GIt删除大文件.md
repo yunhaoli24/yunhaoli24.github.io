@@ -1,11 +1,13 @@
 ---
 title: GIt删除大文件
-permalink: GIt删除大文件
 date: 2020-05-27 22:48:21
 tags:
+	- 工具人
+	- Git
 categories:
 	- 工具人
 	- Git
+cover: https://th.bing.com/th/id/OIP.RpCxUSwzHdnAt2BQ1IthcwHaEK?w=297&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7
 ---
 # GIt从历史记录中删除大文件和查看文件大小
 

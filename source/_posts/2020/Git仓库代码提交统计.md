@@ -1,11 +1,13 @@
 ---
 title: Git仓库代码提交统计
-permalink: Git仓库代码提交统计
 date: 2020-07-07 14:42:02
 tags:
+	- 工具人
+	- Git
 categories:
 	- 工具人
 	- Git
+cover: https://th.bing.com/th/id/OIP.9TSMJGQjXlsMp5bI82ii-gHaE8?w=273&h=182&c=7&r=0&o=5&dpr=1.5&pid=1.7
 ---
 
 ## Git 代码统计

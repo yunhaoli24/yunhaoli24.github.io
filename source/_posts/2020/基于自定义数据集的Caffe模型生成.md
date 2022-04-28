@@ -1,11 +1,13 @@
 ---
 title: 基于自定义数据集的Caffe模型生成
-permalink: 基于自定义数据集的Caffe模型生成
 date: 2020-05-27 22:45:33
 tags:
+	- Machine learning
+	- Caffe
 categories:  
 	- Machine learning
 	- Caffe
+cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1112%2F11291Q34538%2F1Q129134538-3.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653714376&t=1777cbbce415c90b0f44922d1165831a
 ---
 
 ![](https://www.microsoft.com/en-us/CMSImages/AI_AIPlatform_Caffe2_491x276.jpg?version=23c76694-e7db-6da1-65cf-8248206ea83e)

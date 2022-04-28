@@ -1,11 +1,13 @@
 ---
 title: Docker Caffe训练自定义模型
-permalink: Docker Caffe训练自定义模型
 date: 2020-08-30 20:27:44
 tags:
+	- Machine learning
+	- Caffe
 categories:
 	- Machine learning
 	- Caffe
+cover: https://th.bing.com/th/id/OIP.zZGFuZaPkkAOyLsoue9KMwHaEK?w=323&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7
 ---
 ## docker安装caffe
 

@@ -1,11 +1,13 @@
 ---
 title: Java开源项目推荐
-permalink: Java开源项目推荐
 date: 2020-06-21 19:12:14
 tags:
+	- Java
+	- 开源项目
 categories:
 	- Java
 	- 开源项目
+cover: https://th.bing.com/th/id/OIP.60xK-yMLAd2I8LKwM6F-vQHaEo?w=298&h=186&c=7&r=0&o=5&dpr=1.5&pid=1.7
 ---
 
 ## Spring Boot

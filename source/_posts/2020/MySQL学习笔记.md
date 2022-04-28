@@ -1,11 +1,13 @@
 ---
 title: MySQL学习笔记
-permalink: MySQL学习笔记
 date: 2020-05-28 15:53:44
 tags:
+	- 数据库
+	- MySQL
 categories:
 	- 数据库
 	- MySQL
+cover: https://th.bing.com/th/id/OIP.V8CAO25z1I-3M6c-WDCsGQHaEK?w=310&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7
 ---
 
 

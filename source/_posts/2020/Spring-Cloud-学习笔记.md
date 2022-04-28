@@ -1,12 +1,15 @@
 ---
 title: Spring Cloud 学习笔记
-permalink: Spring Cloud 学习笔记
 date: 2020-05-27 21:38:56
 tags:
+	- Java
+	- Spring
+	- Spring Cloud
 categories:
 	- Java
 	- Spring
 	- Spring Cloud
+cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fphoto%2F2008-6-13%2F200806131108306030.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653714142&t=57ad1ad0d887b8d54abdac0b8b4b6031
 ---
 # Ⅰ、持久层
 

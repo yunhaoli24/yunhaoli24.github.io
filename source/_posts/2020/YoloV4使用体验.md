@@ -1,11 +1,13 @@
 ---
 title: YoloV4使用体验
-permalink: YoloV4使用体验
 date: 2020-05-27 22:46:31
 tags:
+	- Machine learning
+	- YOLOV4
 categories:
 	- Machine learning
 	- YOLOV4
+cover: https://img0.baidu.com/it/u=1701113910,2775267702&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500
 ---
 
 # YOLOV4首发使用体验
@@ -54,15 +56,15 @@ categories:
 
 ### 开始训练
 
-	如果你的环境和配置文件都准备好了，就可以开始训练了，不过这一步需要下载预训练权重，官方文档是从墙外下载的，我也好心上传了一份“[yolov4.conv.137](http://img.peterli.club/objectyolov4.conv.137)”，点击就可以直接下载。
+如果你的环境和配置文件都准备好了，就可以开始训练了，不过这一步需要下载预训练权重，官方文档是从墙外下载的，我也好心上传了一份“[yolov4.conv.137](http://img.peterli.club/objectyolov4.conv.137)”，点击就可以直接下载。
 	
-	darknet的训练代码也非常简单`darknet detector train custom.data yolov4-custom.cfg yolov4.conv.137`，直接打开cmd运行这句话就可以了，然后就可以开始训练了。
+darknet的训练代码也非常简单`darknet detector train custom.data yolov4-custom.cfg yolov4.conv.137`，直接打开cmd运行这句话就可以了，然后就可以开始训练了。
 
 ## 训练YOLOV4之后的体验
 
-	先贴出来我训练的mAP，可以看到YOLOV4训练的结果比较惨淡，在同样的数据集的情况下甚至还不如YOLOV3，可能是我使用的有点问题，不知道为什么会出现这样的情况。这个模型训练到后期loss一直在7.X降不下来，而同数据集下的YOLOV3就可以把loss降到2.X。
+先贴出来我训练的mAP，可以看到YOLOV4训练的结果比较惨淡，在同样的数据集的情况下甚至还不如YOLOV3，可能是我使用的有点问题，不知道为什么会出现这样的情况。这个模型训练到后期loss一直在7.X降不下来，而同数据集下的YOLOV3就可以把loss降到2.X。
 	
-	下图是YOLOV4训练过后的map，然后是相同数据集训练相同次数的yolov3的训练map。YOLOV4和YOLOV3我都是使用了官方推荐的训练配置进行训练，可以看到YOLOV3的效果要比4好一点，而且检测时间也比较快。
+下图是YOLOV4训练过后的map，然后是相同数据集训练相同次数的yolov3的训练map。YOLOV4和YOLOV3我都是使用了官方推荐的训练配置进行训练，可以看到YOLOV3的效果要比4好一点，而且检测时间也比较快。
 
 测试命令：`darknet.exe detector map data/custom.data yolov4-custom.cfg backup\yolov4-custom_last.weights`
 
@@ -70,4 +72,4 @@ categories:
 
 ![image-20200427122221534](http://img.peterli.club/img/image-20200427122221534.png)
 
-	训练完成之后，我又详细阅读了官方文档，上边说最终的loss可以降到从`0.05`（对于小模型和简单数据集）到`3.0`（对于大模型和困难数据集）。YOLOV3确实是达到了这个要求的，但是YOLOV4最终loss是稳定在7.X的，也许是我使用v4的方法有些不对，并没有看到很高的提升。
+训练完成之后，我又详细阅读了官方文档，上边说最终的loss可以降到从`0.05`（对于小模型和简单数据集）到`3.0`（对于大模型和困难数据集）。YOLOV3确实是达到了这个要求的，但是YOLOV4最终loss是稳定在7.X的，也许是我使用v4的方法有些不对，并没有看到很高的提升。

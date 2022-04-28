@@ -1,20 +1,20 @@
 ---
 title: Tf2.X安装指南
-permalink: Tf2.X安装指南
 date: 2020-05-28 10:26:11
 tags:
+	- Machine learning
+	- TensorFlow2
 categories:
 	- Machine learning
 	- TensorFlow2
+cover: https://th.bing.com/th/id/OIP.q1ksL7LPnJzi5E_W2tDHtwHaEK?w=329&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7 
 ---
-
 ## 下载Anaconda
 
 从清华源下载 Anaconda
 [下载地址](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)，选择自己系统的新版下载。
 下载完成后一路next 在这个位置需要添加环境变量，便于以后从cmd访问conda
 选Add Anaconda to my PATH environment variable
-![](https://cn.bing.com/th?id=OIP.YTj0WPOvdhKaNLQpIwd2NwHaFv&pid=Api&rs=1)
 安装结束后重启计算机
 
 ## 配置Anaconda

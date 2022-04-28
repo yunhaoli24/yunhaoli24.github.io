@@ -1,10 +1,11 @@
 ---
 title: RoboMaster视觉学习建议
-permalink: RoboMaster视觉学习建议
 date: 2020-07-18 18:57:34
 tags:
+	- RoboMaster
 categories:
 	- RoboMaster
+cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fspider.ws.126.net%2Fbfd6e944b6d55a7aa79999f655bba5db.jpeg&refer=http%3A%2F%2Fspider.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653714050&t=a398f75de61a279970c545962791c3e4
 ---
 # 视觉学习建议
 ## 目录

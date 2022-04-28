@@ -1,10 +1,11 @@
 ---
 title: docker笔记
-permalink: docker笔记
 date: 2021-05-24 21:07:58
 tags:
+	- Docker
 categories:
 	- Docker
+cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fask-fd.zol-img.com.cn%2Fg5%2FM00%2F08%2F04%2FChMkJlo-qF6IeYkzAATACznjbq0AAjbxgCO83gABMAj575.jpg&refer=http%3A%2F%2Fask-fd.zol-img.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653714439&t=b7f621183e4eabbabb7036e1667f3015
 ---
 # 笔记
 ## 常用命令
