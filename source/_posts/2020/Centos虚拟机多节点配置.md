@@ -5,7 +5,7 @@ tags:
 	- Linux
 categories:
 	- Linux
-cover: https://th.bing.com/th/id/OIP.PLH_RrpRMcKVmZITghqVCgHaE8?w=255&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7
+cover: https://img0.baidu.com/it/u=2040941498,1591181657&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500
 ---
 
 # VMware创建虚拟机

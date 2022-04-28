@@ -7,7 +7,7 @@ tags:
 categories:
 	- Java
 	- 开源项目
-cover: https://th.bing.com/th/id/OIP.60xK-yMLAd2I8LKwM6F-vQHaEo?w=298&h=186&c=7&r=0&o=5&dpr=1.5&pid=1.7
+cover: https://img2.baidu.com/it/u=4111394352,4253439966&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800
 ---
 
 ## Spring Boot

@@ -7,7 +7,7 @@ tags:
 categories:
 	- Machine learning
 	- TensorFlow2
-cover: https://th.bing.com/th/id/OIP.q1ksL7LPnJzi5E_W2tDHtwHaEK?w=329&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7 
+cover: https://img2.baidu.com/it/u=1618167363,156084292&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500
 ---
 ## 下载Anaconda
 

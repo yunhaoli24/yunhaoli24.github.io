@@ -4,8 +4,8 @@
 
 # Site
 title: 李云灏的博客
-subtitle: '好好学习，天天向上'
-description: '正在努力学习'
+subtitle: 好好学习，天天向上
+description: 码农
 keywords: ML,JAVA
 author: peter
 language: zh-CN
@@ -99,6 +99,10 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
+search:
+  path: search.json
+  field: post
+  content: true
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

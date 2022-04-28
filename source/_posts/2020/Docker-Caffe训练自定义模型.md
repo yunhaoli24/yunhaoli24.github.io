@@ -7,7 +7,7 @@ tags:
 categories:
 	- Machine learning
 	- Caffe
-cover: https://th.bing.com/th/id/OIP.zZGFuZaPkkAOyLsoue9KMwHaEK?w=323&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7
+cover: https://img0.baidu.com/it/u=1443653190,2014929959&fm=253&fmt=auto&app=120&f=JPEG?w=1080&h=608
 ---
 ## docker安装caffe
 

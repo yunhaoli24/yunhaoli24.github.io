@@ -6,7 +6,7 @@ tags:
 	- Nginx
 categories:
 	- 服务部署
-cover: https://th.bing.com/th/id/OIP.Ay9IpllqRw8Nz4HgTwe4AgHaEo?w=298&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7
+cover: https://img1.baidu.com/it/u=4272075540,4028945889&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500
 ---
 ### 新建一个nginx server
 

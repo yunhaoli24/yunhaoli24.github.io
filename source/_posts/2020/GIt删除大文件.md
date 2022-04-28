@@ -7,7 +7,7 @@ tags:
 categories:
 	- 工具人
 	- Git
-cover: https://th.bing.com/th/id/OIP.RpCxUSwzHdnAt2BQ1IthcwHaEK?w=297&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7
+cover: https://img0.baidu.com/it/u=1443653190,2014929959&fm=253&fmt=auto&app=120&f=JPEG?w=1080&h=608
 ---
 # GIt从历史记录中删除大文件和查看文件大小
 
