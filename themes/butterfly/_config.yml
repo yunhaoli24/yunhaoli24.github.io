@@ -16,7 +16,7 @@ menu:
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: darker #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -37,6 +37,7 @@ copy:
 social:
   fab fa-github: https://github.com/lealaxy || Github
   fas fa-envelope: mailto:li.yunhao@foxmail.com || Email
+  fa-brands fa-telegram: https://t.me/lealaxy || Telegram
 
 # search (搜索)
 # --------------------------------------
@@ -403,7 +404,7 @@ footer:
 
 # Baidu Analytics
 # https://tongji.baidu.com/web/welcome/login
-baidu_analytics:
+baidu_analytics: e50dee5804918429b74a301c425729fe
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
@@ -444,8 +445,8 @@ google_adsense:
 site_verification:
   # - name: google-site-verification
   #   content: xxxxxx
-  # - name: baidu-site-verification
-  #   content: xxxxxxx
+  - name: baidu-site-verification
+    content: code-c9hz390Wld
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
@@ -601,7 +602,8 @@ subtitle:
   source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
-    - 不上班就没饭吃
+    - 不上班就没饭吃！
+    - 好好学习，天天向上！
 
 # Loading Animation (加載動畫)
 preloader: false
