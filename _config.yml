@@ -110,4 +110,5 @@ deploy:
   repository: 
     tencent: root@peterli.club:/www/wwwroot/peterli.club/hexoBlog.git
     github: git@github.com:lealaxy/lealaxy.github.io.git
+    gitee: git@gitee.com:yunhaoli/yunhaoli.git
   branch: master
