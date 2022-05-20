@@ -19,85 +19,85 @@ hexo.extend.filter.register('before_generate', () => {
     utils: '/js/utils.js',
 
     // pjax
-    pjax: 'https://cdn.jsdelivr.net/npm/pjax/pjax.min.js',
+    pjax: 'https://unpkg.com/pjax@0.2.8/pjax.min.js',
 
     // comments
-    gitalk: 'https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js',
-    gitalk_css: 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css',
-    blueimp_md5: 'https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js',
-    valine: 'https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js',
-    disqusjs: 'https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js',
-    disqusjs_css: 'https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css',
+    gitalk: 'https://unpkg.com/gitalk@1.7.2/dist/gitalk.min.js',
+    gitalk_css: 'https://unpkg.com/gitalk@1.7.2/dist/gitalk.css',
+    blueimp_md5: 'https://unpkg.com/blueimp-md5/js/md5.min.js',
+    valine: 'https://unpkg.com/valine/dist/Valine.min.js',
+    disqusjs: 'https://unpkg.com/disqusjs@1/dist/disqus.js',
+    disqusjs_css: 'https://unpkg.com/disqusjs@1/dist/disqusjs.css',
     utterances: 'https://utteranc.es/client.js',
-    twikoo: 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
-    waline: 'https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js',
+    twikoo: 'https://unpkg.com/twikoo/dist/twikoo.all.min.js',
+    waline: 'https://unpkg.com/@waline/client/dist/Waline.min.js',
     giscus: 'https://giscus.app/client.js',
 
     // share
     addtoany: 'https://static.addtoany.com/menu/page.js',
-    sharejs: 'https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js',
-    sharejs_css: 'https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css',
+    sharejs: 'https://unpkg.com/social-share.js/dist/js/social-share.min.js',
+    sharejs_css: 'https://unpkg.com/social-share.js/dist/css/share.min.css',
 
     // search
     local_search: '/js/search/local-search.js',
     algolia_js: '/js/search/algolia.js',
-    algolia_search_v4: 'https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js',
-    instantsearch_v4: 'https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js',
+    algolia_search_v4: 'https://unpkg.com/algoliasearch@4/dist/algoliasearch-lite.umd.js',
+    instantsearch_v4: 'https://unpkg.com/instantsearch.js@4/dist/instantsearch.production.min.js',
 
     // math
-    mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
-    katex: 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css',
-    katex_copytex: 'https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js',
-    katex_copytex_css: 'https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css',
-    mermaid: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js',
+    mathjax: 'https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js',
+    katex: 'https://unpkg.com/katex@latest/dist/katex.min.css',
+    katex_copytex: 'https://unpkg.com/katex@latest/dist/contrib/copy-tex.min.js',
+    katex_copytex_css: 'https://unpkg.com/katex@latest/dist/contrib/copy-tex.css',
+    mermaid: 'https://unpkg.com/mermaid/dist/mermaid.min.js',
 
     // count
     busuanzi: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js',
 
     // background effect
-    canvas_ribbon: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js',
-    canvas_fluttering_ribbon: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js',
-    canvas_nest: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js',
+    canvas_ribbon: 'https://unpkg.com/butterfly-extsrc@1/dist/canvas-ribbon.min.js',
+    canvas_fluttering_ribbon: 'https://unpkg.com/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js',
+    canvas_nest: 'https://unpkg.com/butterfly-extsrc@1/dist/canvas-nest.min.js',
 
-    lazyload: 'https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js',
-    instantpage: 'https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js',
-    typed: 'https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js',
-    pangu: 'https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js',
+    lazyload: 'https://unpkg.com/vanilla-lazyload/dist/lazyload.iife.min.js',
+    instantpage: 'https://unpkg.com/instant.page/instantpage.min.js',
+    typed: 'https://unpkg.com/typed.js@2.0.12/lib/typed.min.js',
+    pangu: 'https://unpkg.com/pangu/dist/browser/pangu.min.js',
 
     // photo
-    fancybox_css_v4: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css',
-    fancybox_v4: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js',
-    medium_zoom: 'https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js',
+    fancybox_css_v4: 'https://unpkg.com/@fancyapps/ui@4.0.27/dist/fancybox.css',
+    fancybox_v4: 'https://unpkg.com/@fancyapps/ui@4.0.27/dist/fancybox.umd.js',
+    medium_zoom: 'https://unpkg.com/medium-zoom/dist/medium-zoom.min.js',
 
     // snackbar
-    snackbar_css: 'https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css',
-    snackbar: 'https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js',
+    snackbar_css: 'https://unpkg.com/node-snackbar/dist/snackbar.min.css',
+    snackbar: 'https://unpkg.com/node-snackbar/dist/snackbar.min.js',
 
     // effect
-    activate_power_mode: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js',
-    fireworks: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js',
-    click_heart: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js',
-    ClickShowText: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js',
+    activate_power_mode: 'https://unpkg.com/butterfly-extsrc@1/dist/activate-power-mode.min.js',
+    fireworks: 'https://unpkg.com/butterfly-extsrc@1/dist/fireworks.min.js',
+    click_heart: 'https://unpkg.com/butterfly-extsrc@1/dist/click-heart.min.js',
+    ClickShowText: 'https://unpkg.com/butterfly-extsrc@1/dist/click-show-text.min.js',
 
     // fontawesome
-    fontawesomeV6: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css',
+    fontawesomeV6: 'https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css',
 
     // Conversion between Traditional and Simplified Chinese
     translate: '/js/tw_cn.js',
 
     // flickr-justified-gallery
-    flickr_justified_gallery_js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-    flickr_justified_gallery_css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css',
+    flickr_justified_gallery_js: 'https://unpkg.com/flickr-justified-gallery@2/dist/fjGallery.min.js',
+    flickr_justified_gallery_css: 'https://unpkg.com/flickr-justified-gallery@2/dist/fjGallery.min.css',
 
     // aplayer
-    aplayer_css: 'https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css',
-    aplayer_js: 'https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js',
+    aplayer_css: 'https://unpkg.com/aplayer/dist/APlayer.min.css',
+    aplayer_js: 'https://unpkg.com/aplayer/dist/APlayer.min.js',
     meting_js: 'https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js',
 
     // Prism.js
-    prismjs_js: 'https://cdn.jsdelivr.net/npm/prismjs/prism.min.js',
-    prismjs_lineNumber_js: 'https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js',
-    prismjs_autoloader: 'https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js'
+    prismjs_js: 'https://unpkg.com/prismjs/prism.min.js',
+    prismjs_lineNumber_js: 'https://unpkg.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js',
+    prismjs_autoloader: 'https://unpkg.com/prismjs/plugins/autoloader/prism-autoloader.min.js'
   }
 
   // delete null value

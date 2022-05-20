@@ -85,10 +85,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img:
+index_img: http://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img:
+default_top_img: http://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
 
 # The banner image of archive page
 archive_img:
