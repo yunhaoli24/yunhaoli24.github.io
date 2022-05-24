@@ -4,6 +4,8 @@ date: 2020-08-30 20:27:44
 tags:
 	- Machine learning
 	- Caffe
+	- Docker
+	- Dockerfile
 categories:
 	- Machine learning
 	- Caffe
