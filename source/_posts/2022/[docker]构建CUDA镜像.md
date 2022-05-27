@@ -58,13 +58,14 @@ docker run -it --rm --gpus all centos nvidia-smi
 
 ```dockerfile
 FROM nvidia/cuda:11.4.2-cudnn8-devel-ubuntu18.04
-LABEL author="https://github.com/lealaxy"
+LABEL author="li.yunhao@foxmail.com"
 
 ENV PASSWORD="123456" 
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone \ 
     && sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list \
     && sed -i "s/security.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list \
+    && apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub \
     && apt clean && apt update && apt install -yq --no-install-recommends sudo \
     && sudo apt install -yq --no-install-recommends python3 python3-pip libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev openssh-server \
     && sudo pip3 install --upgrade pip \
@@ -76,6 +77,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shangh
     && sudo /etc/init.d/ssh restart \
     && echo "root:${PASSWORD}" | chpasswd
 ENTRYPOINT /etc/init.d/ssh restart && /bin/bash
+
 ```
 
 ## 运行容器
@@ -97,3 +99,29 @@ sudo docker run -itd -p 43251:22 --gpus all --name cuda -e NVIDIA_DRIVER_CAPABIL
 ```
 
 运行容器之后就可以愉快的ssh连进去炼丹了，再也不用担心环境搞崩影响其他人了。
+
+# PyTorch版本
+
+上边那个镜像构建出来的容器啥都没有，conda之类的还需要自己安装。于是我又写了一份Pytorch版本的`Dockerfile`，这里边conda已经默认安装好并且换好阿里源了，可以说是开箱即用。
+
+```dockerfile
+FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
+LABEL author="li.yunhao@foxmail.com"
+
+ENV PASSWORD="123456" 
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone \ 
+    && sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list && sed -i "s/security.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list \
+    && apt clean && apt update && apt install -yq gnupg \
+    && apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub \
+    && conda config --set show_channel_urls yes && conda init\
+    && echo "channels:" >>  ~/.condarc && echo "  - defaults" >>  ~/.condarc && echo "default_channels:" >>  ~/.condarc && echo "  - http://mirrors.aliyun.com/anaconda/pkgs/main" >>  ~/.condarc && echo "  - http://mirrors.aliyun.com/anaconda/pkgs/r" >>  ~/.condarc && echo "  - http://mirrors.aliyun.com/anaconda/pkgs/msys2" >>  ~/.condarc && echo "custom_channels:" >>  ~/.condarc && echo "  conda-forge: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  msys2: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  bioconda: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  menpo: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  pytorch: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  simpleitk: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc \
+    && apt clean && apt update && apt install -yq --no-install-recommends sudo \
+    && apt install -yq --no-install-recommends libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev openssh-server git wget curl\
+    && pip install --upgrade pip && pip config set global.index-url https://mirrors.aliyun.com/pypi/simple && pip install setuptools \
+    && sed -i "s/#PubkeyAuthentication/PubkeyAuthentication/g" /etc/ssh/sshd_config && sed -i "s/#AuthorizedKeysFile/AuthorizedKeysFile/g" /etc/ssh/sshd_config && sed -i "s/#PermitRootLogin prohibit-password/PermitRootLogin yes/g" /etc/ssh/sshd_config \
+    && sudo /etc/init.d/ssh restart \
+    && echo "root:${PASSWORD}" | chpasswd
+ENTRYPOINT /etc/init.d/ssh restart && /bin/bash
+```
+
