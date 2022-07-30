@@ -50,7 +50,7 @@ steps:
       source: public/*
 
   - name: deploy-github
-    image: appleboy/drone-git-push
+    image: appleboy/drone-git-push:0.2.0-linux-amd64
     settings:
       branch: master
       remote: "git@github.com:lealaxy/lealaxy.github.io.git"
