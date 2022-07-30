@@ -37,16 +37,6 @@ steps:
     commands:
       - npm run build
 
-  - name: github-pages  
-    image: plugins/gh-pages
-    settings:
-      target_branch: master
-      username:
-        from_secret: github_username
-      password:
-        from_secret: github_password
-      pages_directory: public/
-
   - name: deploy-server
     image: appleboy/drone-scp
     settings:
@@ -58,6 +48,17 @@ steps:
       port: 22
       target: /www/wwwroot/peterli.club
       source: public
+
+  - name: git-push
+    image: appleboy/drone-git-push
+    settings:
+      branch: master
+      remote: git@github.com:lealaxy/lealaxy.github.io.git
+      force: false
+      commit: true
+      path: public
+      ssh_key:
+        from_secret: github_ssh_key
 
   - name: notify
     image: drillster/drone-email
