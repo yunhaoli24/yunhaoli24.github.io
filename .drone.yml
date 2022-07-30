@@ -38,7 +38,7 @@ steps:
       - npm run build
 
   - name: deploy-server
-    image: ryjer/drone-scp
+    image: appleboy/drone-scp
     settings:
       host: peterli.club
       username:
@@ -47,7 +47,7 @@ steps:
         from_secret: deploy_server_password
       port: 22
       target: /www/wwwroot/peterli.club/
-      source: public/*
+      source: .
 
   - name: deploy-github
     image: appleboy/drone-git-push:0.2.0-linux-amd64
