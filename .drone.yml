@@ -46,14 +46,14 @@ steps:
       password:
         from_secret: deploy_server_password
       port: 22
-      target: /www/wwwroot/peterli.club
-      source: public
+      target: /www/wwwroot/peterli.club/
+      source: public/*
 
-  - name: git-push
+  - name: deploy-github
     image: appleboy/drone-git-push
     settings:
       branch: master
-      remote: git@github.com:lealaxy/lealaxy.github.io.git
+      remote: "git@github.com:lealaxy/lealaxy.github.io.git"
       force: false
       commit: true
       path: public
