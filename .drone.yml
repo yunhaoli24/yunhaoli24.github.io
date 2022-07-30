@@ -49,16 +49,15 @@ steps:
       target: /www/wwwroot/peterli.club/
       source: public
 
-  - name: deploy-github
-    image: appleboy/drone-git-push:0.2.0-linux-amd64
+  - name: github-pages  
+    image: plugins/gh-pages
     settings:
-      branch: master
-      remote: "git@github.com:lealaxy/lealaxy.github.io.git"
-      force: true
-      commit: true
-      path: public
-      ssh_key:
-        from_secret: github_ssh_key
+      target_branch: master
+      username:
+        from_secret: github_username
+      password:
+        from_secret: github_password
+      pages_directory: public/
 
   - name: notify
     image: drillster/drone-email
