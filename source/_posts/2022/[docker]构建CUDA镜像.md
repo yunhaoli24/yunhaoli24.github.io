@@ -104,6 +104,15 @@ sudo docker run -itd -p 43251:22 --gpus all --name cuda -e NVIDIA_DRIVER_CAPABIL
 
 上边那个镜像构建出来的容器啥都没有，conda之类的还需要自己安装。于是我又写了一份Pytorch版本的`Dockerfile`，这里边conda已经默认安装好并且换好阿里源了，可以说是开箱即用。
 
+我这边已经上传到Docker Hub一份镜像，直接pull下来就可以用
+
+```shell
+docker pull lealaxy/pytorch:1.11-cuda11.3-cudnn8
+docker run -itd -p 43251:22 -p 14380:80 --gpus all --name pytorch -e NVIDIA_VISIBLE_DEVICES=all lealaxy/pytorch:1.11-cuda11.3-cudnn8
+```
+
+
+
 ```dockerfile
 FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
 LABEL author="li.yunhao@foxmail.com"
