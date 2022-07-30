@@ -112,3 +112,9 @@ deploy:
     github: git@github.com:lealaxy/lealaxy.github.io.git
     gitee: git@gitee.com:yunhaoli/yunhaoli.git
   branch: master
+markdown:
+  plugins:
+    - plugin:
+      name: '@neilsustc/markdown-it-katex'
+      options:
+        strict: false

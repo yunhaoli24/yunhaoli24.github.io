@@ -66,7 +66,7 @@ mathjax:
 
 # KaTeX
 katex:
-  enable: false
+  enable: true
   per_page: false
   hide_scrollbar: true
 
@@ -617,6 +617,10 @@ aside:
   button: true
   mobile: true # display on mobile
   position: right # left or right
+  display:
+    archive: true
+    tag: true
+    category: true
   card_author:
     enable: true
     description:
@@ -830,88 +834,70 @@ inject:
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
 CDN:
-  # main
-  main_css:
-  main:
-  utils:
+  # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
+  # option: local/jsdelivr/unpkg/cdnjs/custom
+  # Dev version can only choose. ( dev版的主題只能設置為 local )
+  internal_provider: local
 
-  # pjax
-  pjax:
+  # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
+  # option: local/jsdelivr/unpkg/cdnjs/custom
+  # when set it to local, you need to install hexo-butterfly-extjs
+  third_party_provider: unpkg
 
-  # comments
-  gitalk:
-  gitalk_css:
-  blueimp_md5:
-  valine:
-  disqusjs:
-  disqusjs_css:
-  utterances:
-  twikoo:
-  waline:
-  giscus:
+  # Add version number to CDN, true or false  
+  version: false
 
-  # share
-  addtoany:
-  sharejs:
-  sharejs_css:
+  # Custom format
+  # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
+  custom_format:
 
-  # search
-  local_search:
-  algolia_js:
-  algolia_search_v4:
-  instantsearch_v4:
-
-  # math
-  mathjax:
-  katex:
-  katex_copytex:
-  katex_copytex_css:
-  mermaid:
-
-  # count
-  busuanzi:
-
-  # background effect
-  canvas_ribbon:
-  canvas_fluttering_ribbon:
-  canvas_nest:
-
-  lazyload:
-  instantpage:
-  typed:
-  pangu:
-
-  # photo
-  fancybox_css_v4:
-  fancybox_v4:
-  medium_zoom:
-
-  # snackbar
-  snackbar_css:
-  snackbar:
-
-  # effect
-  activate_power_mode:
-  fireworks:
-  click_heart:
-  ClickShowText:
-
-  # fontawesome
-  fontawesomeV6:
-
-  # Conversion between Traditional and Simplified Chinese
-  translate:
-
-  # flickr-justified-gallery
-  flickr_justified_gallery_js:
-  flickr_justified_gallery_css:
-
-  # aplayer
-  aplayer_css:
-  aplayer_js:
-  meting_js:
-
-  # Prism.js
-  prismjs_js:
-  prismjs_lineNumber_js:
-  prismjs_autoloader:
+  option:
+    # main_css:
+    # main:
+    # utils:
+    # translate:
+    # local_search:
+    # algolia_js:
+    # algolia_search_v4:
+    # instantsearch_v4:
+    # pjax:
+    # gitalk:
+    # gitalk_css:
+    # blueimp_md5:
+    # valine:
+    # disqusjs:
+    # disqusjs_css:
+    # twikoo:
+    # waline_js:
+    # waline_css:
+    # sharejs:
+    # sharejs_css:
+    # mathjax:
+    # katex:
+    # katex_copytex:
+    # mermaid:
+    # canvas_ribbon:
+    # canvas_fluttering_ribbon:
+    # canvas_nest:
+    # lazyload:
+    # instantpage:
+    # typed:
+    # pangu:
+    # fancybox_css_v4:
+    # fancybox_v4:
+    # medium_zoom:
+    # snackbar_css:
+    # snackbar:
+    # activate_power_mode:
+    # fireworks:
+    # click_heart:
+    # ClickShowText:
+    # fontawesomeV6:
+    # flickr_justified_gallery_js:
+    # flickr_justified_gallery_css:
+    # aplayer_css:
+    # aplayer_js:
+    # meting_js:
+    # prismjs_js:
+    # prismjs_lineNumber_js:
+    # prismjs_autoloader:
