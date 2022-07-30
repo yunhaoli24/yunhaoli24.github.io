@@ -63,7 +63,7 @@ steps:
     settings:
       branch: master
       remote: "git@github.com:lealaxy/lealaxy.github.io.git"
-      force: false
+      force: true
       commit: true
       path: public
       ssh_key:
