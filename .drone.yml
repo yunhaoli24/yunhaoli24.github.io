@@ -20,7 +20,7 @@ steps:
   - name: install
     image: node:18.6.0-alpine
     commands:
-      - npm install
+      - npm install --registry=https://registry.npmmirror.com/
 
   - name: rebuild-cache
     image: drillster/drone-volume-cache
@@ -40,11 +40,24 @@ steps:
   - name: github-pages  
     image: plugins/gh-pages
     settings:
+      target_branch: master
       username:
         from_secret: github_username
       password:
         from_secret: github_password
       pages_directory: public/
+
+  - name: deploy-server
+    image: appleboy/drone-scp
+    settings:
+      host: peterli.club
+      username:
+        from_secret: deploy_server_username
+      password:
+        from_secret: deploy_server_password
+      port: 22
+      target: /www/wwwroot/peterli.club
+      source: public
 
   - name: notify
     image: drillster/drone-email
