@@ -108,7 +108,6 @@ search:
 deploy:
   type: git
   repository: 
-    tencent: root@peterli.club:/www/wwwroot/peterli.club/hexoBlog.git
     github: git@github.com:lealaxy/lealaxy.github.io.git
   branch: master
 markdown:
