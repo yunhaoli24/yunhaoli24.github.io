@@ -106,10 +106,9 @@ search:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repository: 
-    github: git@github.com:lealaxy/lealaxy.github.io.git
-  branch: master
+ - type: git
+   repository: git@github.com:lealaxy/lealaxy.github.io.git
+   branch: gh-pages
 markdown:
   plugins:
     - plugin:
