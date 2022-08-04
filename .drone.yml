@@ -49,14 +49,15 @@ steps:
       target: /www/wwwroot/peterli.club/
       source: public
 
-  - name: deploy-github
-    image: node:18.6.0-alpine
-    commands:
-      - echo ${ssh_key} >~/.ssh/id_rsa
-      - npm run deploy
-    environment:
-      ssh_key:
-        from_secret: github_ssh_key
+  - name: github-pages  
+    image: plugins/gh-pages
+    settings:
+      target_branch: gh-pages
+      username:
+        from_secret: github_username
+      password:
+        from_secret: github_password
+      pages_directory: public/
 
   - name: notify
     image: drillster/drone-email
