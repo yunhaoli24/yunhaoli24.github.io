@@ -62,7 +62,7 @@ LABEL author="li.yunhao@foxmail.com"
 
 ENV PASSWORD="123456" 
 
-RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone \ 
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone \
     && sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list \
     && sed -i "s/security.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list \
     && apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub \
@@ -119,18 +119,20 @@ LABEL author="li.yunhao@foxmail.com"
 
 ENV PASSWORD="123456" 
 
-RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone \ 
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone \
     && sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list && sed -i "s/security.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list \
     && apt clean && apt update && apt install -yq gnupg \
     && apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub \
     && conda config --set show_channel_urls yes && conda init\
     && echo "channels:" >>  ~/.condarc && echo "  - defaults" >>  ~/.condarc && echo "default_channels:" >>  ~/.condarc && echo "  - http://mirrors.aliyun.com/anaconda/pkgs/main" >>  ~/.condarc && echo "  - http://mirrors.aliyun.com/anaconda/pkgs/r" >>  ~/.condarc && echo "  - http://mirrors.aliyun.com/anaconda/pkgs/msys2" >>  ~/.condarc && echo "custom_channels:" >>  ~/.condarc && echo "  conda-forge: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  msys2: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  bioconda: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  menpo: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  pytorch: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc && echo "  simpleitk: http://mirrors.aliyun.com/anaconda/cloud" >>  ~/.condarc \
     && apt clean && apt update && apt install -yq --no-install-recommends sudo \
-    && apt install -yq --no-install-recommends libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev openssh-server git wget curl\
+    && apt install -yq --no-install-recommends libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev openssh-server git wget curl vim\
     && pip install --upgrade pip && pip config set global.index-url https://mirrors.aliyun.com/pypi/simple && pip install setuptools \
     && sed -i "s/#PubkeyAuthentication/PubkeyAuthentication/g" /etc/ssh/sshd_config && sed -i "s/#AuthorizedKeysFile/AuthorizedKeysFile/g" /etc/ssh/sshd_config && sed -i "s/#PermitRootLogin prohibit-password/PermitRootLogin yes/g" /etc/ssh/sshd_config \
-    && sudo /etc/init.d/ssh restart \
-    && echo "root:${PASSWORD}" | chpasswd
-ENTRYPOINT /etc/init.d/ssh restart && /bin/bash
+    && echo "root:${PASSWORD}" | chpasswd \
+    && conda init
+RUN yes | unminimize
+ENTRYPOINT /bin/bash
+
 ```
 
