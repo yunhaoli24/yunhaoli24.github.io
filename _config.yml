@@ -109,9 +109,9 @@ deploy:
  - type: git
    repository: git@github.com:lealaxy/lealaxy.github.io.git
    branch: gh-pages
-markdown:
-  plugins:
-    - plugin:
-      name: '@neilsustc/markdown-it-katex'
-      options:
-        strict: false
+# markdown:
+#   plugins:
+#     - plugin:
+#       name: '@neilsustc/markdown-it-katex'
+#       options:
+#         strict: false

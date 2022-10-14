@@ -61,12 +61,12 @@ local_search:
 
 # MathJax
 mathjax:
-  enable: false
-  per_page: false
+  enable: true
+  per_page: true
 
 # KaTeX
 katex:
-  enable: true
+  enable: false
   per_page: false
   hide_scrollbar: true
 
