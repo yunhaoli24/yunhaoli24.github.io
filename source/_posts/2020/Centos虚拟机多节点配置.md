@@ -5,7 +5,7 @@ tags:
 	- Linux
 categories:
 	- Linux
-cover: https://img0.baidu.com/it/u=2040941498,1591181657&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500
+cover: https://www.kagoya.jp/howto/wp-content/uploads/202106d_catch.jpg
 ---
 
 # VMware创建虚拟机

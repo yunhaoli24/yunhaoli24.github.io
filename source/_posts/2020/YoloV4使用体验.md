@@ -30,13 +30,13 @@ cover: https://img0.baidu.com/it/u=1701113910,2775267702&fm=253&fmt=auto&app=138
 
 6. 下图就是一个实例：
 
-   ![image-20200426224150938](https://peter-md-image.oss-cn-beijing.aliyuncs.com/img/image-20200426224150938.png)
+   ![image-20200426224150938](https://object-lealaxy.oss-cn-beijing.aliyuncs.com/img/image-20200426224150938.png)
 
 7. 下一步就是更改具体的yolo层的配置了，yolov4和v3一样，还是有三个yolo层，这三个yolo层都需要根据自己的数据集改一下，如果你在cfg里找不到可以搜索一下。
 
 8. 更改classes为你自己的标签数量，然后更改yolo层上边的convolutional层的`filters`的数量为filters=(classes + 5)x3 。也就是说如果你有5个classes，就需要设置filters为（5+5）*3=30，就像下图展示的那样。这一步很关键，**三个YOLO层都需要这样设置，不能只设置一个YOLO层**。
 
-      ![image-20200426224515277](https://peter-md-image.oss-cn-beijing.aliyuncs.com/img/image-20200426224515277.png)
+      ![image-20200426224515277](https://object-lealaxy.oss-cn-beijing.aliyuncs.com/img/image-20200426224515277.png)
 
 9. 如果你用`[Gaussian_yolo]`的话是需要特殊的设置的，这里就不讲了，用到的话可以自己去看官方文档。
 

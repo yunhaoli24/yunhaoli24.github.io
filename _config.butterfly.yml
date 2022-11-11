@@ -7,16 +7,16 @@ menu:
   时间轴: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
-  # Link: /link/ || fas fa-link
+  目录||fas fa-list:
+    机器学习: /ML/ || fa-solid fa-robot
+    Docker: /docker/ || fa-brands fa-docker
+#   Link: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: pale night #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -36,7 +36,7 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/lealaxy || Github
-  fas fa-envelope: mailto:li.yunhao@foxmail.com || Email
+  fas fa-envelope: mailto:lealaxy@gmail.com || Email
   fa-brands fa-telegram: https://t.me/lealaxy || Telegram
 
 # search (搜索)
@@ -675,7 +675,7 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: false
+  enable: true
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
@@ -842,7 +842,7 @@ CDN:
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # when set it to local, you need to install hexo-butterfly-extjs
-  third_party_provider: unpkg
+  third_party_provider: jsdelivr
 
   # Add version number to CDN, true or false  
   version: false
