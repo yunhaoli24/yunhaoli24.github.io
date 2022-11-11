@@ -4,35 +4,35 @@ specifiers:
   hexo: ^6.3.0
   hexo-deployer-git: ^3.0.0
   hexo-deployer-sftp: ^0.4.1
-  hexo-generator-archive: ^1.0.0
-  hexo-generator-category: ^1.0.0
-  hexo-generator-index: ^2.0.0
+  hexo-generator-archive: ^2.0.0
+  hexo-generator-category: ^2.0.0
+  hexo-generator-index: ^3.0.0
   hexo-generator-search: ^2.4.3
-  hexo-generator-tag: ^1.0.0
+  hexo-generator-tag: ^2.0.0
   hexo-renderer-ejs: ^2.0.0
   hexo-renderer-kramed: ^0.1.4
   hexo-renderer-markdown-it: ^6.1.0
   hexo-renderer-pug: ^3.0.0
   hexo-renderer-stylus: ^2.1.0
   hexo-server: ^3.0.0
-  hexo-theme-butterfly: ^4.4.0
+  hexo-theme-butterfly: ^4.5.1
 
 dependencies:
   hexo: 6.3.0
   hexo-deployer-git: 3.0.0
   hexo-deployer-sftp: 0.4.1
-  hexo-generator-archive: 1.0.0
-  hexo-generator-category: 1.0.0
-  hexo-generator-index: 2.0.0
+  hexo-generator-archive: 2.0.0
+  hexo-generator-category: 2.0.0
+  hexo-generator-index: 3.0.0
   hexo-generator-search: 2.4.3
-  hexo-generator-tag: 1.0.0
+  hexo-generator-tag: 2.0.0
   hexo-renderer-ejs: 2.0.0
   hexo-renderer-kramed: 0.1.4
   hexo-renderer-markdown-it: 6.1.0
   hexo-renderer-pug: 3.0.0
   hexo-renderer-stylus: 2.1.0
   hexo-server: 3.0.0
-  hexo-theme-butterfly: 4.4.0
+  hexo-theme-butterfly: 4.5.1
 
 packages:
 
@@ -46,16 +46,16 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: false
 
-  /@babel/parser/7.19.4:
-    resolution: {integrity: sha512-qpVT7gtuOLjWeDTKLkJ6sryqLliBaFpAtGeqw5cs5giLldvh+Ch0plqnUMKoVAUS6ZEueQQiZV+p5pxtPitEsA==}
+  /@babel/parser/7.20.3:
+    resolution: {integrity: sha512-OP/s5a94frIPXwjzEcv5S/tpQfc6XhxYUnmWpgdqMWGgYCuErA3SzozaRAMQgSZWKeTJxht9aWAkUY+0UzvOFg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': 7.19.4
+      '@babel/types': 7.20.2
     dev: false
 
-  /@babel/types/7.19.4:
-    resolution: {integrity: sha512-M5LK7nAeS6+9j7hAq+b3fQs+pNfUtTGq+yFFfHnauFA8zQtLRfmuipmsKDKKLuyG+wC8ABW43A153YNawNTEtw==}
+  /@babel/types/7.20.2:
+    resolution: {integrity: sha512-FnnvsNWgZCr232sqtXggapvlkk/tuwR/qhGzcmxI0GXLCjmPYQPzio2FbdlWuY6y1sHFfQKk+rRbUZ9VStQMog==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-string-parser': 7.19.4
@@ -169,7 +169,7 @@ packages:
     resolution: {integrity: sha512-GAwkz0AihzY5bkwIY5QDR+LvsRQgB/B+1foMPvi0FZPMl5fjD7ICiznUiBdLYMH1QYe6vqu4gWYytZOccLouFw==}
     engines: {node: '>= 10.0.0'}
     dependencies:
-      '@babel/types': 7.19.4
+      '@babel/types': 7.20.2
     dev: false
 
   /balanced-match/1.0.2:
@@ -235,7 +235,7 @@ packages:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
     dependencies:
       pascal-case: 3.1.2
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /chalk/2.4.2:
@@ -347,8 +347,8 @@ packages:
   /constantinople/4.0.1:
     resolution: {integrity: sha512-vCrqcSIq4//Gx74TXXCGnHpulY1dskqLTFGDmhrGxzeXL8lF8kvXv6mpNWlJj1uD4DW23D4ljAqbY4RRaaUZIw==}
     dependencies:
-      '@babel/parser': 7.19.4
-      '@babel/types': 7.19.4
+      '@babel/parser': 7.20.3
+      '@babel/types': 7.20.2
     dev: false
 
   /cross-spawn/4.0.2:
@@ -683,26 +683,25 @@ packages:
       hexo-util: 2.7.0
     dev: false
 
-  /hexo-generator-archive/1.0.0:
-    resolution: {integrity: sha512-24TeanDGpMBUIq37DHpSESQbeN6ssZ06edsGSI76tN4Yit50TgsgzP5g5DSu0yJk0jUtHJntysWE8NYAlFXibA==}
-    engines: {node: '>=8.6.0'}
+  /hexo-generator-archive/2.0.0:
+    resolution: {integrity: sha512-KikJk7dGFbtNHOgqtLFGf5T/S8n1paGp+Gy0KfVDz+HKYhGbXOouyiZkmc3O9KrYt6ja14rmkMhq7KKGtvfehw==}
+    engines: {node: '>=14'}
     dependencies:
-      hexo-pagination: 1.0.0
+      hexo-pagination: 3.0.0
     dev: false
 
-  /hexo-generator-category/1.0.0:
-    resolution: {integrity: sha512-kmtwT1SHYL2ismbGnYQXNtqLFSeTdtHNbJIqno3LKROpCK8ybST5QVXF1bZI9LkFcXV/H8ilt8gfg4/dNNcQQQ==}
-    engines: {node: '>=8.6.0'}
+  /hexo-generator-category/2.0.0:
+    resolution: {integrity: sha512-9OduRBf3WeRDa4BR0kAfRjOVHur7v3fm0NKAwbjUiqULigAdNZVZPO3cHKW2MlBbl/lI5PuWdhQ9zZ99CCCAgQ==}
+    engines: {node: '>=14'}
     dependencies:
-      hexo-pagination: 1.0.0
+      hexo-pagination: 3.0.0
     dev: false
 
-  /hexo-generator-index/2.0.0:
-    resolution: {integrity: sha512-q/29Vj9BZs0dwBcF+s9IT8ymS4aYZsDwBEYDnh96C8tsX+KPY5v6TzCdttz58BchifaJpP/l9mi6u9rZuYqA0g==}
-    engines: {node: '>=10.13.0'}
+  /hexo-generator-index/3.0.0:
+    resolution: {integrity: sha512-83AuNN4cWdLVi//3ugR8E3kR6rrOwhXZt+hOCm1IjtIGj353/GlrtpMHpqZHU5kqipzj4miy9dweVdukXglVWw==}
+    engines: {node: '>=14'}
     dependencies:
-      hexo-pagination: 1.0.0
-      timsort: 0.3.0
+      hexo-pagination: 3.0.0
     dev: false
 
   /hexo-generator-search/2.4.3:
@@ -715,11 +714,11 @@ packages:
       - chokidar
     dev: false
 
-  /hexo-generator-tag/1.0.0:
-    resolution: {integrity: sha512-JDoB2T1EncRlyGSjuAhkGxRfKkN8tq0i8tFlk9I4q2L6iYxPaUnFenhji0oxufTADC16/IchuPjmMk//dt8Msg==}
-    engines: {node: '>=8.6.0'}
+  /hexo-generator-tag/2.0.0:
+    resolution: {integrity: sha512-1px/hF3veEohWDN8jjzchQhaiz+uOStUvvMaBJC9vWOlALh30UFcapL8IrvAwwJZjFRVA+WqGgDRqoQ8+yaaFw==}
+    engines: {node: '>=14'}
     dependencies:
-      hexo-pagination: 1.0.0
+      hexo-pagination: 3.0.0
     dev: false
 
   /hexo-i18n/1.0.0:
@@ -743,9 +742,9 @@ packages:
       picocolors: 1.0.0
     dev: false
 
-  /hexo-pagination/1.0.0:
-    resolution: {integrity: sha512-miEVFgxchPr2qNWxw0JWpJ9R/Yaf7HjHBZVjvCCcqfbsLyYtCvIfJDxcEwz1sDOC/fLzYPqNnhUI73uNxBHRSA==}
-    engines: {node: '>=8.6.0'}
+  /hexo-pagination/3.0.0:
+    resolution: {integrity: sha512-8oo1iozloZo7TojPVYg4IxL3SJKCBdSJ908fTlIxIK7TWJIKdYnQlW31+12DBJ0NhVZA/lZisPObGF08wT8fKw==}
+    engines: {node: '>=14'}
     dev: false
 
   /hexo-renderer-ejs/2.0.0:
@@ -816,8 +815,8 @@ packages:
       - supports-color
     dev: false
 
-  /hexo-theme-butterfly/4.4.0:
-    resolution: {integrity: sha512-YCgA8eyKA9/uvP3n4887mL6kRhRXrasOZqNFkPvUt4yu1+ge/IUkUCtvlNUb29NNJ0B/SjbFuGP+ZHVB/YrEgA==}
+  /hexo-theme-butterfly/4.5.1:
+    resolution: {integrity: sha512-gZQ0y0q27n52tAphsF5Nj5Uvihhr8uAIyjPvK+BnysZuLgnSgbbnIr1rresRIWygvNn/PA87wzDJpKAM2NhJ3A==}
     dependencies:
       hexo-renderer-pug: 3.0.0
       hexo-renderer-stylus: 2.1.0
@@ -869,7 +868,7 @@ packages:
       micromatch: 4.0.5
       moize: 6.1.3
       moment: 2.29.4
-      moment-timezone: 0.5.37
+      moment-timezone: 0.5.38
       nunjucks: 3.2.3
       picocolors: 1.0.0
       pretty-hrtime: 1.0.3
@@ -936,8 +935,8 @@ packages:
       binary-extensions: 2.2.0
     dev: false
 
-  /is-core-module/2.10.0:
-    resolution: {integrity: sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==}
+  /is-core-module/2.11.0:
+    resolution: {integrity: sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==}
     dependencies:
       has: 1.0.3
     dev: false
@@ -1058,7 +1057,7 @@ packages:
   /lower-case/2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /lru-cache/4.1.5:
@@ -1199,8 +1198,8 @@ packages:
       micro-memoize: 4.0.11
     dev: false
 
-  /moment-timezone/0.5.37:
-    resolution: {integrity: sha512-uEDzDNFhfaywRl+vwXxffjjq1q0Vzr+fcQpQ1bU0kbzorfS7zVtZnCnGc8mhWmF39d4g4YriF6kwA75mJKE/Zg==}
+  /moment-timezone/0.5.38:
+    resolution: {integrity: sha512-nMIrzGah4+oYZPflDvLZUgoVUO4fvAqHstvG3xAUnMolWncuAiLDWNnJZj6EwJGMGfb1ZcuTFE6GI3hNOVWI/Q==}
     dependencies:
       moment: 2.29.4
     dev: false
@@ -1257,7 +1256,7 @@ packages:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /normalize-path/3.0.0:
@@ -1328,7 +1327,7 @@ packages:
     resolution: {integrity: sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /path-is-absolute/1.0.1:
@@ -1496,7 +1495,7 @@ packages:
     resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
     hasBin: true
     dependencies:
-      is-core-module: 2.10.0
+      is-core-module: 2.11.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
     dev: false
@@ -1721,10 +1720,6 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /timsort/0.3.0:
-    resolution: {integrity: sha512-qsdtZH+vMoCARQtyod4imc2nIJwg9Cc7lPRrw9CzF8ZKR0khdr8+2nX80PBhET3tcyTtJDxAffGh2rXH4tyU8A==}
-    dev: false
-
   /titlecase/1.1.3:
     resolution: {integrity: sha512-pQX4oiemzjBEELPqgK4WE+q0yhAqjp/yzusGtlSJsOuiDys0RQxggepYmo0BuegIDppYS3b3cpdegRwkpyN3hw==}
     hasBin: true
@@ -1751,8 +1746,8 @@ packages:
     resolution: {integrity: sha512-VSsyNPPW74RpHwR8Fc21uubwHY7wMDeJLys2IX5zJNih+OnAnaifKHo+1LHT7DAdloQ7apeaaWg8l7qnf/TnEg==}
     dev: false
 
-  /tslib/2.4.0:
-    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+  /tslib/2.4.1:
+    resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: false
 
   /uc.micro/1.0.6:
@@ -1820,8 +1815,8 @@ packages:
     resolution: {integrity: sha512-RNGKj82nUPg3g5ygxkQl0R937xLyho1J24ItRCBTr/m1YnZkzJy1hUiHUJrc/VlsDQzsCnInEGSg3bci0Lmd4w==}
     engines: {node: '>= 10.0.0'}
     dependencies:
-      '@babel/parser': 7.19.4
-      '@babel/types': 7.19.4
+      '@babel/parser': 7.20.3
+      '@babel/types': 7.20.2
       assert-never: 1.2.1
       babel-walk: 3.0.0-canary-5
     dev: false

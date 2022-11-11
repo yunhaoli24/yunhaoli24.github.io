@@ -68,8 +68,8 @@ darknet的训练代码也非常简单`darknet detector train custom.data yolov4-
 
 测试命令：`darknet.exe detector map data/custom.data yolov4-custom.cfg backup\yolov4-custom_last.weights`
 
-![image-20200427122101454](http://img.peterli.club/img/image-20200427122101454.png)
+![image-20200427122101454](https://img.peterli.club/img/image-20200427122101454.png)
 
-![image-20200427122221534](http://img.peterli.club/img/image-20200427122221534.png)
+![image-20200427122221534](https://img.peterli.club/img/image-20200427122221534.png)
 
 训练完成之后，我又详细阅读了官方文档，上边说最终的loss可以降到从`0.05`（对于小模型和简单数据集）到`3.0`（对于大模型和困难数据集）。YOLOV3确实是达到了这个要求的，但是YOLOV4最终loss是稳定在7.X的，也许是我使用v4的方法有些不对，并没有看到很高的提升。

@@ -90,7 +90,7 @@ set/a a+=1
 
 ```
 
-![样本结构](http://img.peterli.club/img/20200830201247.png)
+![样本结构](https://img.peterli.club/img/20200830201247.png)
 
 
 
@@ -154,12 +154,11 @@ if __name__ == '__main__':
 
 生成完txt后，txt里的数据应该是这个样的。
 
-![2019-12-14
-22-22-21屏幕截图.png](https://i.loli.net/2019/12/14/GjP5XkZ2vgNSQa7.png)
+![2019-12-14s22-22-21屏幕截图.png](https://i.loli.net/2019/12/14/GjP5XkZ2vgNSQa7.png)
 
 工程结构是这个样的
 
-![](http://img.peterli.club/img/20200830201449.png)
+![](https://img.peterli.club/img/20200830201449.png)
 
 ## 开始训练
 

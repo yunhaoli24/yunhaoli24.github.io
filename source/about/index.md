@@ -16,7 +16,7 @@ type: "about"
 
 <table>
     <tr>
-        <td ><center><img src="http://img.peterli.club/img/8FC3CDE76EB8FD1121E07ED7CAD74920.png" width="512" height="512" ></br>微信</center></td>
-        <td ><center><img src="http://img.peterli.club/img/F0F5202DB814596F2DDF6EE9FF640ACB.jpg" width="512" height="512" ></br>支付宝</center></td>
+        <td ><center><img src="https://img.peterli.club/img/8FC3CDE76EB8FD1121E07ED7CAD74920.png" width="512" height="512" ></br>微信</center></td>
+        <td ><center><img src="https://img.peterli.club/img/F0F5202DB814596F2DDF6EE9FF640ACB.jpg" width="512" height="512" ></br>支付宝</center></td>
     </tr>
 </table>

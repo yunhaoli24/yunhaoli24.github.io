@@ -106,9 +106,15 @@ search:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
+ - type: sftp
+   host: peterli.club
+   user: root
+   remotePath: /www/wwwroot/peterli.club/
+   port: 22
  - type: git
    repository: git@github.com:lealaxy/lealaxy.github.io.git
    branch: gh-pages
+  #  privateKey: ~/.ssh/id_rsa.pub
 # markdown:
 #   plugins:
 #     - plugin:

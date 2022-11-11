@@ -74,21 +74,21 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: http://img.peterli.club/img/profile.png
+favicon: https://img.peterli.club/img/profile.png
 
 # Avatar (頭像)
 avatar:
-  img: http://img.peterli.club/img/profile.png
+  img: https://img.peterli.club/img/profile.png
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: http://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
+index_img: https://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: http://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
+default_top_img: https://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
 
 # The banner image of archive page
 archive_img:
@@ -396,7 +396,7 @@ footer:
   owner:
     enable: true
     since: 2019
-  custom_text: <a href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="http://www.beian.gov.cn/img/new/gongan.png"><span>鲁ICP备19056758号-1</span></a>
+  custom_text: <a href="https://www.beian.gov.cn/"><img class="icp-icon" src="https://www.beian.gov.cn/img/new/gongan.png"><span>鲁ICP备19056758号-1</span></a>
   copyright: true # Copyright of theme and framework
 
 # Analysis
