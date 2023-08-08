@@ -215,7 +215,7 @@ for (ServiceInstance instance : instances) {
 
 ## 六、消息总线
 
-![image-20200409132047341](https://peter-md-image.oss-cn-beijing.aliyuncs.com/img/image-20200409132047341.png)
+![image-20200409132047341](https://object-lealaxy.oss-cn-beijing.aliyuncs.com/img/image-20200409132047341.png)
 
 > 用轻量级消息代理来构建一个共用的消息主题，并让系统中所有微服务实例都连接上来。由于该主题中产生的消息会被所有实例监听和消费，所以成为消息总线。在总线上的各个实例，都可以方便地广播一些需要让其他连接在该主题上的实例都知道的消息。
 
@@ -228,11 +228,11 @@ for (ServiceInstance instance : instances) {
 ### 1.Spring Cloud Stream
 > 屏蔽底层消息中间件差异，消息驱动微服务框架
 
-![image-20200409134502181](https://peter-md-image.oss-cn-beijing.aliyuncs.com/img/image-20200409134502181.png)
+![image-20200409134502181](https://object-lealaxy.oss-cn-beijing.aliyuncs.com/img/image-20200409134502181.png)
 
 * 常用注解
 
-![常用注解](https://peter-md-image.oss-cn-beijing.aliyuncs.com/img/image-20200409135302145.png)
+![常用注解](https://object-lealaxy.oss-cn-beijing.aliyuncs.com/img/image-20200409135302145.png)
 
 * 发送消息
 

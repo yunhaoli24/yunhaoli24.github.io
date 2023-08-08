@@ -7,16 +7,16 @@ menu:
   时间轴: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
-  # Link: /link/ || fas fa-link
+  目录||fas fa-list:
+    机器学习: /ML/ || fa-solid fa-robot
+    Docker: /docker/ || fa-brands fa-docker
+  #   Link: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: pale night #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -36,7 +36,7 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/lealaxy || Github
-  fas fa-envelope: mailto:li.yunhao@foxmail.com || Email
+  fas fa-envelope: mailto:lealaxy@gmail.com || Email
   fa-brands fa-telegram: https://t.me/lealaxy || Telegram
 
 # search (搜索)
@@ -61,12 +61,12 @@ local_search:
 
 # MathJax
 mathjax:
-  enable: false
-  per_page: false
+  enable: true
+  per_page: true
 
 # KaTeX
 katex:
-  enable: true
+  enable: false
   per_page: false
   hide_scrollbar: true
 
@@ -74,21 +74,21 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: http://img.peterli.club/img/profile.png
+favicon: https://img.peterli.club/img/profile.png
 
 # Avatar (頭像)
 avatar:
-  img: http://img.peterli.club/img/profile.png
+  img: https://img.peterli.club/img/profile.png
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: http://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
+index_img: https://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: http://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
+default_top_img: https://img.peterli.club/img/8f23d0adaf83fd2aefae793948b0bc3a.jpeg
 
 # The banner image of archive page
 archive_img:
@@ -131,7 +131,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: false
-  subtitle: 'Page Not Found'
+  subtitle: "Page Not Found"
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
 post_meta:
@@ -396,7 +396,7 @@ footer:
   owner:
     enable: true
     since: 2019
-  custom_text: <a href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="http://www.beian.gov.cn/img/new/gongan.png"><span>鲁ICP备19056758号-1</span></a>
+  custom_text: <a href="https://beian.miit.gov.cn/"><img class="icp-icon" src="https://www.beian.gov.cn/img/new/gongan.png"><span>鲁ICP备19056758号-1</span></a>
   copyright: true # Copyright of theme and framework
 
 # Analysis
@@ -519,7 +519,7 @@ canvas_fluttering_ribbon:
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
   enable: false
-  color: '0,0,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
   count: 99 # the number of lines, default: 99.
@@ -650,7 +650,7 @@ aside:
   card_archives:
     enable: true
     type: monthly # yearly or monthly
-    format: YYYY年MM月  # eg: YYYY年MM月
+    format: YYYY年MM月 # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
     limit: 8 # if set 0 will show all
     sort_order: # Don't modify the setting unless you know how it works
@@ -675,7 +675,7 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: false
+  enable: true
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
@@ -694,9 +694,9 @@ translate:
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '繁'
+  msgToTraditionalChinese: "繁"
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '簡'
+  msgToSimplifiedChinese: "簡"
 
 # Read Mode (閲讀模式)
 readmode: true
@@ -782,8 +782,8 @@ aplayerInject:
 snackbar:
   enable: false
   position: bottom-left
-  bg_light: '#49b1f5' # The background color of Toast Notification in light mode
-  bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
+  bg_light: "#49b1f5" # The background color of Toast Notification in light mode
+  bg_dark: "#1f1f1f" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
 # prefetch (預加載)
@@ -842,9 +842,9 @@ CDN:
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # when set it to local, you need to install hexo-butterfly-extjs
-  third_party_provider: unpkg
+  third_party_provider: jsdelivr
 
-  # Add version number to CDN, true or false  
+  # Add version number to CDN, true or false
   version: false
 
   # Custom format

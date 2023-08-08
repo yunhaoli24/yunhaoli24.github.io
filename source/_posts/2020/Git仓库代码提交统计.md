@@ -18,7 +18,7 @@ cover: https://img0.baidu.com/it/u=2446728729,250871220&fm=253&fmt=auto&app=138&
 git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 3
 ```
 
-![image-20200707143833213](http://img.peterli.club/img/image-20200707143833213.png)
+![image-20200707143833213](https://img.peterli.club/img/image-20200707143833213.png)
 
 ### 给Git查看某一个用户代码量
 
@@ -26,7 +26,7 @@ git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 3
 git log --author="用户名" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' 
 ```
 
-![image-20200707143344921](http://img.peterli.club/img/image-20200707143344921.png)
+![image-20200707143344921](https://img.peterli.club/img/image-20200707143344921.png)
 
 ### 统计每个人增删行数
 
@@ -34,4 +34,4 @@ git log --author="用户名" --pretty=tformat: --numstat | awk '{ add += $1; sub
 git log --format='%aN' | sort -u | while read name; do echo -en "$name\t"; git log --author="$name" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -; done
 ```
 
-![image-20200707143631623](http://img.peterli.club/img/image-20200707143631623.png)
+![image-20200707143631623](https://img.peterli.club/img/image-20200707143631623.png)
