@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   hexo:
     specifier: ^6.3.0
@@ -26,8 +30,8 @@ dependencies:
     specifier: ^0.1.4
     version: 0.1.4
   hexo-renderer-markdown-it:
-    specifier: ^7.0.0
-    version: 7.0.0
+    specifier: ^7.1.0
+    version: 7.1.0
   hexo-renderer-pug:
     specifier: ^3.0.0
     version: 3.0.0
@@ -711,8 +715,8 @@ packages:
       strip-indent: 1.0.1
     dev: false
 
-  /hexo-renderer-markdown-it@7.0.0:
-    resolution: {integrity: sha512-X+JDJ+FKGOvgGnJ1UW2AR13Ibltr/80IUbe2xh5u1hyCMKptAAhBHrhvRIqMR4WQuBgKOjQclyx4IHHY8u0n7w==}
+  /hexo-renderer-markdown-it@7.1.0:
+    resolution: {integrity: sha512-CQK7/kvhWbpKzXOSTpSuANVKgOZjPzxkPna4IQ6xMnRqsNpVXNSzpn5Ke1QEVH2x6FJB1/Vf7B40sJVxQKagaw==}
     engines: {node: '>=14'}
     dependencies:
       hexo-util: 3.1.0
