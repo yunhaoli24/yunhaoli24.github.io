@@ -7,7 +7,7 @@ tags:
 categories:  
 	- Machine learning
 	- Caffe
-cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1112%2F11291Q34538%2F1Q129134538-3.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653714376&t=1777cbbce415c90b0f44922d1165831a
+cover: https://www.fif.it/media/k2/items/cache/77e3798bb9782084333898c5f75d9aab_XL.jpg
 ---
 
 ![](https://www.microsoft.com/en-us/CMSImages/AI_AIPlatform_Caffe2_491x276.jpg?version=23c76694-e7db-6da1-65cf-8248206ea83e)
@@ -83,8 +83,7 @@ cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2
     print ("退出程序")
 
 然后运行脚本`sudo python get_data.py`
-这样就生成了两个txt文件，如果你的脚本不报错，文件应该是长成这个样的．![2019-12-14
-22-22-21屏幕截图.png](https://i.loli.net/2019/12/14/GjP5XkZ2vgNSQa7.png)
+这样就生成了两个txt文件，如果你的脚本不报错，文件应该是长成这个样的．![2019-12-1422-22-21屏幕截图.png](https://i.loli.net/2019/12/14/GjP5XkZ2vgNSQa7.png)
 
 准备LMDB文件和均值文件
 ----------------------
@@ -151,8 +150,7 @@ cover: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2
 
 保存退出然后运行`sudo sh create_imagenet.sh`
 脚本正常运行完之后应该是这个样子的,如果有报错多半是你的路径填的不对,仔细检查一下.
-![2019-12-14
-22-30-13屏幕截图.png](https://i.loli.net/2019/12/14/o6sL5hOWl1DpN7i.png)
+![2019-12-1422-30-13屏幕截图.png](https://i.loli.net/2019/12/14/o6sL5hOWl1DpN7i.png)
 
 ### 均值文件
 

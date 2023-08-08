@@ -22,8 +22,6 @@ git rev-list --objects --all \
 | $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
 ```
 
-![image-20200515163411737](http://img.peterli.club/img/20200515163441.png)
-
 
 
 ## 从所有分支和历史记录中删除大文件

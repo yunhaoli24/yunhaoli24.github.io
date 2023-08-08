@@ -7,7 +7,7 @@ tags:
 	- Ubuntu
 categories:
 	- Linux
-cover: https://peter-md-image.oss-cn-beijing.aliyuncs.com/img/image-20200427113426863.png
+cover: https://object-lealaxy.oss-cn-beijing.aliyuncs.com/img/image-20200427113426863.png
 ---
 
 查看可用内核信息
