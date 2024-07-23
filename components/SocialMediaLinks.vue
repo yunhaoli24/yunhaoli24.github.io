@@ -2,14 +2,14 @@
  * @Author: li.yunhao
  * @Date: 2024-07-17 18:01:46
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-17 18:50:39
+ * @LastEditTime: 2024-07-23 22:49:56
  * @FilePath: /lealaxy.github.io/components/SocialMediaLinks.vue
  * @Description: 
 -->
 <template>
   <el-space>
     <a
-      href="https://github.com/lealaxy"
+      href="https://github.com/yunhaoli24"
       target="_blank"
       rel="noopener noreferrer"
     >
