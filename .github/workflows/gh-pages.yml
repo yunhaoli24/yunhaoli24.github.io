@@ -21,6 +21,9 @@ jobs:
           node-version: 21.x
           cache: "pnpm"
 
+      - name: Install
+        run: pnpm install
+
       - name: Build
         run: pnpm run ghpage
 
