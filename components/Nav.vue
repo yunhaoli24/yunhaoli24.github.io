@@ -2,8 +2,8 @@
  * @Author: li.yunhao
  * @Date: 2024-07-17 17:06:05
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-17 17:55:57
- * @FilePath: /lealaxy.github.io/components/Nav.vue
+ * @LastEditTime: 2024-07-24 11:06:03
+ * @FilePath: /yunhaoli24.github.io/components/Nav.vue
  * @Description: 
 -->
 <template>
@@ -14,20 +14,24 @@
           <el-text size="large">Yunhao Li</el-text>
         </nuxt-link>
       </el-menu-item>
-      <el-menu-item index="About" @click="scrollTo"> About </el-menu-item>
-      <el-menu-item index="Education" @click="scrollTo">
-        Education
-      </el-menu-item>
-      <el-menu-item index="WorkExp" @click="scrollTo">
-        Work Experience
-      </el-menu-item>
-      <el-menu-item index="Publications" @click="scrollTo">
-        Publications
-      </el-menu-item>
-      <el-menu-item index="ProgrammingSkills" @click="scrollTo">
-        Programming Skills
-      </el-menu-item>
-      <el-menu-item index="Honors" @click="scrollTo"> Honors </el-menu-item>
+      <el-menu-item
+        v-for="item in menuItems"
+        v-if="!isMobile"
+        :key="item.index"
+        :index="item.index"
+        @click="scrollTo"
+        >{{ item.label }}</el-menu-item
+      >
+      <el-sub-menu v-if="isMobile" index="2">
+        <template #title>Workspace</template>
+        <el-menu-item
+          v-for="item in menuItems"
+          :key="item.index"
+          :index="item.index"
+          @click="scrollTo"
+          >{{ item.label }}</el-menu-item
+        >
+      </el-sub-menu>
       <div class="flex-grow" />
       <el-menu-item index="2">
         <el-switch
@@ -45,6 +49,8 @@
 
 <script lang="ts" setup>
 import { Moon, Sunny } from "@element-plus/icons-vue";
+const { width, height } = useWindowSize();
+const isMobile = computed(() => width.value < 760);
 const color = useColorMode();
 const colorMode = computed({
   get: () => color.value === "dark",
@@ -58,6 +64,14 @@ const scrollTo = (index: any) => {
     element.scrollIntoView({ behavior: "smooth" });
   }
 };
+const menuItems = ref([
+  { index: "About", label: "About" },
+  { index: "Education", label: "Education" },
+  { index: "WorkExp", label: "Work Experience" },
+  { index: "Publications", label: "Publications" },
+  { index: "ProgrammingSkills", label: "Programming Skills" },
+  { index: "Honors", label: "Honors" },
+]);
 </script>
 
 <style></style>

@@ -1,3 +1,11 @@
+<!--
+ * @Author: li.yunhao
+ * @Date: 2024-07-17 21:32:27
+ * @LastEditors: li.yunhao li.yunhao@foxmail.com
+ * @LastEditTime: 2024-07-24 09:51:48
+ * @FilePath: /yunhaoli24.github.io/components/WorkExp.vue
+ * @Description: 
+-->
 <template>
   <div>
     <h1>Work Experience</h1>
@@ -47,8 +55,7 @@ const works = [
   {
     title: "China Post Bank",
     job: "ML Researcher & Data Analyst",
-    image:
-      "https://logos-download.com/wp-content/uploads/2016/10/China_Post_logo.png",
+    image: "/imgs/china_post.png",
     content:
       "* Developed AI-driven finance data precision recommendation model for customer marketing.\n" +
       "* Designed and implemented a model training engine for automatic rolling training and optimization.\n" +

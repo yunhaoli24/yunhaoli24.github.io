@@ -78,8 +78,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 const honors = [
   {
-    image:
-      "https://www.aicompetition-pz.com/public/assets/front/images/logo.png",
+    image: "/imgs/pazhou.png",
     title: "First Prize in the National Guangzhou Pazhou Algorithm Competition",
     content:
       "* Lead AI and backend teams develop an Artificial Intelligence Security Assessment platform.\n" +
@@ -87,8 +86,7 @@ const honors = [
     timestamp: "2023",
   },
   {
-    image:
-      "http://www.sei.ynu.edu.cn/__local/5/CC/29/6781F17FF0F4DE1B7AA2957F8DB_90C2160E_48633.png",
+    image: "imgs/cccc.png",
     title:
       "Third Prize in the National China Collegiate Computing Contest-AI Track",
     content:
@@ -97,7 +95,7 @@ const honors = [
     timestamp: "2020",
   },
   {
-    image: "https://www.cnsoftbei.com/statics/images/images/logo.png",
+    image: "imgs/csc.png",
     title: 'Second Prize in the National 9th "China Software Cup"',
     content:
       "* Developed a Real-Time Vehicle Recognition and Tracking System for Traffic Light Scenarios.\n" +
@@ -105,8 +103,7 @@ const honors = [
     timestamp: "2020",
   },
   {
-    image:
-      "https://upload.wikimedia.org/wikipedia/en/7/70/RoboMaster-official-logo.png",
+    image: "/imgs/RoboMaster.png",
     title: "Second Prize in the National Competition at the RoboMaster",
     content:
       "* Led computer vision algorithm team to build real-time target recognition and tracking system for edge devices.\n" +
@@ -114,7 +111,7 @@ const honors = [
     timestamp: "2020",
   },
   {
-    image: "http://www.ercc.org.cn/skin/default/picture/aboutus-wap.jpg",
+    image: "/imgs/ercc.jpg",
     title:
       'Second Prize in the National 9th "China Education Robot Competition"',
     content:

@@ -3,7 +3,7 @@
  * @Date: 2024-07-17 16:33:08
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
  * @LastEditTime: 2024-07-17 18:19:33
- * @FilePath: /lealaxy.github.io/nuxt.config.ts
+ * @FilePath: /yunhaoli24.github.io/nuxt.config.ts
  * @Description:
  */
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config

@@ -5,3 +5,4 @@ dist
 .nuxt
 .vercel
 .idea
+.DS_Store

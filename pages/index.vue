@@ -2,8 +2,8 @@
  * @Author: li.yunhao
  * @Date: 2024-07-17 16:33:08
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-17 17:58:02
- * @FilePath: /lealaxy.github.io/pages/index.vue
+ * @LastEditTime: 2024-07-24 11:23:44
+ * @FilePath: /yunhaoli24.github.io/pages/index.vue
  * @Description: 
 -->
 <template>
@@ -13,35 +13,14 @@
         <Nav />
       </el-header>
       <el-main class="content">
-        <el-row>
+        <el-row v-if="!isMobile">
           <el-col :span="12" :offset="6">
-            <About class="About" />
-            <el-divider />
-          </el-col>
-          <el-col :span="12" :offset="6">
-            <WorkExp class="WorkExp" />
-            <el-divider />
-          </el-col>
-          <el-col :span="12" :offset="6">
-            <Publications class="Publications" />
-            <el-divider />
-          </el-col>
-          <el-col :span="12" :offset="6">
-            <ProgrammingSkills class="ProgrammingSkills" />
-            <el-divider />
-          </el-col>
-          <el-col :span="12" :offset="6">
-            <Education class="Education" />
-            <el-divider />
-          </el-col>
-          <el-col :span="12" :offset="6">
-            <Honors class="Honors" />
-            <el-divider />
-          </el-col>
-          <el-col :span="12" :offset="6">
-            <Footer />
+            <ContentSections />
           </el-col>
         </el-row>
+        <div v-else>
+          <ContentSections />
+        </div>
       </el-main>
     </el-container>
   </div>
@@ -59,4 +38,7 @@
   overflow-y: scroll;
 }
 </style>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { width, height } = useWindowSize();
+const isMobile = computed(() => width.value < 760);
+</script>

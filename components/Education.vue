@@ -2,8 +2,8 @@
  * @Author: li.yunhao
  * @Date: 2024-07-17 17:41:02
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-23 15:54:11
- * @FilePath: /lealaxy.github.io/components/Education.vue
+ * @LastEditTime: 2024-07-24 09:45:39
+ * @FilePath: /yunhaoli24.github.io/components/Education.vue
  * @Description: 
 -->
 <template>
@@ -42,7 +42,7 @@ const educations = [
     title: "Master of Artificial Intelligence",
     school: "GuangZhou University",
     content:
-      "* Major in Artificial Intelligence\n* Advisor: [Yan Pang](https://pangyan.me)\n* GPA 3.65/4",
+      "* Major in Artificial Intelligence\n* Advisor: [Yan Pang](https://pangyan.me)\n* GPA 3.61/4",
     timestamp: "2022-2025",
   },
   {

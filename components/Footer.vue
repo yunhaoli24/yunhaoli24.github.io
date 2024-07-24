@@ -3,7 +3,7 @@
  * @Date: 2024-07-17 17:57:38
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
  * @LastEditTime: 2024-07-17 18:42:14
- * @FilePath: /lealaxy.github.io/components/Footer.vue
+ * @FilePath: /yunhaoli24.github.io/components/Footer.vue
  * @Description: 
 -->
 <template>

@@ -2,8 +2,8 @@
  * @Author: li.yunhao
  * @Date: 2024-07-17 18:01:46
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-23 22:49:56
- * @FilePath: /lealaxy.github.io/components/SocialMediaLinks.vue
+ * @LastEditTime: 2024-07-24 09:44:29
+ * @FilePath: /yunhaoli24.github.io/components/SocialMediaLinks.vue
  * @Description: 
 -->
 <template>
@@ -35,7 +35,7 @@
         <font-awesome-icon icon="envelope" />
       </el-icon>
     </a>
-    <a href="https://t.me/lealaxy" target="_blank" rel="noopener noreferrer">
+    <a href="https://t.me/yunhaoli24" target="_blank" rel="noopener noreferrer">
       <el-icon color="#409efc" class="no-inherit" :size="20">
         <font-awesome-icon icon="fa-brands fa-telegram" />
       </el-icon>
