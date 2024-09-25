@@ -1,58 +1,58 @@
 {
-  "name": "yunhaoli-bolg",
-  "version": "0.1.0",
-  "description": "Yunhao Li Blog",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/yunhaoli24/yunhaoli24.github.io"
-  },
-  "author": "Yunhao Li",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "preview": "nuxi preview",
-    "start": "node .output/server/index.mjs",
-    "generate": "nuxi generate",
-    "postinstall": "nuxi prepare",
-    "ghpage": "nuxt build --preset github_pages",
-    "prettier": "prettier . --write"
-  },
-  "dependencies": {
-    "@element-plus/icons-vue": "^2.3.1",
-    "@fortawesome/fontawesome-svg-core": "^6.6.0",
-    "@fortawesome/free-brands-svg-icons": "^6.6.0",
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
-    "element-plus": "^2.7.7",
-    "marked": "13.0.2"
-  },
-  "devDependencies": {
-    "@element-plus/nuxt": "^1.0.9",
-    "@fortawesome/vue-fontawesome": "^3.0.8",
-    "@nuxtjs/color-mode": "^3.4.2",
-    "@pinia/nuxt": "^0.5.1",
-    "@unocss/nuxt": "^0.58.9",
-    "@vesp/nuxt-fontawesome": "^1.0.4",
-    "@vueuse/nuxt": "^10.11.0",
-    "consola": "^3.2.3",
-    "nuxt": "^3.12.3",
-    "nuxt-gtag": "^2.0.7",
-    "prettier": "3.3.3",
-    "sass": "^1.77.8",
-    "typescript": "^5.5.3"
-  },
-  "peerDependencies": {
-    "pinia": "^2.1.6"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "webpack",
-        "vite",
-        "vue"
-      ]
+    "name": "yunhaoli-bolg",
+    "version": "0.1.0",
+    "description": "Yunhao Li Blog",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/yunhaoli24/yunhaoli24.github.io"
+    },
+    "author": "Yunhao Li",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "preinstall": "npx only-allow pnpm",
+        "dev": "nuxi dev",
+        "build": "nuxi build",
+        "preview": "nuxi preview",
+        "start": "node .output/server/index.mjs",
+        "generate": "nuxi generate",
+        "postinstall": "nuxi prepare",
+        "ghpage": "nuxt build --preset github_pages",
+        "prettier": "prettier . --write"
+    },
+    "dependencies": {
+        "@element-plus/icons-vue": "^2.3.1",
+        "@fortawesome/fontawesome-svg-core": "^6.6.0",
+        "@fortawesome/free-brands-svg-icons": "^6.6.0",
+        "@fortawesome/free-solid-svg-icons": "^6.6.0",
+        "element-plus": "^2.8.2",
+        "marked": "^14.1.1"
+    },
+    "devDependencies": {
+        "@element-plus/nuxt": "^1.0.10",
+        "@fortawesome/vue-fontawesome": "^3.0.8",
+        "@nuxtjs/color-mode": "^3.4.4",
+        "@pinia/nuxt": "^0.5.4",
+        "@unocss/nuxt": "^0.58.9",
+        "@vesp/nuxt-fontawesome": "^1.1.0",
+        "@vueuse/nuxt": "^11.0.3",
+        "consola": "^3.2.3",
+        "nuxt": "^3.13.1",
+        "nuxt-gtag": "^3.0.1",
+        "prettier": "3.3.3",
+        "sass": "^1.78.0",
+        "typescript": "^5.5.4"
+    },
+    "peerDependencies": {
+        "pinia": "^2.1.6"
+    },
+    "pnpm": {
+        "peerDependencyRules": {
+            "ignoreMissing": [
+                "webpack",
+                "vite",
+                "vue"
+            ]
+        }
     }
-  }
 }

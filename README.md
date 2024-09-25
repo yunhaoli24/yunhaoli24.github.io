@@ -2,4 +2,4 @@
 
 ## Ref
 
-- [element-plus-nuxt-starter](https://github.com/element-plus/element-plus-nuxt-starter)
+-   [element-plus-nuxt-starter](https://github.com/element-plus/element-plus-nuxt-starter)

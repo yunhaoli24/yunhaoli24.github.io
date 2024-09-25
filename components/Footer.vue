@@ -7,21 +7,24 @@
  * @Description: 
 -->
 <template>
-  <div>
-    <div class="title text-center" style="font-size: xx-large">Yunhao Li</div>
-    <br />
-    <div class="title text-center"><SocialMediaLinks /></div>
-    <div class="text-center text-muted">
-      <p>
-        &copy; 2021 - {{ currentYear }} Yunhao Li All Rights Reserved.<br />
-      </p>
+    <div>
+        <div class="title text-center" style="font-size: xx-large">
+            Yunhao Li
+        </div>
+        <br />
+        <div class="title text-center"><SocialMediaLinks /></div>
+        <div class="text-center text-muted">
+            <p>
+                &copy; 2021 - {{ currentYear }} Yunhao Li All Rights
+                Reserved.<br />
+            </p>
+        </div>
     </div>
-  </div>
 </template>
 <script setup>
 const currentYear = computed(() => {
-  let now = new Date();
-  return now.getFullYear();
-});
+    let now = new Date()
+    return now.getFullYear()
+})
 </script>
 <style lang=""></style>
