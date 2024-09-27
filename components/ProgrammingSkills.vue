@@ -11,7 +11,16 @@
                 kubesphere, CI/CD
             </li>
             <li>
-                Contribute to
+                Contribute to:
+                <a
+                    href="https://github.com/run-llama/llama_index"
+                    target="_blank"
+                    style="color: inherit; text-decoration: none"
+                    >LlamaIndex 
+                    <img
+                        src="https://img.shields.io/github/stars/run-llama/llama_index?style=flat"
+                /></a>
+                &nbsp;
                 <a
                     href="https://github.com/hiyouga/LLaMA-Factory"
                     target="_blank"
@@ -22,7 +31,7 @@
                 /></a>
                 &nbsp;
                 <a
-                    href="https://github.com/hiyouga/LLaMA-Factory"
+                    href="https://github.com/ymcui/Chinese-LLaMA-Alpaca"
                     target="_blank"
                     style="color: inherit; text-decoration: none"
                     >Chinese-LLaMA-Alpaca
