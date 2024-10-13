@@ -2,7 +2,7 @@
  * @Author: li.yunhao
  * @Date: 2024-07-17 17:06:05
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-24 11:06:03
+ * @LastEditTime: 2024-10-13 16:58:38
  * @FilePath: /yunhaoli24.github.io/components/Nav.vue
  * @Description: 
 -->
@@ -10,9 +10,9 @@
     <ClientOnly>
         <el-menu mode="horizontal" :ellipsis="false">
             <el-menu-item index="0">
-                <nuxt-link to="/">
-                    <el-text size="large">Yunhao Li</el-text>
-                </nuxt-link>
+                <!-- <nuxt-link to="/"> -->
+                <el-text size="large">Yunhao Li</el-text>
+                <!-- </nuxt-link> -->
             </el-menu-item>
             <el-menu-item
                 v-for="item in menuItems"
@@ -60,9 +60,7 @@ const colorMode = computed({
     set: () => (color.preference = color.value === 'dark' ? 'light' : 'dark'),
 })
 const scrollTo = (index: any) => {
-    console.log(index.index)
     const element = document.querySelector(`.${index.index}`)
-    console.log(element)
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
     }

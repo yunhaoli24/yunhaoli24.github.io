@@ -25,23 +25,23 @@
         "@fortawesome/fontawesome-svg-core": "^6.6.0",
         "@fortawesome/free-brands-svg-icons": "^6.6.0",
         "@fortawesome/free-solid-svg-icons": "^6.6.0",
-        "element-plus": "^2.8.2",
-        "marked": "^14.1.1"
+        "element-plus": "^2.8.5",
+        "marked": "^14.1.2"
     },
     "devDependencies": {
         "@element-plus/nuxt": "^1.0.10",
         "@fortawesome/vue-fontawesome": "^3.0.8",
-        "@nuxtjs/color-mode": "^3.4.4",
-        "@pinia/nuxt": "^0.5.4",
+        "@nuxtjs/color-mode": "^3.5.1",
+        "@pinia/nuxt": "^0.5.5",
         "@unocss/nuxt": "^0.58.9",
         "@vesp/nuxt-fontawesome": "^1.1.0",
-        "@vueuse/nuxt": "^11.0.3",
+        "@vueuse/nuxt": "^11.1.0",
         "consola": "^3.2.3",
-        "nuxt": "^3.13.1",
+        "nuxt": "^3.13.2",
         "nuxt-gtag": "^3.0.1",
         "prettier": "3.3.3",
-        "sass": "^1.78.0",
-        "typescript": "^5.5.4"
+        "sass": "^1.79.5",
+        "typescript": "^5.6.3"
     },
     "peerDependencies": {
         "pinia": "^2.1.6"

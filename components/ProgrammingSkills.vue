@@ -16,7 +16,7 @@
                     href="https://github.com/run-llama/llama_index"
                     target="_blank"
                     style="color: inherit; text-decoration: none"
-                    >LlamaIndex 
+                    >LlamaIndex
                     <img
                         src="https://img.shields.io/github/stars/run-llama/llama_index?style=flat"
                 /></a>

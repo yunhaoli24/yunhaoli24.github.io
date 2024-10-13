@@ -52,11 +52,11 @@
                                 v-html="marked(patent.title)"
                                 class="markdown_inline"
                                 :style="`font-size: var(--el-font-size-large)`"
-                            /><br />
+                            />
                             <span
                                 v-html="marked(patent.author)"
                                 class="markdown_inline"
-                            /><br />
+                            />
                             <el-space>
                                 <el-tag type="info">{{ patent.id }}</el-tag>
                                 <a
@@ -122,6 +122,27 @@ const honors = [
     },
 ]
 const patents = [
+    {
+        title: 'A medical image segmentation method, device, and medium.',
+        author: '**Yunhao Li**, Jiaming Liang, Junming Yan, Yan Pang, Changyu Dong, Teng Huang, Zheng Zhang.',
+        id: 'CN118552553A',
+        link: 'https://patentimages.storage.googleapis.com/ec/61/c8/623098bbaf4de0/CN118552553A.pdf',
+        timestamp: '2024',
+    },
+    {
+        title: 'Method, device, apparatus, and medium for rapid segmentation of breast lesion features in medical video.',
+        author: 'JiamingLiang, Yan Pang, Teng Hunag, Ziyu Ding, Zhenyu Lu, **Yunhao Li**, Weiqing Kong, Wang Yang.',
+        id: 'CN118537769A',
+        link: 'https://patentimages.storage.googleapis.com/bc/72/15/a9fd6a41855a72/CN118537769A.pdf',
+        timestamp: '2024',
+    },
+    {
+        title: 'Self-distilling and self-learning medical image segmentation method, device, and storage medium',
+        author: 'Yan Pang, Changyu Dong, Teng Huang, **Yunhao Li**, Jiahui Huang, Hui Li, Caiyan Tang.',
+        id: 'CN118587232A',
+        link: 'https://patentimages.storage.googleapis.com/5b/b4/7d/3cfcf7dc071b3c/CN118587232A.pdf',
+        timestamp: '2024',
+    },
     {
         title: 'A Deep Learning-Based Method and System for Satellite Anomaly Traffic Detection',
         author: 'HongYang Yan, Cong Wang, **Yunhao Li**, Weichuan Mo, Cong Li, Haiyang Wang, Yu Wang, Teng Huang.',

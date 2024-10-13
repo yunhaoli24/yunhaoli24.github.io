@@ -28,7 +28,7 @@
                             target="_blank"
                             v-if="publication.code_link"
                         >
-                        <font-awesome-icon icon="fa-brands fa-github" />
+                            <font-awesome-icon icon="fa-brands fa-github" />
                         </a>
                         <el-tag v-if="publication.journal">
                             {{ publication.journal }}
@@ -64,7 +64,8 @@ const publications = [
     {
         title: 'IPM: An Intelligent Component for 3D Brain Tumor Segmentation Integrating Semantic Extractor and Pixel Refiner',
         author: '**Yunhao Li**, Caiyan Tan, Mingdu Zhang, Xi Zhang, Teng Huang ,Xiao-Qing Pei, Yan Pang.',
-        journal_name: 'Chinese Conference on Pattern Recognition and Computer Vision',
+        journal_name:
+            'Chinese Conference on Pattern Recognition and Computer Vision',
         // pdf_link: "https://ieeexplore.ieee.org/abstract/document/10288609/",
         // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
         // IF: "10.4",
@@ -86,7 +87,8 @@ const publications = [
     {
         title: 'CAM-PC: A novel method for camouflaging point clouds to counter adversarial deception in remote sensing',
         author: 'Bo Wei, Teng Huang, Xi Zhang, Jiaming Liang, **Yunhao Li**, Cong Cao, Dan Li, Yongfeng Chen, Huagang Xiong, Feng Jiang, Xiqiu Zhang.',
-        journal_name: 'IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing',
+        journal_name:
+            'IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing',
         pdf_link:
             'https://ieeexplore.ieee.org/iel7/4609443/4609444/10285331.pdf',
         // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
@@ -98,7 +100,8 @@ const publications = [
     {
         title: 'AgileNet: A Rapid and Efficient Breast Lesion Segmentation Method for Medical Image Analysis',
         author: 'Jiaming Liang, Teng Huang, Dan Li, Ziyu Ding, **Yunhao Li**, Lin Huang, Qiong Wang, Xi Zhang.',
-        journal_name: 'Chinese Conference on Pattern Recognition and Computer Vision',
+        journal_name:
+            'Chinese Conference on Pattern Recognition and Computer Vision',
         pdf_link:
             'https://link.springer.com/chapter/10.1007/978-981-99-8469-5_33',
         // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
