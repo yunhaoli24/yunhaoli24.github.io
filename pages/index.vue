@@ -2,7 +2,7 @@
  * @Author: li.yunhao
  * @Date: 2024-07-17 16:33:08
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-24 11:23:44
+ * @LastEditTime: 2024-10-19 11:05:42
  * @FilePath: /yunhaoli24.github.io/pages/index.vue
  * @Description: 
 -->
@@ -39,6 +39,34 @@
 }
 </style>
 <script setup lang="ts">
+const description =
+    'The CV of Yunhao Li, a passionate researcher who love to use programming skills and creativity to solve problems.'
+const image = 'https://peterli.club/profile.JPG'
+useSeoMeta({
+    description: description,
+    ogTitle: 'Yunhao Li',
+    ogDescription: description,
+    ogImage: image,
+    ogUrl: 'https://peterli.club',
+    twitterTitle: 'Yunhao Li',
+    twitterDescription: description,
+    twitterImage: image,
+    twitterCard: 'summary',
+})
+
+useHead({
+    htmlAttrs: {
+        lang: 'en',
+    },
+    link: [
+        {
+            rel: 'icon',
+            type: 'image/x-icon',
+            href: '/favicon.ico',
+        },
+    ],
+})
+
 const { width, height } = useWindowSize()
 const isMobile = computed(() => width.value < 760)
 </script>

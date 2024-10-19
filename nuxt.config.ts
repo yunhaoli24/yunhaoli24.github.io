@@ -2,7 +2,7 @@
  * @Author: li.yunhao
  * @Date: 2024-07-17 16:33:08
  * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-17 18:19:33
+ * @LastEditTime: 2024-10-19 10:57:07
  * @FilePath: /yunhaoli24.github.io/nuxt.config.ts
  * @Description:
  */
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
                     name: 'twitter:image',
                     content: `https://peterli.club/og_image.jpeg`,
                 },
-                { name: 'twitter:creator', content: `@Eason_C13` },
+                { name: 'twitter:creator', content: `@YunhaoLi` },
                 {
                     name: 'google-site-verification',
                     content: 'auUb0qKw6LnnH0N_zrY9XhA4BAbFBAH6CnbY-kiUM0Y',
@@ -98,6 +98,7 @@ export default defineNuxtConfig({
         css: {
             preprocessorOptions: {
                 scss: {
+                    api: 'modern-compiler',
                     additionalData: `@use "@/assets/scss/element/index.scss" as element;`,
                 },
             },
@@ -113,6 +114,12 @@ export default defineNuxtConfig({
     gtag: {
         id: 'G-SHRXZRGLKR',
     },
-    devtools: { enabled: true },
+    devtools: {
+        enabled: true,
+
+        timeline: {
+            enabled: true,
+        },
+    },
     compatibilityDate: '2024-07-17',
 })
