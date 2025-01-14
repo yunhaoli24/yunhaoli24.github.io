@@ -14,50 +14,31 @@
                 <el-text size="large">Yunhao Li</el-text>
                 <!-- </nuxt-link> -->
             </el-menu-item>
-            <el-menu-item
-                v-for="item in menuItems"
-                v-if="!isMobile"
-                :key="item.index"
-                :index="item.index"
-                @click="scrollTo"
-                >{{ item.label }}</el-menu-item
-            >
+            <el-menu-item v-for="item in menuItems" v-if="!isMobile" :key="item.index" :index="item.index"
+                @click="scrollTo">{{ item.label }}</el-menu-item>
             <el-sub-menu v-if="isMobile" index="2">
                 <template #title>Workspace</template>
-                <el-menu-item
-                    v-for="item in menuItems"
-                    :key="item.index"
-                    :index="item.index"
-                    @click="scrollTo"
-                    >{{ item.label }}</el-menu-item
-                >
+                <el-menu-item v-for="item in menuItems" :key="item.index" :index="item.index" @click="scrollTo">{{
+                    item.label
+                }}</el-menu-item>
             </el-sub-menu>
             <div class="flex-grow" />
             <el-menu-item index="2">
-                <el-switch
-                    v-model="colorMode"
-                    inline-prompt
-                    :active-action-icon="Moon"
-                    :inactive-action-icon="Sunny"
-                    style="
-                        --el-switch-on-color: #272727;
-                        --el-switch-off-color: #f0f0f0;
-                    "
-                    size="large"
-                ></el-switch
-            ></el-menu-item>
+                <el-switch v-model="colorMode" inline-prompt :active-action-icon="Moon" :inactive-action-icon="Sunny"
+                    class="dark:[--el-switch-on-color:#272727] light:[--el-switch-off-color:#f0f0f0]"
+                    size="large" /></el-menu-item>
         </el-menu>
     </ClientOnly>
 </template>
 
 <script lang="ts" setup>
+import { useDevice } from '~/composables/useDevice'
 import { Moon, Sunny } from '@element-plus/icons-vue'
-const { width, height } = useWindowSize()
-const isMobile = computed(() => width.value < 760)
+const { isMobile } = useDevice()
 const color = useColorMode()
 const colorMode = computed({
     get: () => color.value === 'dark',
-    set: () => (color.preference = color.value === 'dark' ? 'light' : 'dark'),
+    set: () => color.value = color.value === 'dark' ? 'light' : 'dark',
 })
 const scrollTo = (index: any) => {
     const element = document.querySelector(`.${index.index}`)
@@ -74,5 +55,3 @@ const menuItems = ref([
     { index: 'Honors', label: 'Honors' },
 ])
 </script>
-
-<style></style>

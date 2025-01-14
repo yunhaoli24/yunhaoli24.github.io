@@ -8,23 +8,24 @@
 -->
 <template>
     <div>
-        <div class="title text-center" style="font-size: xx-large">
+        <div class="text-center text-4xl">
             Yunhao Li
         </div>
-        <br />
-        <div class="title text-center"><SocialMediaLinks /></div>
-        <div class="text-center text-muted">
+        <br>
+        <div class="text-center">
+            <SocialMediaLinks />
+        </div>
+        <div class="text-center mt-2">
             <p>
-                &copy; 2021 - {{ currentYear }} Yunhao Li All Rights
-                Reserved.<br />
+                &copy; 2018 - {{ currentYear }} Yunhao Li All Rights
+                Reserved.<br>
             </p>
         </div>
     </div>
 </template>
 <script setup>
 const currentYear = computed(() => {
-    let now = new Date()
+    const now = new Date()
     return now.getFullYear()
 })
 </script>
-<style lang=""></style>

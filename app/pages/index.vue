@@ -7,14 +7,14 @@
  * @Description: 
 -->
 <template>
-    <div class="app-wrapper">
+    <div class="w-full h-full">
         <el-container>
             <el-header class="header">
                 <Nav />
             </el-header>
-            <el-main class="content">
+            <el-main class="relative w-full h-[calc(100vh-60px)] overflow-y-scroll">
                 <el-row v-if="!isMobile">
-                    <el-col :span="12" :offset="6">
+                    <el-col :span="18" :offset="3">
                         <ContentSections />
                     </el-col>
                 </el-row>
@@ -26,31 +26,20 @@
     </div>
 </template>
 
-<style>
-.app-wrapper {
-    width: 100%;
-    height: 100%;
-}
-.content {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 60px);
-    overflow-y: scroll;
-}
-</style>
 <script setup lang="ts">
+import { useDevice } from '~/composables/useDevice'
+
 const description =
     'The CV of Yunhao Li, a passionate researcher who love to use programming skills and creativity to solve problems.'
-const image = 'https://peterli.club/profile.JPG'
 useSeoMeta({
     description: description,
     ogTitle: 'Yunhao Li',
     ogDescription: description,
-    ogImage: image,
+    ogImage: 'https://peterli.club/profile.JPG',
     ogUrl: 'https://peterli.club',
     twitterTitle: 'Yunhao Li',
     twitterDescription: description,
-    twitterImage: image,
+    twitterImage: 'https://peterli.club/profile.JPG',
     twitterCard: 'summary',
 })
 
@@ -67,6 +56,5 @@ useHead({
     ],
 })
 
-const { width, height } = useWindowSize()
-const isMobile = computed(() => width.value < 760)
+const { isMobile } = useDevice()
 </script>

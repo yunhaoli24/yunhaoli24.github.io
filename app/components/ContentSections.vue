@@ -7,7 +7,6 @@
  * @Description: 
 -->
 <template>
-    <!-- <el-divider style="opacity: 0" /> -->
     <About class="About" />
     <el-divider />
     <ProgrammingSkills class="ProgrammingSkills" />
@@ -24,5 +23,3 @@
 </template>
 
 <script setup lang="ts"></script>
-
-<style></style>

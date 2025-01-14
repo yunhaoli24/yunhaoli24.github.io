@@ -8,18 +8,14 @@
 -->
 <template>
     <div>
-        <h1>About</h1>
+        <div class="text-4xl mb-8">About</div>
         <el-row :gutter="20">
             <el-col :span="isMobile ? 24 : 8">
-                <el-image
-                    style="width: 100%; max-width: 300px; height: 400px"
-                    src="/profile.JPG"
-                    fit="fill"
-                />
+                <el-image class="w-full max-w-300px inline-block" src="/profile.JPG" fit="contain" />
             </el-col>
             <el-col :span="isMobile ? 24 : 16">
-                <div :style="`font-size: var(--el-font-size-large)`">
-                    <p style="text-indent: 2em">
+                <div class="text-l">
+                    <p class="indent-2em">
                         Hi, my name is Yunhao Li. I am currently pursuing a
                         Master of Science in Artificial Intelligence at
                         Guangzhou University. My research interests focus on
@@ -32,14 +28,14 @@
                         help others reach their full their potential through
                         education.
                     </p>
-                    <SocialMediaLinks style="float: right" />
+                    <SocialMediaLinks class="float-right" />
                 </div>
             </el-col>
         </el-row>
     </div>
 </template>
 <script setup lang="ts">
-const { width, height } = useWindowSize()
-const isMobile = computed(() => width.value < 760)
+import { useDevice } from '~/composables/useDevice'
+
+const { isMobile } = useDevice()
 </script>
-<style></style>

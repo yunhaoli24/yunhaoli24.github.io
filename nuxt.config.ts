@@ -17,10 +17,6 @@ export default defineNuxtConfig({
             title: 'Yunhao Li',
             meta: [
                 { charset: 'utf-8' },
-                {
-                    name: 'viewport',
-                    content: 'width=device-width, initial-scale=1',
-                },
                 { name: 'title', content: `Yunhao Li` },
                 {
                     name: 'description',
@@ -56,24 +52,18 @@ export default defineNuxtConfig({
     },
 
     // css
-    css: [
-        '~/assets/scss/index.scss',
-        '@fortawesome/fontawesome-svg-core/styles.css',
-    ],
-
-    typescript: {
-        strict: true,
-        shim: false,
-    },
+    css: ['@unocss/reset/tailwind.css', '~/assets/scss/index.scss'],
 
     // build modules
     modules: [
         'nuxt-gtag',
+        '@nuxt/eslint',
         '@vueuse/nuxt',
         '@unocss/nuxt',
         '@pinia/nuxt',
         '@element-plus/nuxt',
         '@nuxtjs/color-mode',
+        '@nuxt/icon',
     ],
 
     // vueuse
@@ -121,5 +111,16 @@ export default defineNuxtConfig({
             enabled: true,
         },
     },
-    compatibilityDate: '2024-07-17',
+    future: {
+        compatibilityVersion: 4,
+    },
+    experimental: {
+        // when using generate, payload js assets included in sw precache manifest
+        // but missing on offline, disabling extraction it until fixed
+        payloadExtraction: false,
+        renderJsonPayloads: true,
+        typedPages: true,
+    },
+
+    compatibilityDate: '2024-08-14',
 })

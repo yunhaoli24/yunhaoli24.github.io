@@ -8,34 +8,23 @@
 -->
 <template>
     <div>
-        <h1>Education</h1>
+        <div class="text-4xl mb-8">Education</div>
         <el-timeline>
-            <el-timeline-item
-                v-for="(education, index) in educations"
-                :key="index"
-                :timestamp="education.timestamp"
-                placement="top"
-            >
+            <el-timeline-item v-for="(education, index) in educations" :key="index" :timestamp="education.timestamp"
+                placement="top">
                 <el-card>
                     <template #header>
                         <div class="card-header">
-                            <span
-                                :style="`font-size: var(--el-font-size-extra-large)`"
-                            >
+                            <span class="text-xl">
                                 {{ education.title }}
                             </span>
-                            <br />
-                            <span
-                                :style="`font-size: var(--el-font-size-large)`"
-                            >
+                            <br>
+                            <span class="text-lg">
                                 {{ education.school }}
                             </span>
                         </div>
                     </template>
-                    <span
-                        v-html="marked(education.content)"
-                        class="markdown_inline"
-                    />
+                    <span class="markdown_inline" v-html="marked(education.content)" />
                 </el-card>
             </el-timeline-item>
         </el-timeline>
@@ -60,4 +49,3 @@ const educations = [
     },
 ]
 </script>
-<style lang=""></style>

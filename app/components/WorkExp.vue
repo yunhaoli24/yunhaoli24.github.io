@@ -8,48 +8,29 @@
 -->
 <template>
     <div>
-        <h1>Work Experience</h1>
-        <el-timeline>
-            <el-timeline-item
-                v-for="(work, index) in works"
-                :key="index"
-                :timestamp="work.timestamp"
-                placement="top"
-            >
-                <el-card>
+        <div class="text-4xl mb-8">Work Experience</div>
+        <el-timeline class="space-y-4">
+            <el-timeline-item v-for="(work, index) in works" :key="index" :timestamp="work.timestamp" placement="top">
+                <el-card class="mb-4">
                     <template #header>
-                        <div class="card-header">
-                            <el-row :gutter="20">
+                        <div class="card-header p-4">
+                            <el-row class="gap-5">
                                 <el-col :span="3">
                                     <el-image :src="work.image" fit="fill" />
                                 </el-col>
-                                <el-col
-                                    :span="21"
-                                    style="
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
-                                    "
-                                >
-                                    <span
-                                        :style="`font-size: var(--el-font-size-extra-large)`"
-                                    >
+                                <el-col :span="21" class="flex flex-col justify-center">
+                                    <span class="text-xl">
                                         {{ work.job }}
                                     </span>
-                                    <br />
-                                    <span
-                                        :style="`font-size: var(--el-font-size-large)`"
-                                    >
+                                    <br>
+                                    <span class="text-lg">
                                         {{ work.title }}
                                     </span>
                                 </el-col>
                             </el-row>
                         </div>
                     </template>
-                    <span
-                        v-html="marked(work.content)"
-                        class="markdown_inline"
-                    />
+                    <span class="markdown_inline" v-html="marked(work.content)" />
                 </el-card>
             </el-timeline-item>
         </el-timeline>
@@ -71,4 +52,3 @@ const works = [
     },
 ]
 </script>
-<style lang=""></style>

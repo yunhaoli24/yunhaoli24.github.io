@@ -1,13 +1,9 @@
 <template>
     <div>
-        <h1>Honors & Awards</h1>
+        <div class="text-4xl mb-8">Honors & Awards</div>
         <el-timeline>
-            <el-timeline-item
-                v-for="(honor, index) in honors"
-                :key="index"
-                :timestamp="honor.timestamp"
-                placement="top"
-            >
+            <el-timeline-item v-for="(honor, index) in honors" :key="index" :timestamp="honor.timestamp"
+                placement="top">
                 <el-card>
                     <template #header>
                         <div class="card-header">
@@ -15,57 +11,30 @@
                                 <el-col :span="3">
                                     <el-image :src="honor.image" fit="fill" />
                                 </el-col>
-                                <el-col
-                                    :span="21"
-                                    :style="`font-size: var(--el-font-size-extra-large)`"
-                                    style="display: flex; align-items: center"
-                                >
+                                <el-col :span="21" class="text-xl flex items-center">
                                     {{ honor.title }}
                                 </el-col>
                             </el-row>
                         </div>
                     </template>
-                    <span
-                        v-html="marked(honor.content)"
-                        class="markdown_inline"
-                    />
+                    <span class="markdown_inline" v-html="marked(honor.content)" />
                 </el-card>
             </el-timeline-item>
         </el-timeline>
 
         <h1>Patent</h1>
         <el-collapse accordion>
-            <el-collapse-item
-                :title="patentCollapseTitle"
-                name="1"
-                @click="patentHide = !patentHide"
-            >
+            <el-collapse-item :title="patentCollapseTitle" name="1" @click="patentHide = !patentHide">
                 <el-timeline>
-                    <el-timeline-item
-                        v-for="(patent, index) in patents"
-                        :key="index"
-                        :timestamp="patent.timestamp"
-                        placement="top"
-                    >
+                    <el-timeline-item v-for="(patent, index) in patents" :key="index" :timestamp="patent.timestamp"
+                        placement="top">
                         <el-card>
-                            <span
-                                v-html="marked(patent.title)"
-                                class="markdown_inline"
-                                :style="`font-size: var(--el-font-size-large)`"
-                            />
-                            <span
-                                v-html="marked(patent.author)"
-                                class="markdown_inline"
-                            />
+                            <span class="markdown_inline text-lg" v-html="marked(patent.title)" />
+                            <span class="markdown_inline" v-html="marked(patent.author)" />
                             <el-space>
                                 <el-tag type="info">{{ patent.id }}</el-tag>
-                                <a
-                                    :href="patent.link"
-                                    target="_blank"
-                                    class="link-primary"
-                                    title="PDF"
-                                >
-                                    <font-awesome-icon icon="file-pdf" />
+                                <a :href="patent.link" target="_blank" class="link-primary" title="PDF">
+                                    <Icon name="lsicon:file-pdf-outline" />
                                 </a>
                             </el-space>
                         </el-card>
@@ -77,7 +46,6 @@
 </template>
 <script setup>
 import { marked } from 'marked'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const honors = [
     {
@@ -185,4 +153,3 @@ const patentCollapseTitle = computed(() => {
     return patentHide.value === false ? 'Toggle to expand' : 'Toggle to hied'
 })
 </script>
-<style lang=""></style>

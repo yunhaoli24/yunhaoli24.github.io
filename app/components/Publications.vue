@@ -1,34 +1,19 @@
 <template>
-    <div id="Publications">
-        <h2>Publications</h2>
+    <div>
+        <div class="text-4xl mb-8 font-bold">Publications</div>
         <el-timeline>
-            <el-timeline-item
-                v-for="(publication, index) in publications"
-                :key="index"
-                :timestamp="publication.timestamp"
-                placement="top"
-            >
+            <el-timeline-item v-for="(publication, index) in publications" :key="index"
+                :timestamp="publication.timestamp" placement="top">
                 <el-card>
-                    <span
-                        v-html="marked(publication.title)"
-                        :style="`font-size: var(--el-font-size-large)`"
-                    />
-                    <span v-html="marked(publication.author)" />
-                    <span v-html="marked(publication.journal_name)" />
+                    <span class="text-lg font-semibold" v-html="marked(publication.title)" />
+                    <span class="text-base" v-html="marked(publication.author)" />
+                    <span class="text-base" v-html="marked(publication.journal_name)" />
                     <el-space>
-                        <a
-                            :href="publication.pdf_link"
-                            target="_blank"
-                            v-if="publication.pdf_link"
-                        >
-                            <font-awesome-icon icon="file-pdf" />
+                        <a v-if="publication.pdf_link" :href="publication.pdf_link" target="_blank">
+                            <Icon name="lsicon:file-pdf-outline" />
                         </a>
-                        <a
-                            :href="publication.code_link"
-                            target="_blank"
-                            v-if="publication.code_link"
-                        >
-                            <font-awesome-icon icon="fa-brands fa-github" />
+                        <a v-if="publication.code_link" :href="publication.code_link" target="_blank">
+                            <Icon name="uil:github" />
                         </a>
                         <el-tag v-if="publication.journal">
                             {{ publication.journal }}
@@ -47,9 +32,20 @@
 </template>
 <script setup lang="ts">
 import { marked } from 'marked'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-const publications = [
+interface Publication {
+    title: string
+    author: string
+    journal_name: string
+    timestamp: string
+    pdf_link?: string
+    code_link?: string
+    journal?: string
+    ccf?: string
+    IF?: string
+}
+
+const publications: Publication[] = [
     {
         title: 'Optimized Breast Lesion Segmentation in Ultrasound Videos Across Varied Resource-Scant Environments',
         author: '**Yunhao Li**, Chen Zibin, Yan Junming, Ding Ziyu, Li Jie ,Pei Xiaoqing, Zhang Zheng, Qiong Wang, Yan Pang.',
@@ -112,4 +108,3 @@ const publications = [
     },
 ]
 </script>
-<style></style>

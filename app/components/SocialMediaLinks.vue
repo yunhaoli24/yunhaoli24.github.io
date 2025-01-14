@@ -14,7 +14,7 @@
             rel="noopener noreferrer"
         >
             <el-icon color="#409efc" class="no-inherit" :size="20">
-                <font-awesome-icon icon="fa-brands fa-github" />
+                <Icon name="uil:github" />
             </el-icon>
         </a>
         <a
@@ -23,7 +23,7 @@
             rel="noopener noreferrer"
         >
             <el-icon color="#409efc" class="no-inherit" :size="20">
-                <font-awesome-icon icon="fa-brands fa-google-scholar" />
+                <Icon name="fa6-brands:google-scholar" />
             </el-icon>
         </a>
         <a
@@ -32,7 +32,7 @@
             rel="noopener noreferrer"
         >
             <el-icon color="#409efc" class="no-inherit" :size="20">
-                <font-awesome-icon icon="envelope" />
+                <Icon name="material-symbols:mail" />
             </el-icon>
         </a>
         <a
@@ -41,12 +41,9 @@
             rel="noopener noreferrer"
         >
             <el-icon color="#409efc" class="no-inherit" :size="20">
-                <font-awesome-icon icon="fa-brands fa-telegram" />
+                <Icon name="ic:baseline-telegram" />
             </el-icon>
         </a>
     </el-space>
 </template>
-<script setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-</script>
-<style lang=""></style>
+<script setup></script>
