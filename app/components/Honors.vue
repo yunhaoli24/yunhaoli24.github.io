@@ -6,35 +6,40 @@
                 placement="top">
                 <el-card>
                     <template #header>
-                        <div class="card-header">
-                            <el-row :gutter="20">
+                        <div>
+                            <el-row class="flex items-center">
                                 <el-col :span="3">
-                                    <el-image :src="honor.image" fit="fill" />
+                                    <div class="max-h-100px max-w-100px overflow-hidden">
+                                        <img class="h-auto w-auto max-h-100px max-w-100px" :src="honor.image"
+                                            fit="fill">
+                                    </div>
                                 </el-col>
-                                <el-col :span="21" class="text-xl flex items-center">
+                                <el-col class="text-2xl" :span="20">
                                     {{ honor.title }}
                                 </el-col>
                             </el-row>
                         </div>
                     </template>
-                    <span class="markdown_inline" v-html="marked(honor.content)" />
+                    <MDC class="text-xl" :value="honor.content" />
                 </el-card>
             </el-timeline-item>
         </el-timeline>
 
-        <h1>Patent</h1>
+        <div class="text-4xl mb-8">Patent</div>
         <el-collapse accordion>
             <el-collapse-item :title="patentCollapseTitle" name="1" @click="patentHide = !patentHide">
                 <el-timeline>
                     <el-timeline-item v-for="(patent, index) in patents" :key="index" :timestamp="patent.timestamp"
                         placement="top">
                         <el-card>
-                            <span class="markdown_inline text-lg" v-html="marked(patent.title)" />
-                            <span class="markdown_inline" v-html="marked(patent.author)" />
+                            <MDC class="text-xl" :value="patent.title" />
+                            <MDC class="text-base" :value="patent.author" />
                             <el-space>
                                 <el-tag type="info">{{ patent.id }}</el-tag>
                                 <a :href="patent.link" target="_blank" class="link-primary" title="PDF">
-                                    <Icon name="lsicon:file-pdf-outline" />
+                                    <el-icon color="#409efc" class="no-inherit" :size="20">
+                                        <Icon name="lsicon:file-pdf-outline" />
+                                    </el-icon>
                                 </a>
                             </el-space>
                         </el-card>
@@ -45,8 +50,6 @@
     </div>
 </template>
 <script setup>
-import { marked } from 'marked'
-
 const honors = [
     {
         image: '/imgs/pazhou.png',

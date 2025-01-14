@@ -10,23 +10,39 @@
     <ClientOnly>
         <el-menu mode="horizontal" :ellipsis="false">
             <el-menu-item index="0">
-                <!-- <nuxt-link to="/"> -->
-                <el-text size="large">Yunhao Li</el-text>
-                <!-- </nuxt-link> -->
+                <nuxt-link to="/">
+                    <el-text size="large">Yunhao Li</el-text>
+                </nuxt-link>
             </el-menu-item>
-            <el-menu-item v-for="item in menuItems" v-if="!isMobile" :key="item.index" :index="item.index"
-                @click="scrollTo">{{ item.label }}</el-menu-item>
+            <template v-if="!isMobile">
+                <el-menu-item
+                    v-for="item in menuItems"
+                    :key="item.index"
+                    :index="item.index"
+                    @click="scrollTo"
+                    >{{ item.label }}</el-menu-item
+                >
+            </template>
             <el-sub-menu v-if="isMobile" index="2">
                 <template #title>Workspace</template>
-                <el-menu-item v-for="item in menuItems" :key="item.index" :index="item.index" @click="scrollTo">{{
-                    item.label
-                }}</el-menu-item>
+                <el-menu-item
+                    v-for="item in menuItems"
+                    :key="item.index"
+                    :index="item.index"
+                    @click="scrollTo"
+                    >{{ item.label }}</el-menu-item
+                >
             </el-sub-menu>
             <div class="flex-grow" />
             <el-menu-item index="2">
-                <el-switch v-model="colorMode" inline-prompt :active-action-icon="Moon" :inactive-action-icon="Sunny"
+                <el-switch
+                    v-model="colorMode"
+                    inline-prompt
+                    :active-action-icon="Moon"
+                    :inactive-action-icon="Sunny"
                     class="dark:[--el-switch-on-color:#272727] light:[--el-switch-off-color:#f0f0f0]"
-                    size="large" /></el-menu-item>
+                    size="large"
+            /></el-menu-item>
         </el-menu>
     </ClientOnly>
 </template>
@@ -38,9 +54,9 @@ const { isMobile } = useDevice()
 const color = useColorMode()
 const colorMode = computed({
     get: () => color.value === 'dark',
-    set: () => color.value = color.value === 'dark' ? 'light' : 'dark',
+    set: () => (color.value = color.value === 'dark' ? 'light' : 'dark'),
 })
-const scrollTo = (index: any) => {
+const scrollTo = (index: { index: string }) => {
     const element = document.querySelector(`.${index.index}`)
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' })

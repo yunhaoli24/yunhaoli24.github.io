@@ -10,35 +10,40 @@
     <div>
         <div class="text-4xl mb-8">Education</div>
         <el-timeline>
-            <el-timeline-item v-for="(education, index) in educations" :key="index" :timestamp="education.timestamp"
-                placement="top">
+            <el-timeline-item
+                v-for="(education, index) in educations"
+                :key="index"
+                :timestamp="education.timestamp"
+                placement="top"
+            >
                 <el-card>
                     <template #header>
-                        <div class="card-header">
-                            <span class="text-xl">
+                        <div>
+                            <span class="text-2xl">
                                 {{ education.title }}
                             </span>
-                            <br>
-                            <span class="text-lg">
+                            <br >
+                            <span class="text-xl">
                                 {{ education.school }}
                             </span>
                         </div>
                     </template>
-                    <span class="markdown_inline" v-html="marked(education.content)" />
+                    <MDC class="text-lg" :value="education.content" />
                 </el-card>
             </el-timeline-item>
         </el-timeline>
     </div>
 </template>
 <script setup>
-import { marked } from 'marked'
-
 const educations = [
     {
         title: 'Master of Artificial Intelligence',
         school: 'GuangZhou University',
-        content:
-            '* Major in Artificial Intelligence\n* Advisor: [Yan Pang](https://pangyan.me)\n* GPA 3.61/4',
+        content: `
+* Major in Artificial Intelligence
+* Advisor: [Yan Pang](https://pangyan.me)
+* GPA 3.61/4 (National Scholarship)
+        `,
         timestamp: '2022-2025',
     },
     {

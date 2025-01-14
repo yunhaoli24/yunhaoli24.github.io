@@ -11,10 +11,14 @@
         <div class="text-4xl mb-8">About</div>
         <el-row :gutter="20">
             <el-col :span="isMobile ? 24 : 8">
-                <el-image class="w-full max-w-300px inline-block" src="/profile.JPG" fit="contain" />
+                <el-image
+                    class="w-full max-w-300px inline-block"
+                    src="/profile.JPG"
+                    fit="contain"
+                />
             </el-col>
             <el-col :span="isMobile ? 24 : 16">
-                <div class="text-l">
+                <div class="text-xl">
                     <p class="indent-2em">
                         Hi, my name is Yunhao Li. I am currently pursuing a
                         Master of Science in Artificial Intelligence at

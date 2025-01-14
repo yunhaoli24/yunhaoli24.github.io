@@ -11,9 +11,9 @@
     <el-divider />
     <ProgrammingSkills class="ProgrammingSkills" />
     <el-divider />
-    <WorkExp class="WorkExp" />
-    <el-divider />
     <Publications class="Publications" />
+    <el-divider />
+    <WorkExp class="WorkExp" />
     <el-divider />
     <Education class="Education" />
     <el-divider />

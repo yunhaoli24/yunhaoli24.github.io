@@ -13,32 +13,35 @@
             <el-timeline-item v-for="(work, index) in works" :key="index" :timestamp="work.timestamp" placement="top">
                 <el-card class="mb-4">
                     <template #header>
-                        <div class="card-header p-4">
-                            <el-row class="gap-5">
+                        <div>
+                            <el-row class="flex items-center">
                                 <el-col :span="3">
-                                    <el-image :src="work.image" fit="fill" />
+                                    <div class="max-h-100px max-w-100px overflow-hidden">
+                                        <img class="h-auto w-auto max-h-100px max-w-100px" :src="work.image" fit="fill">
+                                    </div>
                                 </el-col>
-                                <el-col :span="21" class="flex flex-col justify-center">
-                                    <span class="text-xl">
-                                        {{ work.job }}
-                                    </span>
-                                    <br>
-                                    <span class="text-lg">
-                                        {{ work.title }}
-                                    </span>
+                                <el-col :span="1" />
+                                <el-col :span="20">
+                                    <div class="flex flex-col">
+                                        <span class="text-3xl">
+                                            {{ work.job }}
+                                        </span>
+                                        <span class="text-2xl">
+                                            {{ work.title }}
+                                        </span>
+                                    </div>
                                 </el-col>
                             </el-row>
                         </div>
                     </template>
-                    <span class="markdown_inline" v-html="marked(work.content)" />
+                    <MDC class="text-xl" :value="work.content" />
                 </el-card>
             </el-timeline-item>
         </el-timeline>
     </div>
 </template>
-<script setup>
-import { marked } from 'marked'
 
+<script setup>
 const works = [
     {
         title: 'China Post Bank',

@@ -12,7 +12,9 @@
             <el-header class="header">
                 <Nav />
             </el-header>
-            <el-main class="relative w-full h-[calc(100vh-60px)] overflow-y-scroll">
+            <el-main
+                class="relative w-full h-[calc(100vh-60px)] overflow-y-scroll"
+            >
                 <el-row v-if="!isMobile">
                     <el-col :span="18" :offset="3">
                         <ContentSections />

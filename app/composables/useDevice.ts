@@ -11,6 +11,6 @@ export const useDevice = () => {
     return {
         isMobile,
         isTablet,
-        isDesktop
+        isDesktop,
     }
 }

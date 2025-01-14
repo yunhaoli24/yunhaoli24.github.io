@@ -64,6 +64,7 @@ export default defineNuxtConfig({
         '@element-plus/nuxt',
         '@nuxtjs/color-mode',
         '@nuxt/icon',
+        '@nuxtjs/mdc',
     ],
 
     // vueuse
