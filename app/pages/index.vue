@@ -9,7 +9,7 @@
 <template>
     <div class="w-full h-full">
         <el-container>
-            <el-header class="header">
+            <el-header>
                 <Nav />
             </el-header>
             <el-main

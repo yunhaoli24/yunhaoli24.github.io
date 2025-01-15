@@ -2,20 +2,46 @@
     <div>
         <div class="text-4xl mb-8">Publications</div>
         <el-timeline>
-            <el-timeline-item v-for="(publication, index) in publications" :key="index"
-                :timestamp="publication.timestamp" placement="top">
+            <el-timeline-item
+                v-for="(publication, index) in publications"
+                :key="index"
+                :timestamp="publication.timestamp"
+                placement="top"
+            >
                 <el-card>
-                    <MDC class="text-xl font-semibold" :value="publication.title" />
+                    <MDC
+                        class="text-xl font-semibold"
+                        :value="publication.title"
+                    />
                     <MDC class="text-base" :value="publication.author" />
-                    <MDC class="text-base m-b-2" :value="publication.journal_name" />
-                    <el-space>
-                        <a v-if="publication.pdf_link" :href="publication.pdf_link" target="_blank">
-                            <el-icon color="#409efc" class="no-inherit" :size="20">
+                    <MDC
+                        class="text-base m-b-2"
+                        :value="publication.journal_name"
+                    />
+                    <el-space class="m-b-1 m-t-1">
+                        <a
+                            v-if="publication.pdf_link"
+                            :href="publication.pdf_link"
+                            target="_blank"
+                        >
+                            <el-icon
+                                color="#409efc"
+                                class="no-inherit"
+                                :size="20"
+                            >
                                 <Icon name="lsicon:file-pdf-outline" />
                             </el-icon>
                         </a>
-                        <a v-if="publication.code_link" :href="publication.code_link" target="_blank">
-                            <el-icon color="#409efc" class="no-inherit" :size="20">
+                        <a
+                            v-if="publication.code_link"
+                            :href="publication.code_link"
+                            target="_blank"
+                        >
+                            <el-icon
+                                color="#409efc"
+                                class="no-inherit"
+                                :size="20"
+                            >
                                 <Icon name="uil:github" />
                             </el-icon>
                         </a>
@@ -54,7 +80,7 @@ const publications: Publication[] = [
         journal_name: 'Journal of Biomedical and Health Informatics',
         // pdf_link:
         //     'https://openaccess.thecvf.com/content/ACCV2024/papers/Li_Optimized_Breast_Lesion_Segmentation_in_Ultrasound_Videos_Across_Varied_Resource-Scant_ACCV_2024_paper.pdf',
-        // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
+        code_link: 'https://github.com/deepang-ai/MOD',
         // IF: "10.4",
         journal: 'JBHI',
         // ccf: 'CCF-C',
@@ -66,7 +92,7 @@ const publications: Publication[] = [
         journal_name: 'Asian Conference on Computer Vision',
         pdf_link:
             'https://openaccess.thecvf.com/content/ACCV2024/papers/Li_Optimized_Breast_Lesion_Segmentation_in_Ultrasound_Videos_Across_Varied_Resource-Scant_ACCV_2024_paper.pdf',
-        // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
+        code_link: 'https://github.com/aigzhusmart/Slim-UNETR',
         // IF: "10.4",
         journal: 'ACCV',
         // ccf: 'CCF-C',

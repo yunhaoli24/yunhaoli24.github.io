@@ -32,7 +32,7 @@
                         help others reach their full their potential through
                         education.
                     </p>
-                    <SocialMediaLinks class="float-right" />
+                    <SocialMediaLinks class="float-right" :size="28" />
                 </div>
             </el-col>
         </el-row>

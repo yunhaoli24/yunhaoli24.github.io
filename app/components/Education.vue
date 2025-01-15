@@ -28,7 +28,7 @@
                             </span>
                         </div>
                     </template>
-                    <MDC class="text-lg" :value="education.content" />
+                    <MDC class="text-base" :value="education.content" />
                 </el-card>
             </el-timeline-item>
         </el-timeline>

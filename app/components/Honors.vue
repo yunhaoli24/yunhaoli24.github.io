@@ -1,43 +1,70 @@
 <template>
     <div>
         <div class="text-4xl mb-8">Honors & Awards</div>
-        <el-timeline>
-            <el-timeline-item v-for="(honor, index) in honors" :key="index" :timestamp="honor.timestamp"
-                placement="top">
+        <el-timeline class="space-y-4">
+            <el-timeline-item
+                v-for="(honor, index) in honors"
+                :key="index"
+                :timestamp="honor.timestamp"
+                placement="top"
+            >
                 <el-card>
                     <template #header>
                         <div>
                             <el-row class="flex items-center">
                                 <el-col :span="3">
-                                    <div class="max-h-100px max-w-100px overflow-hidden">
-                                        <img class="h-auto w-auto max-h-100px max-w-100px" :src="honor.image"
-                                            fit="fill">
+                                    <div
+                                        class="max-h-100px max-w-100px overflow-hidden"
+                                    >
+                                        <img
+                                            class="h-auto w-auto max-h-100px max-w-100px"
+                                            :src="honor.image"
+                                            fit="fill"
+                                        >
                                     </div>
                                 </el-col>
+                                <el-col :span="1" />
                                 <el-col class="text-2xl" :span="20">
                                     {{ honor.title }}
                                 </el-col>
                             </el-row>
                         </div>
                     </template>
-                    <MDC class="text-xl" :value="honor.content" />
+                    <MDC class="text-base" :value="honor.content" />
                 </el-card>
             </el-timeline-item>
         </el-timeline>
 
         <div class="text-4xl mb-8">Patent</div>
         <el-collapse accordion>
-            <el-collapse-item :title="patentCollapseTitle" name="1" @click="patentHide = !patentHide">
+            <el-collapse-item
+                :title="patentCollapseTitle"
+                name="1"
+                @click="patentHide = !patentHide"
+            >
                 <el-timeline>
-                    <el-timeline-item v-for="(patent, index) in patents" :key="index" :timestamp="patent.timestamp"
-                        placement="top">
+                    <el-timeline-item
+                        v-for="(patent, index) in patents"
+                        :key="index"
+                        :timestamp="patent.timestamp"
+                        placement="top"
+                    >
                         <el-card>
                             <MDC class="text-xl" :value="patent.title" />
                             <MDC class="text-base" :value="patent.author" />
                             <el-space>
                                 <el-tag type="info">{{ patent.id }}</el-tag>
-                                <a :href="patent.link" target="_blank" class="link-primary" title="PDF">
-                                    <el-icon color="#409efc" class="no-inherit" :size="20">
+                                <a
+                                    :href="patent.link"
+                                    target="_blank"
+                                    class="link-primary"
+                                    title="PDF"
+                                >
+                                    <el-icon
+                                        color="#409efc"
+                                        class="no-inherit"
+                                        :size="20"
+                                    >
                                         <Icon name="lsicon:file-pdf-outline" />
                                     </el-icon>
                                 </a>

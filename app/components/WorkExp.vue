@@ -10,14 +10,25 @@
     <div>
         <div class="text-4xl mb-8">Work Experience</div>
         <el-timeline class="space-y-4">
-            <el-timeline-item v-for="(work, index) in works" :key="index" :timestamp="work.timestamp" placement="top">
-                <el-card class="mb-4">
+            <el-timeline-item
+                v-for="(work, index) in works"
+                :key="index"
+                :timestamp="work.timestamp"
+                placement="top"
+            >
+                <el-card>
                     <template #header>
                         <div>
                             <el-row class="flex items-center">
                                 <el-col :span="3">
-                                    <div class="max-h-100px max-w-100px overflow-hidden">
-                                        <img class="h-auto w-auto max-h-100px max-w-100px" :src="work.image" fit="fill">
+                                    <div
+                                        class="max-h-100px max-w-100px overflow-hidden"
+                                    >
+                                        <img
+                                            class="h-auto w-auto max-h-100px max-w-100px"
+                                            :src="work.image"
+                                            fit="fill"
+                                        >
                                     </div>
                                 </el-col>
                                 <el-col :span="1" />
@@ -34,7 +45,7 @@
                             </el-row>
                         </div>
                     </template>
-                    <MDC class="text-xl" :value="work.content" />
+                    <MDC class="text-base" :value="work.content" />
                 </el-card>
             </el-timeline-item>
         </el-timeline>
