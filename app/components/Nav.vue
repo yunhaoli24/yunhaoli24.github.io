@@ -37,8 +37,8 @@
             <el-switch
                 v-model="colorMode"
                 inline-prompt
-                :active-action-icon="Moon"
-                :inactive-action-icon="Sunny"
+                :active-action-icon="DarkModeIcon"
+                :inactive-action-icon="LightModeIcon"
                 class="dark:[--el-switch-on-color:#272727] light:[--el-switch-off-color:#f0f0f0]"
                 size="large"
         /></el-menu-item>
@@ -47,7 +47,11 @@
 
 <script lang="ts" setup>
 import { useDevice } from '~/composables/useDevice'
-import { Moon, Sunny } from '@element-plus/icons-vue'
+import { Icon } from '#components'
+
+const DarkModeIcon = h(Icon, { name: 'material-symbols:dark-mode' })
+const LightModeIcon = h(Icon, { name: 'material-symbols:light-mode' })
+
 const { isMobile } = useDevice()
 const color = useColorMode()
 const colorMode = computed({

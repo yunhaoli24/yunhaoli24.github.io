@@ -19,7 +19,7 @@
             </el-col>
             <el-col :span="isMobile ? 24 : 16">
                 <div class="text-xl">
-                    <p class="indent-2em">
+                    <p class="indent-2em m-b-2">
                         Hi, my name is Yunhao Li. I am currently pursuing a
                         Master of Science in Artificial Intelligence at
                         Guangzhou University. My research interests focus on
