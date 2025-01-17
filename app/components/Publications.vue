@@ -78,8 +78,7 @@ const publications: Publication[] = [
         title: 'Online Self-distillation and Self-modeling for 3D Brain Tumor Segmentation',
         author: 'Yan Pang, **Yunhao Li**, Teng Huang, Jiaming Liang, Zhen Wang, Changyu Dong, Dongyang Kuang, Ying Hu, Hao Chen, Tim Lei, Qiong Wang.',
         journal_name: 'Journal of Biomedical and Health Informatics',
-        // pdf_link:
-        //     'https://openaccess.thecvf.com/content/ACCV2024/papers/Li_Optimized_Breast_Lesion_Segmentation_in_Ultrasound_Videos_Across_Varied_Resource-Scant_ACCV_2024_paper.pdf',
+        pdf_link: 'https://ieeexplore.ieee.org/document/10843341',
         code_link: 'https://github.com/deepang-ai/MOD',
         // IF: "10.4",
         journal: 'JBHI',
@@ -92,7 +91,7 @@ const publications: Publication[] = [
         journal_name: 'Asian Conference on Computer Vision',
         pdf_link:
             'https://openaccess.thecvf.com/content/ACCV2024/papers/Li_Optimized_Breast_Lesion_Segmentation_in_Ultrasound_Videos_Across_Varied_Resource-Scant_ACCV_2024_paper.pdf',
-        code_link: 'https://github.com/aigzhusmart/Slim-UNETR',
+        // code_link: 'https://github.com/aigzhusmart/Slim-UNETR',
         // IF: "10.4",
         journal: 'ACCV',
         // ccf: 'CCF-C',
