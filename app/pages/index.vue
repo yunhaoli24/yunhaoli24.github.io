@@ -1,47 +1,33 @@
-<!--
- * @Author: li.yunhao
- * @Date: 2024-07-17 16:33:08
- * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-10-19 11:05:42
- * @FilePath: /yunhaoli24.github.io/pages/index.vue
- * @Description: 
--->
 <template>
-    <div class="w-full h-full">
-        <el-container>
-            <el-header>
-                <Nav />
-            </el-header>
-            <el-main
-                class="relative w-full h-[calc(100vh-60px)] overflow-y-scroll"
-            >
-                <el-row v-if="!isMobile">
-                    <el-col :span="18" :offset="3">
-                        <ContentSections />
-                    </el-col>
-                </el-row>
-                <div v-else>
-                    <ContentSections />
-                </div>
-            </el-main>
-        </el-container>
+    <div>
+        <About class="About" />
+        <el-divider />
+        <ProgrammingSkills class="ProgrammingSkills" />
+        <el-divider />
+        <Publications class="Publications" />
+        <el-divider />
+        <WorkExp class="WorkExp" />
+        <el-divider />
+        <Education class="Education" />
+        <el-divider />
+        <Honors class="Honors" />
+        <el-divider />
+        <Footer />
     </div>
 </template>
 
 <script setup lang="ts">
-import { useDevice } from '~/composables/useDevice'
-
 const description =
     'The CV of Yunhao Li, a passionate researcher who love to use programming skills and creativity to solve problems.'
 useSeoMeta({
     description: description,
     ogTitle: 'Yunhao Li',
     ogDescription: description,
-    ogImage: 'https://peterli.club/profile.JPG',
-    ogUrl: 'https://peterli.club',
+    ogImage: 'https://yunhaoli.top/profile.JPG',
+    ogUrl: 'https://yunhaoli.top',
     twitterTitle: 'Yunhao Li',
     twitterDescription: description,
-    twitterImage: 'https://peterli.club/profile.JPG',
+    twitterImage: 'https://yunhaoli.top/profile.JPG',
     twitterCard: 'summary',
 })
 
@@ -57,6 +43,4 @@ useHead({
         },
     ],
 })
-
-const { isMobile } = useDevice()
 </script>

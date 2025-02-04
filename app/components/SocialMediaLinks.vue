@@ -1,11 +1,3 @@
-<!--
- * @Author: li.yunhao
- * @Date: 2024-07-17 18:01:46
- * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-24 09:44:29
- * @FilePath: /yunhaoli24.github.io/components/SocialMediaLinks.vue
- * @Description: 
--->
 <template>
     <el-space>
         <a

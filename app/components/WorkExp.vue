@@ -1,11 +1,3 @@
-<!--
- * @Author: li.yunhao
- * @Date: 2024-07-17 21:32:27
- * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-07-24 09:51:48
- * @FilePath: /yunhaoli24.github.io/components/WorkExp.vue
- * @Description: 
--->
 <template>
     <div>
         <div class="text-4xl mb-8">Work Experience</div>

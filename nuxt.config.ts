@@ -25,15 +25,15 @@ export default defineNuxtConfig({
                 { name: 'og:title', content: `Yunhao Li` },
                 {
                     name: 'og:image',
-                    content: `https://peterli.club/profile.JPG`,
+                    content: `https://yunhaoli.top/profile.JPG`,
                 },
-                { name: 'og:url', content: `https://peterli.club` },
+                { name: 'og:url', content: `https://yunhaoli.top` },
                 // { name: 'twitter:card', content: `` },
                 { name: 'twitter:title', content: `Yunhao Li` },
                 // { name: 'twitter:description', content: `` },
                 {
                     name: 'twitter:image',
-                    content: `https://peterli.club/og_image.jpeg`,
+                    content: `https://yunhaoli.top/og_image.jpeg`,
                 },
                 { name: 'twitter:creator', content: `@YunhaoLi` },
                 {
@@ -65,6 +65,7 @@ export default defineNuxtConfig({
         '@nuxtjs/color-mode',
         '@nuxt/icon',
         '@nuxtjs/mdc',
+        '@nuxtjs/device',
     ],
 
     // vueuse

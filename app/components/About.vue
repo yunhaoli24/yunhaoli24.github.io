@@ -1,11 +1,3 @@
-<!--
- * @Author: li.yunhao
- * @Date: 2024-07-17 20:44:41
- * @LastEditors: li.yunhao li.yunhao@foxmail.com
- * @LastEditTime: 2024-10-13 17:00:47
- * @FilePath: /yunhaoli24.github.io/components/About.vue
- * @Description: 
--->
 <template>
     <div>
         <div class="text-4xl mb-8">About</div>
@@ -39,7 +31,5 @@
     </div>
 </template>
 <script setup lang="ts">
-import { useDevice } from '~/composables/useDevice'
-
 const { isMobile } = useDevice()
 </script>
