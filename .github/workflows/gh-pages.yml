@@ -1,37 +1,37 @@
-# name: GitHub Pages
+name: GitHub Pages
 
-# on: [push, pull_request]
-# permissions:
-#     contents: write
+on: [push, pull_request]
+permissions:
+    contents: write
 
-# jobs:
-#     build:
-#         runs-on: ubuntu-latest
-#         steps:
-#             - uses: actions/checkout@v3
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
 
-#             - name: Setup Pnpm
-#               uses: pnpm/action-setup@v2
-#               with:
-#                   version: 9.15.0
+            - name: Setup Pnpm
+              uses: pnpm/action-setup@v2
+              with:
+                  version: 9.15.0
 
-#             - name: Setup Node
-#               uses: actions/setup-node@v3
-#               with:
-#                   node-version: 21.x
-#                   cache: 'pnpm'
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 21.x
+                  cache: 'pnpm'
 
-#             - name: Install
-#               run: pnpm install
+            - name: Install
+              run: pnpm install
 
-#             - name: Build
-#               run: pnpm run ghpage
+            - name: Build
+              run: pnpm run ghpage
 
-#             - name: Deploy to Github Pages
-#               if: ${{ github.ref == 'refs/heads/main' }}
-#               uses: peaceiris/actions-gh-pages@v3
-#               with:
-#                   github_token: ${{ secrets.GITHUB_TOKEN }}
-#                   publish_dir: .output/public/
-#                   publish_branch: gh-pages
-#                   force_orphan: true
+            - name: Deploy to Github Pages
+              if: ${{ github.ref == 'refs/heads/main' }}
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: .output/public/
+                  publish_branch: gh-pages
+                  force_orphan: true
