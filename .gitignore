@@ -6,3 +6,4 @@ dist
 .vercel
 .idea
 .DS_Store
+.env*.local
