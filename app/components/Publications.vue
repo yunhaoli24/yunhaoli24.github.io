@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="text-4xl mb-8">Publications</div>
+        <h1 class="text-2xl font-bold m-b-4">📚 Publications</h1>
         <el-timeline>
             <el-timeline-item
                 v-for="(publication, index) in publications"
@@ -9,60 +9,69 @@
                 placement="top"
             >
                 <el-card>
-                    <div class="text-xl font-semibold">
-                        {{ publication.title }}
-                    </div>
-                    <div class="text-base">
-                        <template
-                            v-for="(part, idx) in getAuthorParts(
-                                publication.author
-                            )"
-                            :key="idx"
-                        >
-                            <span :class="{ 'font-bold': part.bold }">{{
-                                part.text
-                            }}</span>
-                        </template>
-                    </div>
-                    <div class="text-base m-b-2">
-                        {{ publication.journal_name }}
-                    </div>
-                    <el-space class="m-b-1 m-t-1">
-                        <a
-                            v-if="publication.pdf_link"
-                            :href="publication.pdf_link"
-                            target="_blank"
-                        >
-                            <el-icon
-                                color="#409efc"
-                                class="no-inherit"
-                                :size="20"
-                            >
-                                <Icon name="lsicon:file-pdf-outline" />
-                            </el-icon>
-                        </a>
-                        <a
-                            v-if="publication.code_link"
-                            :href="publication.code_link"
-                            target="_blank"
-                        >
-                            <el-icon
-                                color="#409efc"
-                                class="no-inherit"
-                                :size="20"
-                            >
-                                <Icon name="uil:github" />
-                            </el-icon>
-                        </a>
-                        <el-tag v-if="publication.journal">
-                            {{ publication.journal }}
-                        </el-tag>
-                        <el-tag v-if="publication.ccf" type="success">
-                            {{ publication.ccf }}
-                        </el-tag>
-                        <el-tag v-if="publication.IF" type="info">
-                            IF:{{ publication.IF }}
-                        </el-tag>
+                    <el-space class="md:flex-row flex-col-reverse">
+                        <el-image
+                            class="h-200px w-300px"
+                            :src="publication.image"
+                            fit="fill"
+                        />
+                        <div>
+                            <div class="text-xl font-semibold">
+                                {{ publication.title }}
+                            </div>
+                            <div class="text-base">
+                                <template
+                                    v-for="(part, idx) in getAuthorParts(
+                                        publication.author
+                                    )"
+                                    :key="idx"
+                                >
+                                    <span :class="{ 'font-bold': part.bold }">{{
+                                        part.text
+                                    }}</span>
+                                </template>
+                            </div>
+                            <div class="text-base m-b-2 font-bold">
+                                {{ publication.journal_name }}
+                            </div>
+                            <el-space class="m-b-1 m-t-1">
+                                <a
+                                    v-if="publication.pdf_link"
+                                    :href="publication.pdf_link"
+                                    target="_blank"
+                                >
+                                    <el-icon
+                                        color="#409efc"
+                                        class="no-inherit"
+                                        :size="20"
+                                    >
+                                        <Icon name="lsicon:file-pdf-outline" />
+                                    </el-icon>
+                                </a>
+                                <a
+                                    v-if="publication.code_link"
+                                    :href="publication.code_link"
+                                    target="_blank"
+                                >
+                                    <el-icon
+                                        color="#409efc"
+                                        class="no-inherit"
+                                        :size="20"
+                                    >
+                                        <Icon name="uil:github" />
+                                    </el-icon>
+                                </a>
+                                <el-tag v-if="publication.journal">
+                                    {{ publication.journal }}
+                                </el-tag>
+                                <el-tag v-if="publication.ccf" type="success">
+                                    {{ publication.ccf }}
+                                </el-tag>
+                                <el-tag v-if="publication.IF" type="info">
+                                    IF:{{ publication.IF }}
+                                </el-tag>
+                            </el-space>
+                        </div>
                     </el-space>
                 </el-card>
             </el-timeline-item>
@@ -76,6 +85,7 @@ interface Publication {
     author: string
     journal_name: string
     timestamp: string
+    image: string
     pdf_link?: string
     code_link?: string
     journal?: string
@@ -90,6 +100,7 @@ const publications: Publication[] = [
         journal_name: 'Journal of Biomedical and Health Informatics',
         pdf_link: 'https://ieeexplore.ieee.org/document/10843341',
         code_link: 'https://github.com/deepang-ai/MOD',
+        image: '/imgs/MOD.png',
         // IF: "10.4",
         journal: 'JBHI',
         // ccf: 'CCF-C',
@@ -103,6 +114,7 @@ const publications: Publication[] = [
             'https://openaccess.thecvf.com/content/ACCV2024/papers/Li_Optimized_Breast_Lesion_Segmentation_in_Ultrasound_Videos_Across_Varied_Resource-Scant_ACCV_2024_paper.pdf',
         // code_link: 'https://github.com/aigzhusmart/Slim-UNETR',
         // IF: "10.4",
+        image: '/imgs/RbS.png',
         journal: 'ACCV',
         // ccf: 'CCF-C',
         timestamp: '2024',
@@ -114,6 +126,7 @@ const publications: Publication[] = [
             'Chinese Conference on Pattern Recognition and Computer Vision',
         pdf_link:
             'https://link.springer.com/chapter/10.1007/978-981-97-8499-8_16',
+        image: '/imgs/IPM.png',
         // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
         // IF: "10.4",
         journal: 'PRCV',
@@ -126,6 +139,7 @@ const publications: Publication[] = [
         journal_name: 'IEEE Transactions on Medical Imaging',
         pdf_link: 'https://ieeexplore.ieee.org/abstract/document/10288609/',
         code_link: 'https://github.com/aigzhusmart/Slim-UNETR',
+        image: '/imgs/SlimUNETR.png',
         // IF: '10.4',
         journal: 'TMI',
         // ccf: 'CCF-A',
@@ -138,6 +152,7 @@ const publications: Publication[] = [
             'IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing',
         pdf_link:
             'https://ieeexplore.ieee.org/iel7/4609443/4609444/10285331.pdf',
+        image: '/imgs/Cam-PC.png',
         // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
         // IF: '4.7',
         journal: 'IEEE J-STARS',
@@ -151,6 +166,7 @@ const publications: Publication[] = [
             'Chinese Conference on Pattern Recognition and Computer Vision',
         pdf_link:
             'https://link.springer.com/chapter/10.1007/978-981-99-8469-5_33',
+        image: '/imgs/AgileNet.png',
         // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
         // IF: "10.4",
         journal: 'PRCV',

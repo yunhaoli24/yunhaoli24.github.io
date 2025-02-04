@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="text-4xl mb-8">Education</div>
-        <ul class="list-disc text-xl">
+        <h1 class="text-2xl font-bold m-b-4">🎓 Education</h1>
+        <ul class="list-disc text-base">
             <li>
                 2022-2025: Master of Artificial Intelligence, GuangZhou
                 University, Advisor:

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="text-4xl mb-8">Honors & Awards</div>
+        <h1 class="text-2xl font-bold m-b-4">🏆 Honors & Awards</h1>
         <el-timeline class="space-y-4">
             <el-timeline-item
                 v-for="(honor, index) in honors"
@@ -10,25 +10,15 @@
             >
                 <el-card>
                     <template #header>
-                        <div>
-                            <el-row class="flex items-center">
-                                <el-col :span="3">
-                                    <div
-                                        class="max-h-100px max-w-100px overflow-hidden"
-                                    >
-                                        <img
-                                            class="h-auto w-auto max-h-100px max-w-100px"
-                                            :src="honor.image"
-                                            fit="fill"
-                                        >
-                                    </div>
-                                </el-col>
-                                <el-col :span="1" />
-                                <el-col class="text-2xl" :span="20">
-                                    {{ honor.title }}
-                                </el-col>
-                            </el-row>
-                        </div>
+                        <el-space>
+                            <el-avatar
+                                :src="honor.image"
+                                shape="square"
+                                size="large"
+                                fit="fill"
+                            />
+                            <div class="text-xl">{{ honor.title }}</div>
+                        </el-space>
                     </template>
                     <ul class="text-base list-disc ml-4 space-y-2">
                         <li
@@ -42,54 +32,48 @@
             </el-timeline-item>
         </el-timeline>
 
-        <div class="text-4xl mb-8">Patent</div>
+        <h1 class="text-2xl font-bold m-b-4">📜 Patent</h1>
+
         <el-collapse accordion>
             <el-collapse-item
                 :title="patentCollapseTitle"
                 name="1"
                 @click="patentHide = !patentHide"
             >
-                <el-timeline>
-                    <el-timeline-item
-                        v-for="(patent, index) in patents"
-                        :key="index"
-                        :timestamp="patent.timestamp"
-                        placement="top"
-                    >
-                        <el-card>
-                            <div class="text-xl">{{ patent.title }}</div>
-                            <div class="text-base">
-                                <template
-                                    v-for="(part, idx) in getAuthorParts(
-                                        patent.author
-                                    )"
-                                    :key="idx"
-                                >
-                                    <span :class="{ 'font-bold': part.bold }">{{
-                                        part.text
-                                    }}</span>
-                                </template>
-                            </div>
-                            <el-space>
-                                <el-tag type="info">{{ patent.id }}</el-tag>
-                                <a
-                                    :href="patent.link"
-                                    target="_blank"
-                                    class="link-primary"
-                                    title="PDF"
-                                >
-                                    <el-icon
-                                        color="#409efc"
-                                        class="no-inherit"
-                                        :size="20"
-                                    >
-                                        <Icon name="lsicon:file-pdf-outline" />
-                                    </el-icon>
-                                </a>
-                            </el-space>
-                        </el-card>
-                    </el-timeline-item>
-                </el-timeline>
+                <ul class="list-disc">
+                    <li v-for="(patent, index) in patents" :key="index">
+                        {{ patent.timestamp }}:
+                        <span>
+                            <template
+                                v-for="(part, idx) in getAuthorParts(
+                                    patent.author
+                                )"
+                                :key="idx"
+                            >
+                                <span :class="{ 'font-bold': part.bold }">{{
+                                    part.text
+                                }}</span>
+                            </template>
+                        </span>
+                        , {{ patent.title }}
+                        <NuxtLink
+                            :to="
+                                'https://patents.google.com/patent/' + patent.id
+                            "
+                            target="_blank"
+                            class="link-primary"
+                            title="PDF"
+                        >
+                            <el-icon
+                                color="#409efc"
+                                class="no-inherit"
+                                :size="20"
+                            >
+                                <Icon name="lsicon:file-pdf-outline" />
+                            </el-icon>
+                        </NuxtLink>
+                    </li>
+                </ul>
             </el-collapse-item>
         </el-collapse>
     </div>
@@ -148,56 +132,48 @@ const patents = [
         title: 'A medical image segmentation method, device, and medium',
         author: '**Yunhao Li**, Jiaming Liang, Junming Yan, Yan Pang, Changyu Dong, Teng Huang, Zheng Zhang.',
         id: 'CN118552553A',
-        link: 'https://patentimages.storage.googleapis.com/ec/61/c8/623098bbaf4de0/CN118552553A.pdf',
         timestamp: '2024',
     },
     {
         title: 'Method, device, apparatus, and medium for rapid segmentation of breast lesion features in medical video',
         author: 'JiamingLiang, Yan Pang, Teng Hunag, Ziyu Ding, Zhenyu Lu, **Yunhao Li**, Weiqing Kong, Wang Yang.',
         id: 'CN118537769A',
-        link: 'https://patentimages.storage.googleapis.com/bc/72/15/a9fd6a41855a72/CN118537769A.pdf',
         timestamp: '2024',
     },
     {
         title: 'Self-distilling and self-learning medical image segmentation method, device, and storage medium',
         author: 'Yan Pang, Changyu Dong, Teng Huang, **Yunhao Li**, Jiahui Huang, Hui Li, Caiyan Tang.',
         id: 'CN118587232A',
-        link: 'https://patentimages.storage.googleapis.com/5b/b4/7d/3cfcf7dc071b3c/CN118587232A.pdf',
         timestamp: '2024',
     },
     {
         title: 'A Deep Learning-Based Method and System for Satellite Anomaly Traffic Detection',
         author: 'HongYang Yan, Cong Wang, **Yunhao Li**, Weichuan Mo, Cong Li, Haiyang Wang, Yu Wang, Teng Huang',
         id: 'CN115834145A',
-        link: 'https://patentimages.storage.googleapis.com/98/c3/1f/910356c3eff57a/CN115834145A.pdf',
         timestamp: '2022',
     },
     {
         title: 'A Network Security-Based Low Earth OrbitSatellite Simulation System',
         author: 'HongYang Yan, Bo Li, Cong Li, Haiyang Wang, **Yunhao Li**, Weichuan Mo, Yu Wang, Teng Huang',
         id: 'CN115765842A',
-        link: 'https://patentimages.storage.googleapis.com/36/18/a4/23b903a0b4a89b/CN115765842A.pdf',
         timestamp: '2022',
     },
     {
         title: 'A Panoptic Segmentation Method Based on Multi-Scale Edge Attention',
         author: 'Xiaochun Lei, Zhiying Liang, Zetao Jiang, Dingjie Zhang,**Yunhao Li**, Xiaolong Wang, Huiying Chen',
         id: 'CN112802038A',
-        link: 'https://patentimages.storage.googleapis.com/43/6c/31/1f4077da273fee/CN112802038A.pdf',
         timestamp: '2021',
     },
     {
         title: 'Intelligent Traffic Signal System',
         author: '**Yunhao Li**, Xiaochun Lei, Dingjie Zhang, Ziyuan Jing, Zhiying Liang, Yunyan Chen, Xiaolong Wang',
         id: 'CN213276964U',
-        link: 'https://patentimages.storage.googleapis.com/0a/8b/e8/c881715f1c2ad5/CN213276964U.pdf',
         timestamp: '2020',
     },
     {
         title: 'A Panoramic Segmentation Method Based on Edge Scaling Correction',
         author: 'Xiaochun Lei, Dingjie Zhang, Zetao Jiang, **Yunhao Li**, Yunyan Chen, Zhiying Liang, Huiying Chen',
         id: 'CN112489064B',
-        link: 'https://patentimages.storage.googleapis.com/ac/a9/56/73c4985571c517/CN112489064B.pdf',
         timestamp: '2020',
     },
 ]

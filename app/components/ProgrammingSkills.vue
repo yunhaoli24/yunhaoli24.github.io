@@ -1,8 +1,7 @@
 <template>
     <div>
-        <div class="text-4xl mb-8">Programming Skills</div>
-
-        <ul class="list-disc text-xl">
+        <h1 class="text-2xl font-bold m-b-4">💻 Programming Skills</h1>
+        <ul class="list-disc text-base">
             <li>
                 <b>AI & Data</b>: PyTorch, Transformers, AutoGluon, Pandas,
                 Matplotlib, OpenCV

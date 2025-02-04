@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="text-4xl mb-8">Work Experience</div>
+        <h1 class="text-2xl font-bold m-b-4">💼 Work Experience</h1>
         <el-timeline class="space-y-4">
             <el-timeline-item
                 v-for="(work, index) in works"
@@ -10,32 +10,22 @@
             >
                 <el-card>
                     <template #header>
-                        <div>
-                            <el-row class="flex items-center">
-                                <el-col :span="3">
-                                    <div
-                                        class="max-h-100px max-w-100px overflow-hidden"
-                                    >
-                                        <img
-                                            class="h-auto w-auto max-h-100px max-w-100px"
-                                            :src="work.image"
-                                            fit="fill"
-                                        >
-                                    </div>
-                                </el-col>
-                                <el-col :span="1" />
-                                <el-col :span="20">
-                                    <div class="flex flex-col">
-                                        <span class="text-3xl">
-                                            {{ work.job }}
-                                        </span>
-                                        <span class="text-2xl">
-                                            {{ work.title }}
-                                        </span>
-                                    </div>
-                                </el-col>
-                            </el-row>
-                        </div>
+                        <el-space>
+                            <el-avatar
+                                :src="work.image"
+                                shape="square"
+                                size="large"
+                                fit="fill"
+                            />
+                            <div class="flex flex-col">
+                                <span class="text-xl">
+                                    {{ work.job }}
+                                </span>
+                                <span class="text-l">
+                                    {{ work.title }}
+                                </span>
+                            </div>
+                        </el-space>
                     </template>
                     <ul class="text-base list-disc ml-4 space-y-2">
                         <li
