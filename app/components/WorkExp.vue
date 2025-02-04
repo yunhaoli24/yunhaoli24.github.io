@@ -37,7 +37,14 @@
                             </el-row>
                         </div>
                     </template>
-                    <MDC class="text-base" :value="work.content" />
+                    <ul class="text-base list-disc ml-4 space-y-2">
+                        <li
+                            v-for="(item, index2) in work.content"
+                            :key="index2"
+                        >
+                            {{ item }}
+                        </li>
+                    </ul>
                 </el-card>
             </el-timeline-item>
         </el-timeline>
@@ -50,10 +57,11 @@ const works = [
         title: 'China Post Bank',
         job: 'ML Researcher & Data Analyst',
         image: '/imgs/china_post.png',
-        content:
-            '* Developed AI-driven finance data precision recommendation model for customer marketing.\n' +
-            '* Designed and implemented a model training engine for automatic rolling training and optimization.\n' +
-            '* Contributed to a 15% increase in performance for China Post Bank GuangZhou.',
+        content: [
+            'Developed AI-driven finance data precision recommendation model for customer marketing.',
+            'Designed and implemented a model training engine for automatic rolling training and optimization',
+            'Contributed to a 15% increase in performance for China Post Bank GuangZhou.',
+        ],
         timestamp: '2023/10-2024/06',
     },
 ]

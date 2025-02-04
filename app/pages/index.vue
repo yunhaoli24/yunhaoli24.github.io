@@ -2,11 +2,11 @@
     <div>
         <About class="About" />
         <el-divider />
-        <ProgrammingSkills class="ProgrammingSkills" />
-        <el-divider />
         <Publications class="Publications" />
         <el-divider />
         <WorkExp class="WorkExp" />
+        <el-divider />
+        <ProgrammingSkills class="ProgrammingSkills" />
         <el-divider />
         <Education class="Education" />
         <el-divider />

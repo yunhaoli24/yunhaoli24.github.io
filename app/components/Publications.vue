@@ -9,15 +9,24 @@
                 placement="top"
             >
                 <el-card>
-                    <MDC
-                        class="text-xl font-semibold"
-                        :value="publication.title"
-                    />
-                    <MDC class="text-base" :value="publication.author" />
-                    <MDC
-                        class="text-base m-b-2"
-                        :value="publication.journal_name"
-                    />
+                    <div class="text-xl font-semibold">
+                        {{ publication.title }}
+                    </div>
+                    <div class="text-base">
+                        <template
+                            v-for="(part, idx) in getAuthorParts(
+                                publication.author
+                            )"
+                            :key="idx"
+                        >
+                            <span :class="{ 'font-bold': part.bold }">{{
+                                part.text
+                            }}</span>
+                        </template>
+                    </div>
+                    <div class="text-base m-b-2">
+                        {{ publication.journal_name }}
+                    </div>
                     <el-space class="m-b-1 m-t-1">
                         <a
                             v-if="publication.pdf_link"
@@ -61,6 +70,7 @@
     </div>
 </template>
 <script setup lang="ts">
+import { getAuthorParts } from '../utils/text'
 interface Publication {
     title: string
     author: string
