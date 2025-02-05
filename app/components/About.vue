@@ -8,6 +8,7 @@
                         class="w-full max-w-200px"
                         src="/profile.JPG"
                         fit="contain"
+                        lazy
                     />
                 </div>
             </el-col>

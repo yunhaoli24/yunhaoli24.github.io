@@ -14,6 +14,7 @@
                             class="h-200px w-300px"
                             :src="publication.image"
                             fit="fill"
+                            lazy
                         />
                         <div>
                             <div class="text-xl font-semibold">
