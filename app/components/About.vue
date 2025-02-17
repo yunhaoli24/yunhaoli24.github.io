@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1 class="text-2xl font-bold mb-4">🌟 About</h1>
+    <h1 class="text-2xl font-bold mb-4">
+      🌟 About
+    </h1>
     <el-row :gutter="20">
       <el-col :span="$device.isMobile ? 24 : 8">
         <div class="flex justify-center">
@@ -19,14 +21,16 @@
               Hello, my name is Yunhao Li, and I am currently serving as a
               research assistant at Chinese Academy of Sciences, where I am
               fortunate to work under the esteemed guidance of
-              <a class="text-blue-500" href="https://people.ucas.ac.cn/~0058478"
-                >Prof. Qiong Wang</a
-              >. My academic journey commenced at Guangzhou University, where I
+              <a
+                class="text-blue-500"
+                href="https://people.ucas.ac.cn/~0058478"
+              >Prof. Qiong Wang</a>. My academic journey commenced at Guangzhou University, where I
               pursued and obtained my Master’s degree in Artificial
               Intelligence. During this enriching period, I was mentored by
-              <a class="text-blue-500" href="https://pangyan.me/"
-                >Assoc. Prof. Yan Pang </a
-              >, whose invaluable insights and expertise have profoundly shaped
+              <a
+                class="text-blue-500"
+                href="https://pangyan.me/"
+              >Assoc. Prof. Yan Pang </a>, whose invaluable insights and expertise have profoundly shaped
               my perspective and skills in the field. Prior to my Master’s
               degree, I also completed my Bachelor’s degree in Computer Science
               at Guilin University of Electronic Technology, further solidifying
@@ -40,10 +44,14 @@
               the medical science, thereby enhancing human health.
             </p>
           </div>
-          <SocialMediaLinks class="float-right" :size="28" />
+          <SocialMediaLinks
+            class="float-right"
+            :size="28"
+          />
         </div>
       </el-col>
     </el-row>
   </div>
 </template>
+
 <script setup lang="ts"></script>

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1 class="text-2xl font-bold mb-4">💼 Work Experience</h1>
+    <h1 class="text-2xl font-bold mb-4">
+      💼 Work Experience
+    </h1>
     <el-timeline class="space-y-4">
       <el-timeline-item
         v-for="(work, index) in works"
@@ -28,7 +30,10 @@
             </el-space>
           </template>
           <ul class="text-base list-disc ml-4 space-y-2">
-            <li v-for="(item, index2) in work.content" :key="index2">
+            <li
+              v-for="(item, index2) in work.content"
+              :key="index2"
+            >
               {{ item }}
             </li>
           </ul>
@@ -41,15 +46,15 @@
 <script setup>
 const works = [
   {
-    title: "China Post Bank",
-    job: "ML Researcher & Data Analyst",
-    image: "/imgs/china_post.png",
+    title: 'China Post Bank',
+    job: 'ML Researcher & Data Analyst',
+    image: '/imgs/china_post.png',
     content: [
-      "Developed AI-driven finance data precision recommendation model for customer marketing.",
-      "Designed and implemented a model training engine for automatic rolling training and optimization",
-      "Contributed to a 15% increase in performance for China Post Bank GuangZhou.",
+      'Developed AI-driven finance data precision recommendation model for customer marketing.',
+      'Designed and implemented a model training engine for automatic rolling training and optimization',
+      'Contributed to a 15% increase in performance for China Post Bank GuangZhou.',
     ],
-    timestamp: "2023/10-2024/06",
+    timestamp: '2023/10-2024/06',
   },
-];
+]
 </script>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/vue";
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 </script>
 
 <template>
@@ -11,7 +11,10 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
           <Nav />
         </el-header>
         <el-main class="relative w-full h-[calc(100vh-60px)] overflow-y-scroll">
-          <el-col :span="18" :offset="3">
+          <el-col
+            :span="18"
+            :offset="3"
+          >
             <slot />
           </el-col>
         </el-main>

@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 export default {
   content: [],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Times New Roman"],
+        sans: ['Times New Roman'],
       },
     },
   },
   plugins: [],
-} satisfies Config;
+} satisfies Config

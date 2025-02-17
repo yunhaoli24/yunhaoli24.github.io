@@ -1,10 +1,10 @@
-import withNuxt from "./.nuxt/eslint.config.mjs";
+import withNuxt from './.nuxt/eslint.config.mjs'
 
 // https://eslint.nuxt.com/packages/module
 export default withNuxt(
   {
     rules: {
-      "vue/multi-word-component-names": "off",
+      'vue/multi-word-component-names': 'off',
     },
   },
   // your custom flat configs go here, for example:
@@ -17,4 +17,4 @@ export default withNuxt(
   // {
   //   ...
   // }
-);
+)
