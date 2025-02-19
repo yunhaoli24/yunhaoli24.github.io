@@ -24,14 +24,10 @@
               </div>
             </el-space>
           </template>
-          <ul class="text-base list-disc ml-4 space-y-2">
-            <li
-              v-for="(item, index2) in honor.content"
-              :key="index2"
-            >
-              {{ item }}
-            </li>
-          </ul>
+          <MDC
+            class="text-base"
+            :value="honor.content"
+          />
         </el-card>
       </el-timeline-item>
     </el-timeline>
@@ -46,21 +42,12 @@
         name="1"
         @click="patentHide = !patentHide"
       >
-        <ul class="list-disc">
+        <ul class="list-disc text-base">
           <li
             v-for="(patent, index) in patents"
             :key="index"
           >
-            {{ patent.timestamp }}:
-            <span>
-              <template
-                v-for="(part, idx) in getAuthorParts(patent.author)"
-                :key="idx"
-              >
-                <span :class="{ 'font-bold': part.bold }">{{ part.text }}</span>
-              </template>
-            </span>
-            , {{ patent.title }}
+            {{ patent.timestamp }}, {{ patent.title }}
             <NuxtLink
               :to="'https://patents.google.com/patent/' + patent.id"
               target="_blank"
@@ -75,6 +62,7 @@
                 <Icon name="lsicon:file-pdf-outline" />
               </el-icon>
             </NuxtLink>
+            <MDC :value="patent.author" />
           </li>
         </ul>
       </el-collapse-item>
@@ -83,54 +71,38 @@
 </template>
 
 <script setup>
-import { getAuthorParts } from '../utils/text'
-
 const honors = [
   {
     image: '/imgs/pazhou.png',
     title: 'First Prize in the National Guangzhou Pazhou Algorithm Competition',
-    content: [
-      'Lead AI and backend teams develop an Artificial Intelligence Security Assessment platform.',
-      'Implemented 20+ adversarial attack, 10+ defense algorithms, integrated image & text classification, object detection models.',
-    ],
+    content:
+      '* Lead AI and backend teams develop an Artificial Intelligence Security Assessment platform.\n* Implemented 20 + adversarial attack, 10 + defense algorithms, integrated image & text classification, object detection models.',
     timestamp: '2023',
   },
   {
     image: 'imgs/cccc.png',
     title:
       'Third Prize in the National China Collegiate Computing Contest-AI Track',
-    content: [
-      'Developed an Intelligent Construction Site Monitoring System for Helmet Detection and Tracking.',
-      'Implemented Helmet Detection and Tracking Pipeline by Vue, FastAPI, and YOLO.',
-    ],
+    content: '* Developed an Intelligent Construction Site Monitoring System for Helmet Detection and Tracking.\n* Implemented Helmet Detection and Tracking Pipeline by Vue, FastAPI, and YOLO.',
     timestamp: '2020',
   },
   {
     image: 'imgs/csc.png',
     title: 'Second Prize in the National 9th "China Software Cup"',
-    content: [
-      'Developed a Real-Time Vehicle Recognition and Tracking System for Traffic Light Scenarios.',
-      'Implemented Traffic Light Visual Processing Pipeline by YOLO, DeepTrack, and Vue, tracking cars and pedestrians.',
-    ],
+    content: '* Developed a Real-Time Vehicle Recognition and Tracking System for Traffic Light Scenarios.\n* Implemented Traffic Light Visual Processing Pipeline by YOLO, DeepTrack, and Vue, tracking cars and pedestrians.',
     timestamp: '2020',
   },
   {
     image: '/imgs/RoboMaster.png',
     title: 'Second Prize in the National Competition at the RoboMaster',
-    content: [
-      'Led computer vision algorithm team to build real-time target recognition and tracking system for edge devices.',
-      'Co-work with the Mechanical Design and Circuit Design Department to build robots.',
-    ],
+    content: '* Led computer vision algorithm team to build real-time target recognition and tracking system for edge devices.\n* Co-work with the Mechanical Design and Circuit Design Department to build robots.',
     timestamp: '2020',
   },
   {
     image: '/imgs/ercc.jpg',
     title:
       'Second Prize in the National 9th "China Education Robot Competition"',
-    content: [
-      'Developed computer vision systems enable robots to recognize and navigate around obstacles and identify specific markers accurately.',
-      'Train object detection models that run on edge devices.',
-    ],
+    content: '* Developed computer vision systems enable robots to recognize and navigate around obstacles and identify specific markers accurately.\n* Train object detection models that run on edge devices.',
     timestamp: '2019',
   },
 ]

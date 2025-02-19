@@ -23,14 +23,7 @@
                 {{ publication.title }}
               </div>
               <div class="text-base mb-1">
-                <template
-                  v-for="(part, idx) in getAuthorParts(publication.author)"
-                  :key="idx"
-                >
-                  <span :class="{ 'font-bold': part.bold }">{{
-                    part.text
-                  }}</span>
-                </template>
+                <MDC :value="publication.author" />
               </div>
               <div class="text-base mb-2 font-bold">
                 {{ publication.journal_name }}
@@ -87,8 +80,6 @@
 </template>
 
 <script setup lang="ts">
-import { getAuthorParts } from '../utils/text'
-
 interface Publication {
   title: string
   author: string
@@ -103,7 +94,7 @@ interface Publication {
 }
 
 const publications: Publication[] = [
-    {
+  {
     title:
       'Efficient Breast Lesion Segmentation from Ultrasound Videos Across Multiple Source-limited Platforms',
     author:

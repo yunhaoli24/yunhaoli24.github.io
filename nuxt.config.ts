@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@element-plus/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/icon',
+    '@nuxt/content',
     '@nuxtjs/device',
   ],
   devtools: {
@@ -74,7 +75,12 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  typescript: {
+    typeCheck: true,
+  },
+
   elementPlus: {
+    icon: false,
     themes: ['dark'],
   },
   eslint: {

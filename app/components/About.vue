@@ -16,7 +16,7 @@
       </el-col>
       <el-col :span="$device.isMobile ? 24 : 16">
         <div>
-          <div class="mb-2 indent-8">
+          <div class="indent-8 text-base">
             <p>
               Hello, my name is Yunhao Li, and I am currently serving as a
               research assistant at Chinese Academy of Sciences, where I am
@@ -24,13 +24,15 @@
               <a
                 class="text-blue-500"
                 href="https://people.ucas.ac.cn/~0058478"
-              >Prof. Qiong Wang</a>. My academic journey commenced at Guangzhou University, where I
+              >Prof. Qiong Wang</a>. My academic
+              journey commenced at Guangzhou University, where I
               pursued and obtained my Master’s degree in Artificial
               Intelligence. During this enriching period, I was mentored by
               <a
                 class="text-blue-500"
                 href="https://pangyan.me/"
-              >Assoc. Prof. Yan Pang </a>, whose invaluable insights and expertise have profoundly shaped
+              >Assoc. Prof. Yan Pang </a>, whose invaluable insights
+              and expertise have profoundly shaped
               my perspective and skills in the field. Prior to my Master’s
               degree, I also completed my Bachelor’s degree in Computer Science
               at Guilin University of Electronic Technology, further solidifying
