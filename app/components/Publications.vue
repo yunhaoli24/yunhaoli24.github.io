@@ -100,7 +100,7 @@ const publications: Publication[] = [
     author:
       'Yan Pang, **Yunhao Li**, Teng Huang, Jiaming Liang, Ziyu Ding, Hao Chen, Baoliang Zhao, Ying Hu, Zheng Zhang, Qiong Wang.',
     journal_name: 'Journal of Biomedical and Health Informatics',
-    pdf_link: 'https://ieeexplore.ieee.org/document/10843341',
+    pdf_link: 'https://ieeexplore.ieee.org/document/10892059',
     code_link: 'https://github.com/deepang-ai/BaS',
     image: '/imgs/bas.png',
     // IF: "10.4",
