@@ -1,84 +1,3 @@
-<template>
-  <div>
-    <h1 class="text-2xl font-bold mb-4">
-      📚 Publications
-    </h1>
-    <el-timeline>
-      <el-timeline-item
-        v-for="(publication, index) in publications"
-        :key="index"
-        :timestamp="publication.timestamp"
-        placement="top"
-      >
-        <el-card>
-          <el-space class="md:flex-row flex-col-reverse">
-            <el-image
-              class="h-[200px] w-[300px]"
-              :src="publication.image"
-              fit="fill"
-              lazy
-            />
-            <div>
-              <div class="text-xl font-semibold">
-                {{ publication.title }}
-              </div>
-              <div class="text-base mb-1">
-                <MDC :value="publication.author" />
-              </div>
-              <div class="text-base mb-2 font-bold">
-                {{ publication.journal_name }}
-              </div>
-              <el-space class="mb-1 mt-1">
-                <a
-                  v-if="publication.pdf_link"
-                  :href="publication.pdf_link"
-                  target="_blank"
-                >
-                  <el-icon
-                    color="#409efc"
-                    class="no-inherit"
-                    :size="20"
-                  >
-                    <Icon name="lsicon:file-pdf-outline" />
-                  </el-icon>
-                </a>
-                <a
-                  v-if="publication.code_link"
-                  :href="publication.code_link"
-                  target="_blank"
-                >
-                  <el-icon
-                    color="#409efc"
-                    class="no-inherit"
-                    :size="20"
-                  >
-                    <Icon name="uil:github" />
-                  </el-icon>
-                </a>
-                <el-tag v-if="publication.journal">
-                  {{ publication.journal }}
-                </el-tag>
-                <el-tag
-                  v-if="publication.ccf"
-                  type="success"
-                >
-                  {{ publication.ccf }}
-                </el-tag>
-                <el-tag
-                  v-if="publication.IF"
-                  type="info"
-                >
-                  IF:{{ publication.IF }}
-                </el-tag>
-              </el-space>
-            </div>
-          </el-space>
-        </el-card>
-      </el-timeline-item>
-    </el-timeline>
-  </div>
-</template>
-
 <script setup lang="ts">
 interface Publication {
   title: string
@@ -198,3 +117,84 @@ const publications: Publication[] = [
   },
 ]
 </script>
+
+<template>
+  <div>
+    <h1 class="mb-4 text-2xl font-bold">
+      📚 Publications
+    </h1>
+    <el-timeline>
+      <el-timeline-item
+        v-for="(publication, index) in publications"
+        :key="index"
+        :timestamp="publication.timestamp"
+        placement="top"
+      >
+        <el-card>
+          <el-space class="flex-col-reverse md:flex-row">
+            <el-image
+              class="h-[200px] w-[300px]"
+              :src="publication.image"
+              fit="fill"
+              lazy
+            />
+            <div>
+              <div class="text-xl font-semibold">
+                {{ publication.title }}
+              </div>
+              <div class="mb-1 text-base">
+                <MDC :value="publication.author" />
+              </div>
+              <div class="mb-2 text-base font-bold">
+                {{ publication.journal_name }}
+              </div>
+              <el-space class="mb-1 mt-1">
+                <a
+                  v-if="publication.pdf_link"
+                  :href="publication.pdf_link"
+                  target="_blank"
+                >
+                  <el-icon
+                    color="#409efc"
+                    class="no-inherit"
+                    :size="20"
+                  >
+                    <Icon name="lsicon:file-pdf-outline" />
+                  </el-icon>
+                </a>
+                <a
+                  v-if="publication.code_link"
+                  :href="publication.code_link"
+                  target="_blank"
+                >
+                  <el-icon
+                    color="#409efc"
+                    class="no-inherit"
+                    :size="20"
+                  >
+                    <Icon name="uil:github" />
+                  </el-icon>
+                </a>
+                <el-tag v-if="publication.journal">
+                  {{ publication.journal }}
+                </el-tag>
+                <el-tag
+                  v-if="publication.ccf"
+                  type="success"
+                >
+                  {{ publication.ccf }}
+                </el-tag>
+                <el-tag
+                  v-if="publication.IF"
+                  type="info"
+                >
+                  IF:{{ publication.IF }}
+                </el-tag>
+              </el-space>
+            </div>
+          </el-space>
+        </el-card>
+      </el-timeline-item>
+    </el-timeline>
+  </div>
+</template>

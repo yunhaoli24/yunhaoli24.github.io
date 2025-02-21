@@ -1,3 +1,20 @@
+<script lang="ts" setup>
+import { Icon } from '#components'
+
+const DarkModeIcon = h(Icon, { name: 'material-symbols:dark-mode' })
+const LightModeIcon = h(Icon, { name: 'material-symbols:light-mode' })
+
+const color = useColorMode()
+const colorMode = ref(false)
+watch(colorMode, (val) => {
+  color.preference = val ? 'dark' : 'light'
+})
+onMounted(() => {
+  const isDark = useDark()
+  colorMode.value = isDark.value
+})
+</script>
+
 <template>
   <el-menu
     mode="horizontal"
@@ -24,20 +41,3 @@
     </el-menu-item>
   </el-menu>
 </template>
-
-<script lang="ts" setup>
-import { Icon } from '#components'
-
-const DarkModeIcon = h(Icon, { name: 'material-symbols:dark-mode' })
-const LightModeIcon = h(Icon, { name: 'material-symbols:light-mode' })
-
-const color = useColorMode()
-const colorMode = ref(false)
-watch(colorMode, (val) => {
-  color.preference = val ? 'dark' : 'light'
-})
-onMounted(() => {
-  const isDark = useDark()
-  colorMode.value = isDark.value
-})
-</script>

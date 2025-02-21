@@ -1,76 +1,4 @@
-<template>
-  <div>
-    <h1 class="text-2xl font-bold mb-4">
-      🏆 Honors & Awards
-    </h1>
-    <el-timeline class="space-y-4">
-      <el-timeline-item
-        v-for="(honor, index) in honors"
-        :key="index"
-        :timestamp="honor.timestamp"
-        placement="top"
-      >
-        <el-card>
-          <template #header>
-            <el-space>
-              <el-avatar
-                :src="honor.image"
-                shape="square"
-                size="large"
-                fit="fill"
-              />
-              <div class="text-xl">
-                {{ honor.title }}
-              </div>
-            </el-space>
-          </template>
-          <MDC
-            class="text-base"
-            :value="honor.content"
-          />
-        </el-card>
-      </el-timeline-item>
-    </el-timeline>
-
-    <h1 class="text-2xl font-bold mb-4">
-      📜 Patent
-    </h1>
-
-    <el-collapse accordion>
-      <el-collapse-item
-        :title="patentCollapseTitle"
-        name="1"
-        @click="patentHide = !patentHide"
-      >
-        <ul class="list-disc text-base">
-          <li
-            v-for="(patent, index) in patents"
-            :key="index"
-          >
-            {{ patent.timestamp }}, {{ patent.title }}
-            <NuxtLink
-              :to="'https://patents.google.com/patent/' + patent.id"
-              target="_blank"
-              class="link-primary"
-              title="PDF"
-            >
-              <el-icon
-                color="#409efc"
-                class="no-inherit"
-                :size="20"
-              >
-                <Icon name="lsicon:file-pdf-outline" />
-              </el-icon>
-            </NuxtLink>
-            <MDC :value="patent.author" />
-          </li>
-        </ul>
-      </el-collapse-item>
-    </el-collapse>
-  </div>
-</template>
-
-<script setup>
+<script setup lang='ts'>
 const honors = [
   {
     image: '/imgs/pazhou.png',
@@ -174,3 +102,75 @@ const patentCollapseTitle = computed(() => {
   return patentHide.value === false ? 'Toggle to expand' : 'Toggle to hied'
 })
 </script>
+
+<template>
+  <div>
+    <h1 class="mb-4 text-2xl font-bold">
+      🏆 Honors & Awards
+    </h1>
+    <el-timeline class="space-y-4">
+      <el-timeline-item
+        v-for="(honor, index) in honors"
+        :key="index"
+        :timestamp="honor.timestamp"
+        placement="top"
+      >
+        <el-card>
+          <template #header>
+            <el-space>
+              <el-avatar
+                :src="honor.image"
+                shape="square"
+                size="large"
+                fit="fill"
+              />
+              <div class="text-xl">
+                {{ honor.title }}
+              </div>
+            </el-space>
+          </template>
+          <MDC
+            class="text-base"
+            :value="honor.content"
+          />
+        </el-card>
+      </el-timeline-item>
+    </el-timeline>
+
+    <h1 class="mb-4 text-2xl font-bold">
+      📜 Patent
+    </h1>
+
+    <el-collapse accordion>
+      <el-collapse-item
+        :title="patentCollapseTitle"
+        name="1"
+        @click="patentHide = !patentHide"
+      >
+        <ul class="list-disc text-base">
+          <li
+            v-for="(patent, index) in patents"
+            :key="index"
+          >
+            {{ patent.timestamp }}, {{ patent.title }}
+            <NuxtLink
+              :to="`https://patents.google.com/patent/${patent.id}`"
+              target="_blank"
+              class="link-primary"
+              title="PDF"
+            >
+              <el-icon
+                color="#409efc"
+                class="no-inherit"
+                :size="20"
+              >
+                <Icon name="lsicon:file-pdf-outline" />
+              </el-icon>
+            </NuxtLink>
+            <MDC :value="patent.author" />
+          </li>
+        </ul>
+      </el-collapse-item>
+    </el-collapse>
+  </div>
+</template>

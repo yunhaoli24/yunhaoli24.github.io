@@ -1,14 +1,15 @@
 {
   "name": "yunhaoli-bolg",
+  "type": "module",
   "version": "0.1.0",
+  "private": true,
   "description": "Yunhao Li Blog",
+  "author": "Yunhao Li",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/yunhaoli24/yunhaoli24.github.io"
   },
-  "author": "Yunhao Li",
-  "license": "MIT",
-  "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "nuxi dev",
@@ -20,11 +21,15 @@
     "generate": "nuxi generate",
     "ghpage": "nuxt build --preset github_pages"
   },
+  "peerDependencies": {
+    "pinia": "^3.0.1"
+  },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^4.3.0",
     "@element-plus/nuxt": "^1.1.1",
     "@iconify-json/fa6-brands": "^1.2.5",
     "@iconify-json/ic": "^1.2.2",
@@ -38,15 +43,12 @@
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/device": "3.2.4",
     "@pinia/nuxt": "^0.10.1",
-    "@tailwindcss/vite": "^4.0.7",
+    "@unocss/eslint-config": "^66.0.0",
+    "@unocss/nuxt": "^66.0.0",
     "@vueuse/nuxt": "^12.7.0",
     "nuxt": "^3.15.4",
-    "tailwindcss": "^4.0.7",
     "typescript": "^5.7.3",
     "vue-tsc": "~2.1.10"
-  },
-  "peerDependencies": {
-    "pinia": "^3.0.1"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -56,6 +58,5 @@
         "vue"
       ]
     }
-  },
-  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+  }
 }

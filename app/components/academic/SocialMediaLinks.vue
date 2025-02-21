@@ -1,3 +1,12 @@
+<script setup lang="ts">
+defineProps({
+  size: {
+    type: Number,
+    default: 20,
+  },
+})
+</script>
+
 <template>
   <el-space>
     <a
@@ -54,12 +63,3 @@
     </a>
   </el-space>
 </template>
-
-<script setup>
-defineProps({
-  size: {
-    type: Number,
-    default: 20,
-  },
-})
-</script>

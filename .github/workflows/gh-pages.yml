@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 21.x
-          cache: "pnpm"
+          cache: pnpm
 
       - name: Install
         run: pnpm install

@@ -1,12 +1,16 @@
+<script setup lang="ts">
+import { SpeedInsights } from '@vercel/speed-insights/vue'
+</script>
+
 <template>
   <div>
     <SpeedInsights />
-    <div class="w-full h-full">
+    <div class="h-full w-full">
       <el-container>
         <el-header>
-          <Nav />
+          <AcademicNav />
         </el-header>
-        <el-main class="relative w-full h-[calc(100vh-80px)] overflow-y-scroll">
+        <el-main class="relative h-[calc(100vh-80px)] w-full overflow-y-scroll">
           <el-col
             :span="18"
             :offset="3"
@@ -18,7 +22,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { SpeedInsights } from '@vercel/speed-insights/vue'
-</script>

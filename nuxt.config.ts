@@ -1,5 +1,3 @@
-import tailwindcss from '@tailwindcss/vite'
-
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
 
@@ -13,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/content',
     '@nuxtjs/device',
+    '@unocss/nuxt',
   ],
   devtools: {
     enabled: true,
@@ -54,7 +53,6 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
-  css: ['~/assets/css/main.css'],
   // colorMode
   colorMode: {
     classSuffix: '',
@@ -70,11 +68,6 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   compatibilityDate: '2024-11-01',
-  vite: {
-    plugins: [
-      tailwindcss(),
-    ],
-  },
   typescript: {
     typeCheck: true,
   },
@@ -86,6 +79,7 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       stylistic: true,
+      standalone: false,
     },
   },
 })

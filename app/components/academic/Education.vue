@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-2xl font-bold mb-4">
+    <h1 class="mb-4 text-2xl font-bold">
       🎓 Education
     </h1>
     <ul class="list-disc text-base">
@@ -20,5 +20,3 @@
     </ul>
   </div>
 </template>
-
-<script setup></script>

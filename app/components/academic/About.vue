@@ -1,13 +1,17 @@
+<script setup lang="ts">
+import SocialMediaLinks from './SocialMediaLinks.vue'
+</script>
+
 <template>
   <div>
-    <h1 class="text-2xl font-bold mb-4">
+    <h1 class="mb-4 text-2xl font-bold">
       🌟 About
     </h1>
     <el-row :gutter="20">
       <el-col :span="$device.isMobile ? 24 : 8">
         <div class="flex justify-center">
           <el-image
-            class="w-full max-w-[200px]"
+            class="max-w-[200px] w-full"
             src="/profile.JPG"
             fit="contain"
             lazy
@@ -55,5 +59,3 @@
     </el-row>
   </div>
 </template>
-
-<script setup lang="ts"></script>

@@ -1,6 +1,18 @@
+<script setup lang="ts">
+const works = [
+  {
+    title: 'China Post Bank',
+    job: 'ML Researcher & Data Analyst',
+    image: '/imgs/china_post.png',
+    content: '* Developed AI-driven finance data precision recommendation model for customer marketing.\n* Designed and implemented a model training engine for automatic rolling training and optimization\n* Contributed to a 15% increase in performance for China Post Bank GuangZhou.',
+    timestamp: '2023/10-2024/06',
+  },
+]
+</script>
+
 <template>
   <div>
-    <h1 class="text-2xl font-bold mb-4">
+    <h1 class="mb-4 text-2xl font-bold">
       💼 Work Experience
     </h1>
     <el-timeline class="space-y-4">
@@ -38,15 +50,3 @@
     </el-timeline>
   </div>
 </template>
-
-<script setup>
-const works = [
-  {
-    title: 'China Post Bank',
-    job: 'ML Researcher & Data Analyst',
-    image: '/imgs/china_post.png',
-    content: '* Developed AI-driven finance data precision recommendation model for customer marketing.\n* Designed and implemented a model training engine for automatic rolling training and optimization\n* Contributed to a 15% increase in performance for China Post Bank GuangZhou.',
-    timestamp: '2023/10-2024/06',
-  },
-]
-</script>
