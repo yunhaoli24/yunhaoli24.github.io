@@ -7,20 +7,6 @@ import ProgrammingSkills from './ProgrammingSkills.vue'
 import Publications from './Publications.vue'
 import WorkExp from './WorkExp.vue'
 
-const description
-  = 'The CV of Yunhao Li, a passionate researcher who love to use programming skills and creativity to solve problems.'
-useSeoMeta({
-  description,
-  ogTitle: 'Yunhao Li',
-  ogDescription: description,
-  ogImage: 'https://yunhaoli.top/profile.JPG',
-  ogUrl: 'https://yunhaoli.top',
-  twitterTitle: 'Yunhao Li',
-  twitterDescription: description,
-  twitterImage: 'https://yunhaoli.top/profile.JPG',
-  twitterCard: 'summary',
-})
-
 useHead({
   htmlAttrs: {
     lang: 'en',

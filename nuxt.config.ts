@@ -3,15 +3,16 @@ export default defineNuxtConfig({
 
   // build modules
   modules: [
+    '@nuxtjs/seo',
+    '@nuxtjs/device',
     '@nuxt/eslint',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@element-plus/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/icon',
-    '@nuxt/content',
-    '@nuxtjs/device',
     '@unocss/nuxt',
+    '@nuxt/content',
   ],
   devtools: {
     enabled: true,
@@ -20,7 +21,6 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-
   app: {
     // head
     head: {
@@ -53,9 +53,41 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
-  // colorMode
+  css: ['assets/css/main.css'],
+  site: {
+    url: 'https://yunhaoli.top',
+    name: 'Yunhao Li',
+  },
   colorMode: {
     classSuffix: '',
+  },
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            // Default theme (same as single string)
+            default: 'github-light',
+            // Theme used if `html.dark`
+            dark: 'github-dark',
+            // Theme used if `html.sepia`
+            sepia: 'monokai',
+          },
+          langs: [
+            'c',
+            'cpp',
+            'java',
+            'shell',
+            'python',
+            'dockerfile',
+            'javascript',
+          ],
+        },
+      },
+    },
+    renderer: {
+      anchorLinks: { h2: false, h3: false, h4: false },
+    },
   },
   future: {
     compatibilityVersion: 4,
@@ -81,5 +113,8 @@ export default defineNuxtConfig({
       stylistic: true,
       standalone: false,
     },
+  },
+  unocss: {
+    injectPosition: 'last',
   },
 })

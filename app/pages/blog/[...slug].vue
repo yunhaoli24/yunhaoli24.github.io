@@ -7,6 +7,8 @@ const title = route.path.slice(1)
 useHead({
   titleTemplate: `%s - ${title}`,
 })
+// Ensure the SEO meta tags are rendered
+useSeoMeta(page.value?.seo || {})
 </script>
 
 <template>
