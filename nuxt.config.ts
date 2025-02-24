@@ -99,7 +99,7 @@ export default defineNuxtConfig({
     renderJsonPayloads: true,
     typedPages: true,
   },
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-02-24',
   typescript: {
     typeCheck: true,
   },
@@ -113,8 +113,5 @@ export default defineNuxtConfig({
       stylistic: true,
       standalone: false,
     },
-  },
-  unocss: {
-    injectPosition: 'last',
   },
 })

@@ -1,10 +1,10 @@
-import presetWind3 from '@unocss/preset-wind3'
 import {
   defineConfig,
   presetAttributify,
   presetIcons,
   presetTypography,
   presetWebFonts,
+  presetWind3,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
