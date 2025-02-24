@@ -1,31 +1,32 @@
 ---
-title: 「docker」构建CUDA镜像
+title: 「Docker」构建 CUDA 镜像
 date: 2025-02-24
 ---
-
 # 背景
 
-实验室的服务器内核版本太老了，有一个项目需要升级内核，但是服务器上还有一堆东西不敢随便升级。
+实验室服务器的内核版本较旧，某个项目需要升级内核，但由于服务器上运行着大量关键服务，直接升级可能存在风险。
 
-于是就准备用docker构建一个镜像，安装CUDA和Python环境，平时ssh连进去炼丹
+因此，计划通过 Docker 构建一个包含 CUDA 和 Python 环境的镜像，通过 SSH 连接到容器中进行深度学习模型训练。
 
 # 需求
 
-炼丹必备的cuda肯定是必不可少的，ssh服务器也需要配置，既然准备写一个dockerfile，那python环境和必要的包的也就一块打包到镜像里去得了。
+CUDA 是深度学习模型训练的核心依赖，必须包含在镜像中。此外，SSH 服务也需要配置以支持远程访问。为了简化环境管理，计划将 Python 环境及常用依赖包一并打包到镜像中。
 
-以后谁想炼丹直接新建一个容器，映射好端口之后容器里炼丹的基础设施就都有了。
+未来，任何需要进行深度学习模型训练的用户，只需启动一个容器并映射相应端口，即可获得完整的训练环境。
 
 # 安装
 
-## 宿主机安装CUDA驱动
+## 宿主机安装 CUDA 驱动
+
+以下命令用于安装 NVIDIA 驱动程序（可根据需求选择其他版本）：
 
 ```shell
-apt install -y nvidia-driver-550 # you can use other version
+apt install -y nvidia-driver-550 # 可根据实际需求更换版本
 ```
 
-## 宿主机安装显卡驱动
+### 宿主机安装 NVIDIA 容器工具包
 
-在[https://nvidia.github.io/nvidia-container-runtime/](https://nvidia.github.io/nvidia-container-runtime/) 查看支持的操作系统和版本，并根据对应选项，添加源，因为我是ubuntu，所以添加方式为：
+访问 [https://nvidia.github.io/nvidia-container-runtime/](https://nvidia.github.io/nvidia-container-runtime/) 查看支持的操作系统和版本，并根据对应的选项添加软件源。以下步骤适用于 Ubuntu 系统：
 
 ```shell
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
@@ -60,13 +61,15 @@ sudo nvidia-ctk runtime configure --runtime=containerd
 docker run -it --rm --gpus all ubuntu nvidia-smi
 ```
 
-## 构建Dockerfile
+## 构建容器
 
-直接把`Dockerfile`复制过去，build即可，可能需要根据自己的CUDA版本换一下第一行的`FROM`部分，具体根据[https://hub.docker.com/r/pytorch/pytorch/tags](https://hub.docker.com/r/pytorch/pytorch/tags)换一下版本号。
+### 编写 Dockerfile
 
-我这里给这个镜像安装了显示图形界面必备的一些包，打开了ssh-server并通过环境变量设置初始密码。这样镜像跑起来之后就可以直接用ssh连了，不需要`exec`进容器里再设置密码，方便管理员批量创建。
+将以下 `Dockerfile` 复制并根据需求进行调整。如果需要适配不同的 CUDA 版本，请参考 [https://hub.docker.com/r/pytorch/pytorch/tags](https://hub.docker.com/r/pytorch/pytorch/tags) 修改 `FROM` 部分的版本号。
 
-```dockerfile
+该镜像集成了图形界面所需的依赖包，并启用了 SSH 服务。通过环境变量设置了初始密码，便于管理员批量创建容器，无需手动进入容器设置密码。
+
+```dockerfile [Dockerfile]
 FROM pytorch/pytorch:2.6.0-cuda12.6-cudnn9-devel
 LABEL author="li.yunhao@foxmail.com"
 
@@ -94,13 +97,15 @@ ENTRYPOINT echo "root:${PASSWORD}" | chpasswd && /usr/sbin/sshd -D
 
 ```
 
-## 运行容器
+### build容器
 
 把`Dockerfile`写好之后就可以build了，可以按照希求更改build tag。
 
 ```shell
 sudo docker build -t server/pytorch/pytorch:2.6.0-cuda12.6-cudnn9-devel .
 ```
+
+### 运行容器
 
 在启动docker容器的时候要注意加一些cuda的参数
 

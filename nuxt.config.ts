@@ -53,7 +53,6 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
-  css: ['assets/css/main.css'],
   site: {
     url: 'https://yunhaoli.top',
     name: 'Yunhao Li',
@@ -64,29 +63,13 @@ export default defineNuxtConfig({
   content: {
     build: {
       markdown: {
-        highlight: {
-          theme: {
-            // Default theme (same as single string)
-            default: 'github-light',
-            // Theme used if `html.dark`
-            dark: 'github-dark',
-            // Theme used if `html.sepia`
-            sepia: 'monokai',
-          },
-          langs: [
-            'c',
-            'cpp',
-            'java',
-            'shell',
-            'python',
-            'dockerfile',
-            'javascript',
-          ],
+        toc: {
+          depth: 3,
         },
       },
     },
     renderer: {
-      anchorLinks: { h2: false, h3: false, h4: false },
+      anchorLinks: { h1: false, h2: false, h3: false, h4: false },
     },
   },
   future: {

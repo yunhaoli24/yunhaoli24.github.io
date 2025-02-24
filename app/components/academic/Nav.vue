@@ -36,7 +36,7 @@ onMounted(() => {
         inline-prompt
         :active-action-icon="DarkModeIcon"
         :inactive-action-icon="LightModeIcon"
-        class="dark:[--el-switch-on-color:#272727] light:[--el-switch-off-color:#f0f0f0]"
+        class="dark:[--el-switch-on-color] light:[--el-switch-off-color]"
       />
     </el-menu-item>
   </el-menu>
