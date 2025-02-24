@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
+  return queryCollection('blog').path(route.path).first()
 })
 const title = route.path.slice(1)
 useHead({
@@ -12,8 +12,16 @@ useSeoMeta(page.value?.seo || {})
 </script>
 
 <template>
-  <ContentRenderer
-    v-if="page"
-    :value="page"
-  />
+  <div v-if="page">
+    <ContentRenderer :value="page" />
+  </div>
+  <div v-else>
+    <div class="empty-page">
+      <h1>Page Not Found</h1>
+      <p>Oops! The content you're looking for doesn't exist.</p>
+      <NuxtLink to="/blog">
+        Go back blog home.
+      </NuxtLink>
+    </div>
+  </div>
 </template>
