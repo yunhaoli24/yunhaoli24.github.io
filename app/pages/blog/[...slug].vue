@@ -3,7 +3,7 @@ const route = useRoute()
 const { data: page, execute } = useLazyAsyncData(route.path, () => {
   return queryCollection('blog').path(route.path).first()
 })
-
+execute()
 onMounted(() => {
   execute()
 })
