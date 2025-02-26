@@ -8,7 +8,7 @@
         2022-2025: Master of Artificial Intelligence, GuangZhou University,
         Advisor:
         <a
-          class="text-blue-500"
+          class="text-[--el-color-primary]"
           href="https://pangyan.me/"
         >Yan Pang </a>, GPA
         3.61/4 (National Scholarship)

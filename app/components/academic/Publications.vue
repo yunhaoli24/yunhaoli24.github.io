@@ -133,13 +133,13 @@ const publications: Publication[] = [
         <el-card>
           <el-space class="flex-col-reverse md:flex-row">
             <el-image
-              class="h-[200px] w-[300px]"
+              class="h-100% w-100% md:h-[200px] md:w-[300px]"
               :src="publication.image"
               fit="fill"
               lazy
             />
             <div>
-              <div class="text-xl font-semibold">
+              <div class="text-xl font-bold">
                 {{ publication.title }}
               </div>
               <div class="mb-1 text-base">
@@ -154,26 +154,14 @@ const publications: Publication[] = [
                   :href="publication.pdf_link"
                   target="_blank"
                 >
-                  <el-icon
-                    color="#409efc"
-                    class="no-inherit"
-                    :size="20"
-                  >
-                    <Icon name="lsicon:file-pdf-outline" />
-                  </el-icon>
+                  <Icon class="c-[--el-color-primary]" name="lsicon:file-pdf-outline" size="20" />
                 </a>
                 <a
                   v-if="publication.code_link"
                   :href="publication.code_link"
                   target="_blank"
                 >
-                  <el-icon
-                    color="#409efc"
-                    class="no-inherit"
-                    :size="20"
-                  >
-                    <Icon name="uil:github" />
-                  </el-icon>
+                  <Icon class="c-[--el-color-primary]" name="garden:github-fill-16" size="20" />
                 </a>
                 <el-tag v-if="publication.journal">
                   {{ publication.journal }}

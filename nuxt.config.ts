@@ -53,6 +53,7 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
+  css: ['~/assets/scss/index.scss'],
   site: {
     url: 'https://yunhaoli.top',
     name: 'Yunhao Li',
@@ -102,12 +103,22 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   compatibilityDate: '2025-02-24',
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+          additionalData: `@use "@/assets/scss/element/index.scss" as element;`,
+        },
+      },
+    },
+  },
   typescript: {
     typeCheck: true,
   },
-
   elementPlus: {
     icon: false,
+    importStyle: 'scss',
     themes: ['dark'],
   },
   eslint: {

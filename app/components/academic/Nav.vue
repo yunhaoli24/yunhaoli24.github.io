@@ -22,12 +22,10 @@ onMounted(() => {
     router
   >
     <el-menu-item index="/">
-      Yunhao Li
+      Home
     </el-menu-item>
     <el-menu-item index="/blog">
-      <NuxtLink to="/blog">
-        Blog
-      </NuxtLink>
+      Blog
     </el-menu-item>
     <div class="flex-grow" />
     <el-menu-item>

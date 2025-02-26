@@ -40,33 +40,32 @@ async function copyButtonHandleClick(): Promise<void> {
     isCopyButtonActive.value = false
   }, 2000)
 }
-
+const langMap: { [key: string]: string } = {
+  python: 'catppuccin:python',
+  javascript: 'catppuccin:javascript',
+  typescript: 'catppuccin:typescript',
+  shell: 'catppuccin:bash',
+  java: 'catppuccin:java-alt-2',
+  json: 'catppuccin:json',
+  c: 'catppuccin:c',
+  cpp: 'catppuccin:cpp',
+  vue: 'catppuccin:vue',
+  dockerfile: 'catppuccin:docker',
+  react: 'catppuccin:javascript-react',
+  golang: 'catppuccin:go',
+}
 function getIconName(language: string | null): string {
   if (!language)
     return ''
-  const langMap: { [key: string]: string } = {
-    python: 'catppuccin:python',
-    javascript: 'catppuccin:javascript',
-    typescript: 'catppuccin:typescript',
-    shell: 'catppuccin:bash',
-    java: 'catppuccin:java-alt-2',
-    json: 'catppuccin:json',
-    c: 'catppuccin:c',
-    cpp: 'catppuccin:cpp',
-    vue: 'catppuccin:vue',
-    dockerfile: 'catppuccin:docker',
-    react: 'catppuccin:javascript-react',
-    golang: 'catppuccin:go',
-  }
   return langMap[language.toLowerCase()] || ''
 }
 </script>
 
 <template>
-  <div class="flex flex-col dark:bg-[#2d2d2d] light:bg-[#f5f5f5]">
+  <div class="flex flex-col dark:bg-gray-800 light:bg-gray-100">
     <div
       v-if="language || filename"
-      class="h-10 flex items-center gap-1.5 rounded-t"
+      class="h-10 flex items-center rounded-t"
     >
       <Icon
         v-if="language"
@@ -76,23 +75,23 @@ function getIconName(language: string | null): string {
       <span
         v-if="filename"
         class="ml-3"
-      >{{
-        filename
-      }}</span>
+      >
+        {{ filename }}
+      </span>
       <el-button
-        :class="`ml-auto mr-3 flex gap-1 rounded p-1 transition-all hover:backdrop-brightness-125 ${isCopyButtonActive ? 'backdrop-brightness-125' : ''}`"
+        class="ml-auto mr-3 flex gap-1 rounded transition-all"
         @click="copyButtonHandleClick"
       >
-        <span v-show="isCopyButtonActive">Copied</span><Icon
-          :name="copyButtonIconName"
-        />
+        <span v-show="isCopyButtonActive">Copied </span>
+        <Icon :name="copyButtonIconName" />
       </el-button>
     </div>
     <pre
-      class="overflow-x-auto overflow-x-auto whitespace-pre-wrap break-words rounded-md px-4 py-3" :class="[
+      class="overflow-x-auto overflow-x-auto whitespace-pre-wrap break-words rounded-md px-4" :class="[
         $props.class,
         filename || language ? 'rounded-b' : 'rounded',
       ]"
-    ><slot /></pre>
+    ><slot />
+  </pre>
   </div>
 </template>

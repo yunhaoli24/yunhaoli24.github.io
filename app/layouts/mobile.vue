@@ -1,12 +1,19 @@
 <template>
   <div>
-    <div class="h-full w-full">
+    <div>
       <el-container>
         <el-header>
           <AcademicNav />
         </el-header>
-        <el-main class="relative h-[calc(100vh-80px)] w-full overflow-y-scroll">
-          <slot />
+        <el-main class="h-[--el-main-height]">
+          <el-scrollbar>
+            <el-col
+              :span="20"
+              :offset="2"
+            >
+              <slot />
+            </el-col>
+          </el-scrollbar>
         </el-main>
       </el-container>
     </div>

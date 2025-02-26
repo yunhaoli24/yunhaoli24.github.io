@@ -159,13 +159,7 @@ const patentCollapseTitle = computed(() => {
               class="link-primary"
               title="PDF"
             >
-              <el-icon
-                color="#409efc"
-                class="no-inherit"
-                :size="20"
-              >
-                <Icon name="lsicon:file-pdf-outline" />
-              </el-icon>
+              <Icon class="c-[--el-color-primary]" name="lsicon:file-pdf-outline" size="18" />
             </NuxtLink>
             <MDC :value="patent.author" />
           </li>
