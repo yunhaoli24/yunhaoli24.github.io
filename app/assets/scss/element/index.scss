@@ -8,4 +8,7 @@ $main: (
     height: calc(100vh - map.get($header, height)),
     padding: 0,
 );
-@forward 'element-plus/theme-chalk/src/common/var.scss' with ($header: $header, $main: $main);
+$menu: (
+    hover-bg-color: transparent,
+);
+@forward 'element-plus/theme-chalk/src/common/var.scss' with ($header: $header, $main: $main, $menu: $menu);

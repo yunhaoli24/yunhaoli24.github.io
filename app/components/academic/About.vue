@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import SocialMediaLinks from './SocialMediaLinks.vue'
-</script>
-
 <template>
   <div>
     <h1 class="mb-4 text-2xl font-bold">
@@ -50,7 +46,7 @@ import SocialMediaLinks from './SocialMediaLinks.vue'
               the medical science, thereby enhancing human health.
             </p>
           </div>
-          <SocialMediaLinks
+          <AcademicSocialMediaLinks
             class="float-right"
             :size="28"
           />

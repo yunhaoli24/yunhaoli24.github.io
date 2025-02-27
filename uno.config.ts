@@ -1,3 +1,4 @@
+import extractorMdc from '@unocss/extractor-mdc'
 import {
   defineConfig,
   presetAttributify,
@@ -18,5 +19,8 @@ export default defineConfig({
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
+  ],
+  extractors: [
+    extractorMdc(),
   ],
 })

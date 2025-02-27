@@ -9,6 +9,11 @@ const colorMode = ref(false)
 watch(colorMode, (val) => {
   color.preference = val ? 'dark' : 'light'
 })
+
+const route = useRoute()
+const searchVisable = computed(() => {
+  return route.path.startsWith('/blog')
+})
 onMounted(() => {
   const isDark = useDark()
   colorMode.value = isDark.value
@@ -28,6 +33,13 @@ onMounted(() => {
       Blog
     </el-menu-item>
     <div class="flex-grow" />
+    <transition
+      name="fade"
+    >
+      <el-menu-item v-show="searchVisable">
+        <BlogContentSearch />
+      </el-menu-item>
+    </transition>
     <el-menu-item>
       <el-switch
         v-model="colorMode"
@@ -39,3 +51,12 @@ onMounted(() => {
     </el-menu-item>
   </el-menu>
 </template>
+
+<style lang="css" scoped>
+.fade-enter-active, .fade-leave-active {
+transition: opacity 0.3s ease;
+}
+.fade-enter-from, .fade-leave-to {
+opacity: 0;
+}
+</style>
