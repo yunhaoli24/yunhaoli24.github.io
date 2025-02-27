@@ -1,0 +1,1 @@
+import{_ as o,c as r,o as s,r as a}from"./9edR9GkG.js";const t={},c={class:"overflow-x-auto overflow-x-auto whitespace-pre-wrap break-words rounded-b px-1 dark:bg-gray-700 light:bg-gray-100"};function n(e,d){return s(),r("code",c,[a(e.$slots,"default")])}const l=Object.assign(o(t,[["render",n]]),{__name:"ProseCode"});export{l as default};
