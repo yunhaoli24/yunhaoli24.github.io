@@ -28,8 +28,7 @@ watch(data, (newData) => {
 const result = computed(() => miniSearch.search(toValue(query)))
 
 function handleSearchCardClick(link: SearchResult) {
-  const router = useRouter()
-  router.push(link.id)
+  useRouter().push(link.id)
   dialogVisible.value = false
 }
 </script>

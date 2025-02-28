@@ -2,10 +2,10 @@
   <div>
     <div>
       <el-container>
-        <el-header>
+        <el-header class="h-60px">
           <AcademicNav />
         </el-header>
-        <el-main class="h-[--el-main-height]">
+        <el-main class="h-[calc(100vh-60px)]">
           <el-scrollbar>
             <el-col
               :span="18"
@@ -19,3 +19,9 @@
     </div>
   </div>
 </template>
+
+<style lang="css" scoped>
+.el-main {
+    padding: 2px;
+}
+</style>

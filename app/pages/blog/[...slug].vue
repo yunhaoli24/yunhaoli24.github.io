@@ -1,14 +1,16 @@
 <script lang="ts" setup>
 const route = useRoute()
-const { data: page, execute } = useLazyAsyncData(route.path, () => {
+const { data: page, status } = useAsyncData(route.path, () => {
   return queryCollection('blog').path(route.path).first()
 })
-execute()
-onMounted(() => {
-  execute()
-})
+// execute()
+// onMounted(() => {
+//   if (page === undefined) {
+//     execute()
+//   }
+// })
 
-const title = route.path.slice(1)
+const title = route.path.slice(1).replace('/', '-')
 useHead({
   titleTemplate: `%s - ${title}`,
 })
@@ -17,16 +19,12 @@ useSeoMeta(page.value?.seo || {})
 </script>
 
 <template>
-  <div v-if="page">
-    <ContentRenderer :value="page" />
-  </div>
-  <div v-else>
-    <div class="empty-page">
-      <h1>Page Not Found</h1>
-      <p>Oops! The content you're looking for doesn't exist.</p>
-      <NuxtLink to="/blog">
-        Go back blog home.
-      </NuxtLink>
-    </div>
-  </div>
+  <el-skeleton :rows="5" animated :loading=" status === 'pending'">
+    <template #default>
+      <div v-if="page && page.body.toc">
+        <BlogTableOfContent :toc="page.body.toc" />
+        <ContentRenderer :value="page" />
+      </div>
+    </template>
+  </el-skeleton>
 </template>

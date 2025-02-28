@@ -52,7 +52,7 @@ onMounted(() => {
   </el-menu>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .fade-enter-active, .fade-leave-active {
 transition: opacity 0.3s ease;
 }
