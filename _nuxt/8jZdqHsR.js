@@ -1,0 +1,1 @@
+import{_ as o,c as r,o as s,r as n}from"./BLsQLv3l.js";const t={};function c(e,a){return s(),r("ol",null,[n(e.$slots,"default")])}const _=Object.assign(o(t,[["render",c]]),{__name:"ProseOl"});export{_ as default};
