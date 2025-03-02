@@ -20,7 +20,7 @@
   </div>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .el-main {
     padding: 2px;
 }

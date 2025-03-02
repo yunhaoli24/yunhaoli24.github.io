@@ -70,7 +70,7 @@ function handleSearchCardClick(link: SearchResult) {
   </el-dialog>
 </template>
 
-<style lang="css">
+<style lang="scss" scoped>
 .el-card__body {
   padding-left: 5px;
 }

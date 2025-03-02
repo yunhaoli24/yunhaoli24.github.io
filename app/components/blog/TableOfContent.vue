@@ -36,7 +36,7 @@ function onNodeClick(data: TreeNode) {
 </script>
 
 <template>
-  <div v-if="!$device.isMobile" class="fixed right-0 top-1/2 h-[80vh] w-[10vw] overflow-y-auto p-4 -translate-y-1/2">
+  <div v-if="!$device.isMobile && formattedToc.length !== 0" class="fixed right-0 top-1/2 m-r-1 h-[80vh] w-[9vw] overflow-y-auto p-4 -translate-y-1/2">
     <el-scrollbar>
       <el-tree
         :data="formattedToc"
@@ -52,8 +52,11 @@ function onNodeClick(data: TreeNode) {
   </div>
 </template>
 
-<style lang="css">
+<style lang="scss">
 .el-tree-node__expand-icon.expanded {
   display: none;
+}
+.el-tree-node__label {
+ overflow: hidden;
 }
 </style>
