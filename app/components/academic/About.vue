@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="mb-4 text-2xl font-bold">
+    <h1 class="text-2xl font-bold mb-4">
       🌟 About
     </h1>
     <el-row :gutter="20">
@@ -16,7 +16,7 @@
       </el-col>
       <el-col :span="$device.isMobile ? 24 : 16">
         <div>
-          <div class="indent-8 text-base">
+          <div class="text-base indent-8">
             <p>
               Hello, my name is Yunhao Li, and I am currently serving as a
               research assistant at Chinese Academy of Sciences, where I am

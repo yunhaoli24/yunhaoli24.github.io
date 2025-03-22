@@ -105,7 +105,7 @@ const patentCollapseTitle = computed(() => {
 
 <template>
   <div>
-    <h1 class="mb-4 text-2xl font-bold">
+    <h1 class="text-2xl font-bold mb-4">
       🏆 Honors & Awards
     </h1>
     <el-timeline class="space-y-4">
@@ -137,7 +137,7 @@ const patentCollapseTitle = computed(() => {
       </el-timeline-item>
     </el-timeline>
 
-    <h1 class="mb-4 text-2xl font-bold">
+    <h1 class="text-2xl font-bold mb-4">
       📜 Patent
     </h1>
 
@@ -147,7 +147,7 @@ const patentCollapseTitle = computed(() => {
         name="1"
         @click="patentHide = !patentHide"
       >
-        <ul class="list-disc text-base">
+        <ul class="text-base list-disc">
           <li
             v-for="(patent, index) in patents"
             :key="index"

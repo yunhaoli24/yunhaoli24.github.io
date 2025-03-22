@@ -9,7 +9,7 @@ const currentYear = computed(() => {
 
 <template>
   <div>
-    <div class="text-center text-4xl">
+    <div class="text-4xl text-center">
       Yunhao Li
     </div>
     <br>

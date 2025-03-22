@@ -46,20 +46,20 @@ function handleSearchCardClick(link: SearchResult) {
         :prefix-icon="searchIcon"
       />
     </template>
-    <div class="h-50vh pr-[calc(var(--el-dialog-padding-primary)+var(--el-message-close-size,_16px))]">
-      <div v-if="result.length === 0" class="text-center text-gray-500">
+    <div class="pr-[calc(var(--el-dialog-padding-primary)+var(--el-message-close-size,_16px))] h-50vh">
+      <div v-if="result.length === 0" class="text-gray-500 text-center">
         No results found
       </div>
       <el-scrollbar>
         <el-card v-for="link of result" :key="link.id" class="mt-2 flex-col hover:bg-[--el-color-primary-light-9]" shadow="hover" @click="handleSearchCardClick(link)">
           <el-row :gutter="10">
             <el-col :span="4" class="text-center">
-              <el-text class="h-60% w-100% text-sm" type="primary" truncated>
+              <el-text class="text-sm h-60% w-100%" type="primary" truncated>
                 {{ link.title }}
               </el-text>
             </el-col>
             <el-col :span="20">
-              <el-text class="h-60% w-100% text-xs" type="info" truncated>
+              <el-text class="text-xs h-60% w-100%" type="info" truncated>
                 {{ link.content }}
               </el-text>
             </el-col>

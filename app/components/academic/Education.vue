@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1 class="mb-4 text-2xl font-bold">
+    <h1 class="text-2xl font-bold mb-4">
       🎓 Education
     </h1>
-    <ul class="list-disc text-base">
+    <ul class="text-base list-disc">
       <li>
         2022-2025: Master of Artificial Intelligence, GuangZhou University,
         Advisor:

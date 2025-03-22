@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1 class="mb-4 text-2xl font-bold">
+    <h1 class="text-2xl font-bold mb-4">
       💻 Programming Skills
     </h1>
-    <ul class="list-disc text-base">
+    <ul class="text-base list-disc">
       <li>
         <b>AI & Data</b>: PyTorch, Transformers, AutoGluon, Pandas, Matplotlib,
         OpenCV
@@ -21,7 +21,7 @@
         ><span>LlamaIndex
           <img
             src="https://img.shields.io/github/stars/run-llama/llama_index?style=flat"
-            class="inline align-middle"
+            class="align-middle inline"
           ></span></a>
         &nbsp;
         <a
@@ -31,7 +31,7 @@
         ><span>LLaMA-Factory
           <img
             src="https://img.shields.io/github/stars/hiyouga/LLaMA-Factory?style=flat"
-            class="inline align-middle"
+            class="align-middle inline"
           ></span></a>
         &nbsp;
         <a
@@ -41,7 +41,7 @@
         ><span>Chinese-LLaMA-Alpaca
           <img
             src="https://img.shields.io/github/stars/ymcui/Chinese-LLaMA-Alpaca?style=flat"
-            class="inline align-middle"
+            class="align-middle inline"
           ></span></a>
       </li>
     </ul>

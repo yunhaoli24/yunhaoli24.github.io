@@ -2,7 +2,7 @@
   <div>
     <div>
       <el-container>
-        <el-header class="h-60px">
+        <el-header h-60px>
           <AcademicNav />
         </el-header>
         <el-main class="h-[calc(100vh-60px)]">

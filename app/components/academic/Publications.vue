@@ -120,7 +120,7 @@ const publications: Publication[] = [
 
 <template>
   <div>
-    <h1 class="mb-4 text-2xl font-bold">
+    <h1 class="text-2xl font-bold mb-4">
       📚 Publications
     </h1>
     <el-timeline>
@@ -142,10 +142,10 @@ const publications: Publication[] = [
               <div class="text-xl font-bold">
                 {{ publication.title }}
               </div>
-              <div class="mb-1 text-base">
+              <div class="text-base mb-1">
                 <MDC :value="publication.author" />
               </div>
-              <div class="mb-2 text-base font-bold">
+              <div class="text-base font-bold mb-2">
                 {{ publication.journal_name }}
               </div>
               <el-space class="mb-1 mt-1">

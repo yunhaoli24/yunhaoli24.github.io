@@ -65,7 +65,7 @@ function getIconName(language: string | null): string {
   <div class="flex flex-col dark:bg-gray-800 light:bg-gray-100">
     <div
       v-if="language || filename"
-      class="h-10 flex items-center rounded-t"
+      class="rounded-t flex h-10 items-center"
     >
       <Icon
         v-if="language"
@@ -79,7 +79,7 @@ function getIconName(language: string | null): string {
         {{ filename }}
       </span>
       <el-button
-        class="ml-auto mr-3 flex gap-1 rounded transition-all"
+        class="ml-auto mr-3 rounded flex gap-1 transition-all"
         @click="copyButtonHandleClick"
       >
         <span v-show="isCopyButtonActive">Copied </span>
@@ -87,7 +87,7 @@ function getIconName(language: string | null): string {
       </el-button>
     </div>
     <pre
-      class="overflow-x-auto overflow-x-auto whitespace-pre-wrap break-words rounded-md px-4" :class="[
+      class="px-4 rounded-md whitespace-pre-wrap break-words overflow-x-auto overflow-x-auto" :class="[
         $props.class,
         filename || language ? 'rounded-b' : 'rounded',
       ]"

@@ -12,7 +12,7 @@ const works = [
 
 <template>
   <div>
-    <h1 class="mb-4 text-2xl font-bold">
+    <h1 class="text-2xl font-bold mb-4">
       💼 Work Experience
     </h1>
     <el-timeline class="space-y-4">
