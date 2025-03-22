@@ -1,0 +1,1 @@
+import{_ as o,c as r,o as s,r as a}from"./DoVm7GKB.js";const t={},c={class:"px-1 rounded-b whitespace-pre-wrap break-words overflow-x-auto overflow-x-auto dark:bg-gray-700 light:bg-gray-100"};function n(e,d){return s(),r("code",c,[a(e.$slots,"default")])}const l=Object.assign(o(t,[["render",n]]),{__name:"ProseCode"});export{l as default};
