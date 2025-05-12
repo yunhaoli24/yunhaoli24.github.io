@@ -19,7 +19,7 @@
           <div class="text-base indent-8">
             <p>
               Hello, my name is Yunhao Li, and I am currently serving as a
-              research assistant at Chinese Academy of Sciences, where I am
+              research assistant at Hong Kong University of Science and Technology, where I am
               fortunate to work under the esteemed guidance of
               <a
                 class="text-[--el-color-primary]"
