@@ -36,11 +36,11 @@ onMounted(() => {
     <transition
       name="fade"
     >
-      <el-menu-item v-show="searchVisable">
+      <el-menu-item v-show="searchVisable" index="">
         <BlogContentSearch />
       </el-menu-item>
     </transition>
-    <el-menu-item>
+    <el-menu-item index="">
       <el-switch
         v-model="colorMode"
         inline-prompt
