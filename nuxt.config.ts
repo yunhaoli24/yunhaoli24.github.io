@@ -103,12 +103,11 @@ export default defineNuxtConfig({
     renderJsonPayloads: true,
     typedPages: true,
   },
-  compatibilityDate: '2025-02-24',
+  compatibilityDate: '2025-07-18',
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern-compiler',
           additionalData: `@use "@/assets/scss/element/index.scss" as element;`,
         },
       },
