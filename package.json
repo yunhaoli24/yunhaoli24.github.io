@@ -28,7 +28,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^4.17.0",
     "@element-plus/nuxt": "^1.1.4",
-    "@iconify-json/carbon": "^1.2.10",
+    "@iconify-json/carbon": "^1.2.11",
     "@iconify-json/catppuccin": "^1.2.11",
     "@iconify-json/fa6-brands": "^1.2.5",
     "@iconify-json/fa6-solid": "^1.2.3",
@@ -36,16 +36,16 @@
     "@iconify-json/hugeicons": "^1.2.6",
     "@iconify-json/ic": "^1.2.2",
     "@iconify-json/lsicon": "^1.2.3",
-    "@iconify-json/material-symbols": "^1.2.29",
+    "@iconify-json/material-symbols": "^1.2.30",
     "@iconify-json/ri": "^1.2.5",
     "@iconify-json/tabler": "^1.2.19",
     "@iconify-json/uil": "^1.2.3",
-    "@nuxt/eslint": "^1.5.2",
+    "@nuxt/eslint": "^1.6.0",
     "@nuxt/icon": "^1.15.0",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/device": "^3.2.4",
     "@nuxtjs/seo": "^3.1.0",
-    "@pinia/nuxt": "^0.11.1",
+    "@pinia/nuxt": "^0.11.2",
     "@unocss/eslint-config": "^66.3.3",
     "@unocss/extractor-mdc": "^66.3.3",
     "@unocss/nuxt": "^66.3.3",
@@ -53,7 +53,7 @@
     "nuxt": "^4.0.0",
     "sass-embedded": "^1.89.2",
     "typescript": "^5.8.3",
-    "vue-tsc": "^2.2.12"
+    "vue-tsc": "^3.0.3"
   },
   "pnpm": {
     "peerDependencyRules": {
