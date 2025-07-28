@@ -11,7 +11,7 @@
           class="text-[--el-color-primary]"
           href="https://pangyan.me/"
         >Yan Pang </a>, GPA
-        3.61/4 (National Scholarship, Outstanding School Graduates)
+        3.58/4 (National Scholarship, Outstanding School Graduates)
       </li>
       <li>
         2018-2022: Bachelor in Computer Science, Guilin University of Electronic
