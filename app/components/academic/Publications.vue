@@ -22,9 +22,7 @@ const publications: Publication[] = [
     pdf_link: 'https://ieeexplore.ieee.org/document/10892059',
     code_link: 'https://github.com/deepang-ai/BaS',
     image: '/imgs/bas.png',
-    // IF: "10.4",
     journal: 'JBHI',
-    // ccf: 'CCF-C',
     timestamp: '2025',
   },
   {
@@ -36,9 +34,7 @@ const publications: Publication[] = [
     pdf_link: 'https://ieeexplore.ieee.org/document/10843341',
     code_link: 'https://github.com/deepang-ai/MOD',
     image: '/imgs/MOD.png',
-    // IF: "10.4",
     journal: 'JBHI',
-    // ccf: 'CCF-C',
     timestamp: '2025',
   },
   {
@@ -49,11 +45,8 @@ const publications: Publication[] = [
     journal_name: 'Asian Conference on Computer Vision',
     pdf_link:
       'https://openaccess.thecvf.com/content/ACCV2024/papers/Li_Optimized_Breast_Lesion_Segmentation_in_Ultrasound_Videos_Across_Varied_Resource-Scant_ACCV_2024_paper.pdf',
-    // code_link: 'https://github.com/aigzhusmart/Slim-UNETR',
-    // IF: "10.4",
     image: '/imgs/RbS.png',
     journal: 'ACCV',
-    // ccf: 'CCF-C',
     timestamp: '2024',
   },
   {
@@ -65,10 +58,7 @@ const publications: Publication[] = [
       'Chinese Conference on Pattern Recognition and Computer Vision',
     pdf_link: 'https://link.springer.com/chapter/10.1007/978-981-97-8499-8_16',
     image: '/imgs/IPM.png',
-    // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
-    // IF: "10.4",
     journal: 'PRCV',
-    // ccf: 'CCF-C',
     timestamp: '2024',
   },
   {
@@ -78,11 +68,9 @@ const publications: Publication[] = [
       'Yan Pang, Jiaming Liang, Teng Huang, Hao Chen, **Yunhao Li**, Dan Li, Lin Huang, Qiong Wang.',
     journal_name: 'IEEE Transactions on Medical Imaging',
     pdf_link: 'https://ieeexplore.ieee.org/abstract/document/10288609/',
-    code_link: 'https://github.com/aigzhusmart/Slim-UNETR',
+    code_link: 'https://github.com/deepang-ai/Slim-UNETR',
     image: '/imgs/SlimUNETR.png',
-    // IF: '10.4',
     journal: 'TMI',
-    // ccf: 'CCF-A',
     timestamp: '2023',
   },
   {
@@ -92,12 +80,9 @@ const publications: Publication[] = [
       'Bo Wei, Teng Huang, Xi Zhang, Jiaming Liang, **Yunhao Li**, Cong Cao, Dan Li, Yongfeng Chen, Huagang Xiong, Feng Jiang, Xiqiu Zhang.',
     journal_name:
       'IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing',
-    pdf_link: 'https://ieeexplore.ieee.org/iel7/4609443/4609444/10285331.pdf',
+    pdf_link: 'https://ieeexplore.ieee.org/abstract/document/10285331/',
     image: '/imgs/Cam-PC.png',
-    // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
-    // IF: '4.7',
     journal: 'IEEE J-STARS',
-    // ccf: 'JCR Q1',
     timestamp: '2023',
   },
   {
@@ -109,10 +94,7 @@ const publications: Publication[] = [
       'Chinese Conference on Pattern Recognition and Computer Vision',
     pdf_link: 'https://link.springer.com/chapter/10.1007/978-981-99-8469-5_33',
     image: '/imgs/AgileNet.png',
-    // code_link: "https://github.com/aigzhusmart/Slim-UNETR",
-    // IF: "10.4",
     journal: 'PRCV',
-    // ccf: 'CCF-C',
     timestamp: '2023',
   },
 ]

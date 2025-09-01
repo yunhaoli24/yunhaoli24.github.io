@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@unocss/nuxt',
     '@nuxt/content',
+    'nuxt-echarts',
   ],
   devtools: {
     enabled: true,
