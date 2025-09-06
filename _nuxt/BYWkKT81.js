@@ -1,0 +1,1 @@
+import{H as e,a9 as t,aA as n,aK as r,ax as i}from"#entry";const a={__name:`ProseA`,props:{href:{type:String,default:``},target:{type:String,default:void 0,required:!1}},setup(a){let o=a;return(a,s)=>{let c=e;return i(),t(c,{href:o.href,target:o.target},{default:r(()=>[n(a.$slots,`default`)]),_:3},8,[`href`,`target`])}}};var o=a;export{o as default};

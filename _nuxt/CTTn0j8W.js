@@ -1,0 +1,1 @@
+import{ab as e,ax as t,b as n}from"#entry";const r={};function i(n,r){return t(),e(`hr`)}var a=Object.assign(n(r,[[`render`,i]]),{__name:`ProseHr`});export{a as default};

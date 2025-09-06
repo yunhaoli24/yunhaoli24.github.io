@@ -1,0 +1,1 @@
+import{b as e}from"./BrQvR_J0.js";export{e as getMdcConfigs};
