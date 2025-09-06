@@ -15,6 +15,18 @@ interface Publication {
 const publications: Publication[] = [
   {
     title:
+      'SegTom: A 3D Volumetric Medical Image Segmentation Framework for Thoracoabdominal Multi-Organ Anatomical Structures',
+    author:
+      'Yan Pang, **Yunhao Li**, Jiaming Liang, Hao Chen, Ying Hu, Qiong Wang.',
+    journal_name: 'Journal of Biomedical and Health Informatics',
+    pdf_link: 'https://ieeexplore.ieee.org/document/11151753',
+    code_link: 'https://github.com/deepang-ai/SegTom',
+    image: '/imgs/segtom.png',
+    journal: 'JBHI',
+    timestamp: '2025',
+  },
+  {
+    title:
       'Efficient Breast Lesion Segmentation from Ultrasound Videos Across Multiple Source-limited Platforms',
     author:
       'Yan Pang, **Yunhao Li**, Teng Huang, Jiaming Liang, Ziyu Ding, Hao Chen, Baoliang Zhao, Ying Hu, Zheng Zhang, Qiong Wang.',
@@ -107,19 +119,12 @@ const publications: Publication[] = [
     </h1>
     <el-timeline>
       <el-timeline-item
-        v-for="(publication, index) in publications"
-        :key="index"
-        :timestamp="publication.timestamp"
+        v-for="(publication, index) in publications" :key="index" :timestamp="publication.timestamp"
         placement="top"
       >
         <el-card>
           <el-space class="flex-col-reverse md:flex-row">
-            <el-image
-              class="h-100% w-100% md:h-[200px] md:w-[300px]"
-              :src="publication.image"
-              fit="fill"
-              lazy
-            />
+            <el-image class="h-100% w-100% md:h-[200px] md:w-[300px]" :src="publication.image" fit="fill" lazy />
             <div>
               <div class="text-xl font-bold">
                 {{ publication.title }}
@@ -131,33 +136,19 @@ const publications: Publication[] = [
                 {{ publication.journal_name }}
               </div>
               <el-space class="mb-1 mt-1">
-                <a
-                  v-if="publication.pdf_link"
-                  :href="publication.pdf_link"
-                  target="_blank"
-                >
+                <a v-if="publication.pdf_link" :href="publication.pdf_link" target="_blank">
                   <Icon class="c-[--el-color-primary]" name="lsicon:file-pdf-outline" size="20" />
                 </a>
-                <a
-                  v-if="publication.code_link"
-                  :href="publication.code_link"
-                  target="_blank"
-                >
+                <a v-if="publication.code_link" :href="publication.code_link" target="_blank">
                   <Icon class="c-[--el-color-primary]" name="garden:github-fill-16" size="20" />
                 </a>
                 <el-tag v-if="publication.journal">
                   {{ publication.journal }}
                 </el-tag>
-                <el-tag
-                  v-if="publication.ccf"
-                  type="success"
-                >
+                <el-tag v-if="publication.ccf" type="success">
                   {{ publication.ccf }}
                 </el-tag>
-                <el-tag
-                  v-if="publication.IF"
-                  type="info"
-                >
+                <el-tag v-if="publication.IF" type="info">
                   IF:{{ publication.IF }}
                 </el-tag>
               </el-space>

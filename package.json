@@ -26,7 +26,7 @@
     "minisearch": "^7.1.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.2.1",
+    "@antfu/eslint-config": "^5.2.2",
     "@element-plus/nuxt": "^1.1.4",
     "@iconify-json/carbon": "^1.2.13",
     "@iconify-json/catppuccin": "^1.2.16",
@@ -36,7 +36,7 @@
     "@iconify-json/hugeicons": "^1.2.14",
     "@iconify-json/ic": "^1.2.4",
     "@iconify-json/lsicon": "^1.2.5",
-    "@iconify-json/material-symbols": "^1.2.33",
+    "@iconify-json/material-symbols": "^1.2.34",
     "@iconify-json/ri": "^1.2.5",
     "@iconify-json/tabler": "^1.2.22",
     "@iconify-json/uil": "^1.2.3",
@@ -49,14 +49,17 @@
     "@unocss/eslint-config": "^66.5.0",
     "@unocss/extractor-mdc": "^66.5.0",
     "@unocss/nuxt": "^66.5.0",
-    "@vueuse/nuxt": "^13.8.0",
-    "nuxt": "^4.0.3",
+    "@vueuse/nuxt": "^13.9.0",
+    "nuxt": "^4.1.1",
     "nuxt-echarts": "^1.0.0",
-    "sass-embedded": "^1.91.0",
+    "sass-embedded": "^1.92.1",
     "typescript": "^5.9.2",
     "vue-tsc": "^3.0.6"
   },
   "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    },
     "peerDependencyRules": {
       "ignoreMissing": [
         "webpack",
