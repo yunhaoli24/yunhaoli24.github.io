@@ -1,9 +1,16 @@
 <template>
-  <section id="skills" class="relative space-y-6 overflow-hidden rounded-2xl border bg-card/70 p-6 shadow-sm">
-    <div aria-hidden="true"
-      class="pointer-events-none absolute -left-6 -top-8 h-28 w-28 rounded-full bg-primary/15 blur-3xl" />
-    <div aria-hidden="true"
-      class="pointer-events-none absolute bottom-0 right-0 h-32 w-32 rounded-full bg-secondary/30 blur-3xl" />
+  <section
+    id="skills"
+    class="relative space-y-6 overflow-hidden rounded-2xl border bg-card/70 p-6 shadow-sm"
+  >
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -left-6 -top-8 h-28 w-28 rounded-full bg-primary/15 blur-3xl"
+    />
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute bottom-0 right-0 h-32 w-32 rounded-full bg-secondary/30 blur-3xl"
+    />
 
     <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
       <div class="flex items-start gap-3">
@@ -11,8 +18,8 @@
         <div class="space-y-1">
           <h2 class="text-2xl font-bold leading-tight">Programming Skills</h2>
           <p class="max-w-2xl text-sm text-muted-foreground md:text-base">
-            Full-stack delivery across research prototypes and production systems, with a focus on reliable ML,
-            developer experience, and thoughtful tooling choices.
+            Full-stack delivery across research prototypes and production systems, with a focus on
+            reliable ML, developer experience, and thoughtful tooling choices.
           </p>
         </div>
       </div>
@@ -25,9 +32,15 @@
 
     <div class="grid gap-4 lg:grid-cols-[1.35fr_1fr]">
       <div class="grid gap-4 sm:grid-cols-2">
-        <Card v-for="skill in skills" :key="skill.title"
-          class="relative overflow-hidden border bg-background/70 transition hover:-translate-y-0.5 hover:shadow-md">
-          <div :class="['absolute inset-x-0 top-0 h-20 bg-linear-to-r opacity-60', skill.accent]" aria-hidden="true" />
+        <Card
+          v-for="skill in skills"
+          :key="skill.title"
+          class="relative overflow-hidden border bg-background/70 transition hover:-translate-y-0.5 hover:shadow-md"
+        >
+          <div
+            :class="['absolute inset-x-0 top-0 h-20 bg-linear-to-r opacity-60', skill.accent]"
+            aria-hidden="true"
+          />
           <CardHeader class="relative space-y-2">
             <div class="flex items-center gap-2">
               <span class="text-lg">{{ skill.icon }}</span>
@@ -44,8 +57,10 @@
       </div>
 
       <Card class="relative h-full overflow-hidden border bg-background/70">
-        <div class="absolute inset-x-0 top-0 h-16 bg-linear-to-br from-primary/20 via-transparent to-transparent"
-          aria-hidden="true" />
+        <div
+          class="absolute inset-x-0 top-0 h-16 bg-linear-to-br from-primary/20 via-transparent to-transparent"
+          aria-hidden="true"
+        />
         <CardHeader class="space-y-2">
           <CardTitle class="text-lg">How I build</CardTitle>
           <CardDescription class="text-sm leading-relaxed text-foreground/80">
@@ -61,8 +76,10 @@
           </ul>
           <div class="rounded-lg border bg-muted/40 p-4">
             <div class="text-sm font-medium text-foreground">Tooling stack</div>
-            <p class="text-sm text-muted-foreground">CI/CD pipelines with containerized services, feature flags for safe
-              rollout, and dashboards to watch model drift.</p>
+            <p class="text-sm text-muted-foreground">
+              CI/CD pipelines with containerized services, feature flags for safe rollout, and
+              dashboards to watch model drift.
+            </p>
           </div>
         </CardContent>
       </Card>
@@ -74,12 +91,19 @@
           <span aria-hidden="true">🌐</span>
           <div>
             <div class="text-sm font-semibold">Open-source contributions</div>
-            <p class="text-sm text-muted-foreground">Collaborating with the community to strengthen LLM and CV tooling.
+            <p class="text-sm text-muted-foreground">
+              Collaborating with the community to strengthen LLM and CV tooling.
             </p>
           </div>
         </div>
         <div class="flex flex-wrap gap-2">
-          <Button v-for="project in contributions" :key="project.href" variant="outline" size="sm" as-child>
+          <Button
+            v-for="project in contributions"
+            :key="project.href"
+            variant="outline"
+            size="sm"
+            as-child
+          >
             <a :href="project.href" target="_blank" rel="noreferrer">{{ project.label }}</a>
           </Button>
         </div>

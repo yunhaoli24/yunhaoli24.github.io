@@ -11,11 +11,14 @@
     </header>
 
     <main class="page-container relative w-full space-y-14 py-10">
-      <div aria-hidden="true"
-        class="pointer-events-none absolute inset-x-0 top-[-140px] h-56 bg-linear-to-b from-primary/15 via-transparent to-transparent blur-3xl">
-      </div>
-      <div aria-hidden="true"
-        class="pointer-events-none absolute right-10 top-28 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-x-0 top-[-140px] h-56 bg-linear-to-b from-primary/15 via-transparent to-transparent blur-3xl"
+      ></div>
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute right-10 top-28 h-64 w-64 rounded-full bg-primary/10 blur-3xl"
+      ></div>
 
       <About />
       <Publications />

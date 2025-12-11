@@ -20,9 +20,14 @@
           <p v-if="education.focus">{{ education.focus }}</p>
           <p v-if="education.advisor" class="text-muted-foreground">
             Advisor:
-            <a class="text-primary underline-offset-2 hover:underline" :href="education.advisor.url" target="_blank"
-              rel="noreferrer">
-              {{ education.advisor.title ? education.advisor.title + " " : "" }}{{ education.advisor.name }}
+            <a
+              class="text-primary underline-offset-2 hover:underline"
+              :href="education.advisor.url"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {{ education.advisor.title ? education.advisor.title + " " : ""
+              }}{{ education.advisor.name }}
             </a>
           </p>
         </CardContent>

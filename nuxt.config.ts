@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         { name: "og:title", content: `Yunhao Li` },
         {
           name: "og:image",
-          content: `https://yunhaoli.top/profile.jpg`,
+          content: `https://yunhaoli.top/imgs/profile.jpg`,
         },
         { name: "og:url", content: `https://yunhaoli.top` },
         // { name: 'twitter:card', content: `` },

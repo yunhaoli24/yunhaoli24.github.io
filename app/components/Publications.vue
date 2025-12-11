@@ -39,7 +39,10 @@
           </CardContent>
         </div>
         <div class="px-6 pb-6 md:col-span-3 md:flex md:items-center md:justify-center md:pb-6">
-          <AspectRatio :ratio="16 / 9" class="w-full max-w-[360px] overflow-hidden rounded-lg border bg-muted/60 md:max-w-none">
+          <AspectRatio
+            :ratio="16 / 9"
+            class="w-full max-w-[360px] overflow-hidden rounded-lg border bg-muted/60 md:max-w-none"
+          >
             <img
               :src="publication.image"
               :alt="publication.title"

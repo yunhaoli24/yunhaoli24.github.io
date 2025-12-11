@@ -23,7 +23,12 @@
         </div>
         <div class="px-6 pb-6 md:flex md:items-center md:justify-center md:pb-6">
           <AspectRatio :ratio="4 / 3" class="w-full overflow-hidden rounded-lg border bg-muted/60">
-            <img :src="honor.image" :alt="honor.title" class="h-full w-full object-cover" loading="lazy" />
+            <img
+              :src="honor.image"
+              :alt="honor.title"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
           </AspectRatio>
         </div>
       </Card>
