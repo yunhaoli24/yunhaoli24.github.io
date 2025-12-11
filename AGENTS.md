@@ -1,42 +1,38 @@
 # Repository Guidelines
 
+This repo is a Nuxt 4 portfolio. Keep changes focused, typed, and easy to review. Favor small PRs that ship safely.
+
 ## Project Structure & Module Organization
-- `app/`: Nuxt 4 application source.
-  - `pages/`: File‑based routes (e.g., `index.vue`, `blog/[...slug].vue`).
-  - `components/`, `layouts/`, `assets/scss/`: UI building blocks and styles.
-- `content/`: Markdown content for the blog (rendered via `@nuxt/content`).
-- `public/`: Static files served as‑is (e.g., images, `favicon.ico`).
-- `nuxt.config.ts`, `uno.config.ts`: App and UnoCSS configuration.
-- `.nuxt/`, `.output/`, `dist/`: Generated/build artifacts (do not edit).
+
+- `app/app.vue` is the main page shell; sections and data live here until factored out.
+- `app/components` holds reusable UI
+- `app/assets/css/tailwind.css` provides global styles; `public/` serves static files at the root path.
+- `nuxt.config.ts` is the source of truth for modules, color mode, and build config; `components.json` tracks the shadcn-nuxt design tokens. Avoid editing `node_modules/`; lockfile is `pnpm-lock.yaml`.
 
 ## Build, Test, and Development Commands
-- `pnpm i`: Install dependencies (pnpm is enforced via `only-allow`).
-- `pnpm dev`: Start Nuxt dev server with HMR.
-- `pnpm build`: Production build.
-- `pnpm preview`: Preview the production build locally.
-- `pnpm generate`: Pre‑render static site (useful for static hosting).
-- `pnpm start`: Run the built server from `.output/`.
-- `pnpm lint`: Lint and auto‑fix with ESLint.
-- `pnpm ghpage`: Build with GitHub Pages preset.
+
+- `pnpm install` (pnpm 10+) to install deps.
+- `pnpm dev` to run Nuxt locally with HMR at the default port.
+- `pnpm lint` runs oxlint (type-aware, auto-fix) and oxfmt; use before commits to keep diffs clean.
+- `pnpm build` generates the production bundle; `pnpm preview` serves the built output for a final check.
+- `pnpm generate` emits a static build when needed for static hosting.
 
 ## Coding Style & Naming Conventions
-- Language: TypeScript + Vue 3 (Nuxt 4). Indent 2 spaces.
-- ESLint: `@antfu/eslint-config` with Nuxt plugin. Run `pnpm lint` before PRs.
-- Components: PascalCase (e.g., `ContentSearch.vue`). Pages may be single‑word; route via file name.
-- Styles: SCSS in `app/assets/scss`; utility classes via UnoCSS.
-- Imports/paths: Use Nuxt aliases (e.g., `~/components/...`).
+
+- Use TypeScript and `<script setup lang="ts">`; prefer `const`, typed objects, and explicit props/emits.
+- Indent with 2 spaces; keep imports sorted logically: Vue/Nuxt, third-party, then local.
+- Components use PascalCase filenames; composables or helpers use camelCase. Co-locate small section-specific components under `app/components/` before adding new folders.
+- Styling is Tailwind-first; merge conditional classes with `cn(...)` to avoid duplicates. Keep class lists readable (group by layout, color, state).
+- When building components, rely on the UI primitives in `components/ui`; do not modify them—create thin wrappers if you need new variants or behaviors.
 
 ## Testing Guidelines
-- No test suite is configured yet. If contributing tests, prefer:
-  - Unit: Vitest + Vue Test Utils under `tests/unit/`.
-  - E2E: Playwright under `tests/e2e/`.
-  - Name files `*.spec.ts`; add `pnpm test` script in `package.json`.
+
+- No automated test harness is present yet. Manually verify UI flows via `pnpm dev` and browser inspection.
+- When adding tests, prefer Vitest + Nuxt test utils; place specs under `tests/` mirroring the source path. Keep fixtures small and deterministic.
+- Document any manual checks (browsers, viewport sizes, dark mode) in the PR description.
 
 ## Commit & Pull Request Guidelines
-- Commits: Follow Conventional Commits when possible (e.g., `feat(search): add highlighting`, `fix(layout): header class`) to match history.
-- PRs: Include clear description, screenshots for UI changes, steps to verify, and link related issues. Ensure `pnpm lint` passes and builds succeed.
 
-## Security & Configuration Tips
-- Secrets: Use `.env.local` for local variables; never commit secrets.
-- Content: Place posts in `content/blog/` using Markdown with front‑matter.
-- Deployment: For GitHub Pages, use `pnpm ghpage` or CI with `generate`.
+- Commit messages should be short, imperative, and scope-oriented (e.g., `feat: add project badges`, `chore: tighten lint config`).
+- PRs need a concise summary, linked issue (if any), and screenshots/gifs for UI changes. Note what was manually tested and whether `pnpm lint`/`pnpm build` were run.
+- Keep diffs focused; split unrelated refactors. Add inline comments when decisions are non-obvious.

@@ -1,7 +1,0 @@
-@use 'sass:math';
-@use 'sass:map';
-@use 'sass:color';
-$menu: (
-    hover-bg-color: transparent,
-);
-@forward 'element-plus/theme-chalk/src/common/var.scss' with ($menu: $menu);

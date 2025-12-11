@@ -1,131 +1,69 @@
-// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
-
-  // build modules
-  modules: [
-    '@nuxtjs/seo',
-    '@nuxtjs/device',
-    '@nuxt/eslint',
-    '@vueuse/nuxt',
-    '@pinia/nuxt',
-    '@element-plus/nuxt',
-    '@nuxtjs/color-mode',
-    '@nuxt/icon',
-    '@unocss/nuxt',
-    '@nuxt/content',
-    'nuxt-echarts',
-  ],
-  devtools: {
-    enabled: true,
-
-    timeline: {
-      enabled: true,
-    },
-  },
+  modules: ["shadcn-nuxt", "@nuxtjs/color-mode", "@nuxtjs/seo", "@nuxtjs/device"],
   app: {
     // head
     head: {
       htmlAttrs: {
-        lang: 'en',
+        lang: "en",
       },
-      title: 'Yunhao Li',
+      title: "Yunhao Li",
       meta: [
-        { charset: 'utf-8' },
-        { name: 'title', content: `Yunhao Li` },
+        { charset: "utf-8" },
+        { name: "title", content: `Yunhao Li` },
         {
-          name: 'description',
+          name: "description",
           content: `The blog of Yunhao Li, a passionate researcher who love to use programming skills and creativity to solve problems.`,
         },
-        { name: 'og:title', content: `Yunhao Li` },
+        { name: "og:title", content: `Yunhao Li` },
         {
-          name: 'og:image',
-          content: `https://yunhaoli.top/profile.JPG`,
+          name: "og:image",
+          content: `https://yunhaoli.top/profile.jpg`,
         },
-        { name: 'og:url', content: `https://yunhaoli.top` },
+        { name: "og:url", content: `https://yunhaoli.top` },
         // { name: 'twitter:card', content: `` },
-        { name: 'twitter:title', content: `Yunhao Li` },
+        { name: "twitter:title", content: `Yunhao Li` },
         // { name: 'twitter:description', content: `` },
         {
-          name: 'twitter:image',
+          name: "twitter:image",
           content: `https://yunhaoli.top/og_image.jpeg`,
         },
-        { name: 'twitter:creator', content: `@YunhaoLi` },
+        { name: "twitter:creator", content: `@YunhaoLi` },
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
-  css: ['~/assets/scss/index.scss'],
-  site: {
-    url: 'https://yunhaoli.top',
-    name: 'Yunhao Li',
+  shadcn: {
+    /**
+     * Prefix for all the imported component.
+     * @default "Ui"
+     */
+    prefix: "",
+    /**
+     * Directory that the component lives in.
+     * Will respect the Nuxt aliases.
+     * @link https://nuxt.com/docs/api/nuxt-config#alias
+     * @default "@/components/ui"
+     */
+    componentDir: "@/components/ui",
   },
   colorMode: {
-    classSuffix: '',
+    classSuffix: "",
   },
-  content: {
-    build: {
-      markdown: {
-        highlight: {
-          theme: {
-            // Default theme (same as single string)
-            default: 'github-light',
-            // Theme used if `html.dark`
-            dark: 'github-dark',
-            // Theme used if `html.sepia`
-            sepia: 'monokai',
-          },
-          langs: [
-            'c',
-            'cpp',
-            'java',
-            'shell',
-            'python',
-            'dockerfile',
-            'javascript',
-          ],
-        },
-        toc: {
-          depth: 3,
-          searchDepth: 3,
-        },
-      },
-    },
-    renderer: {
-      anchorLinks: { h1: false, h2: false, h3: false, h4: false },
-    },
+  site: {
+    url: "https://yunhaoli.top",
+    name: "Yunhao Li",
   },
-  future: {
-    compatibilityVersion: 4,
-  },
-  experimental: {
-    // when using generate, payload js assets included in sw precache manifest
-    // but missing on offline, disabling extraction it until fixed
-    payloadExtraction: false,
-    renderJsonPayloads: true,
-    typedPages: true,
-  },
-  compatibilityDate: '2025-07-18',
+  css: ["~/assets/css/tailwind.css"],
   vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `@use "@/assets/scss/element/index.scss" as element;`,
-        },
-      },
+    plugins: [tailwindcss()],
+  },
+  compatibilityDate: "2025-07-15",
+  devtools: {
+    enabled: true,
+    timeline: {
+      enabled: true,
     },
   },
-  typescript: {
-    typeCheck: true,
-  },
-  elementPlus: {
-    icon: false,
-    importStyle: 'scss',
-    themes: ['dark'],
-  },
-  eslint: {
-    config: {
-      stylistic: true,
-      standalone: false,
-    },
-  },
-})
+});

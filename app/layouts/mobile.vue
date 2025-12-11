@@ -1,27 +1,17 @@
 <template>
-  <div>
-    <div>
-      <el-container>
-        <el-header class="h-60px">
-          <AcademicNav />
-        </el-header>
-        <el-main class="h-[calc(100vh-60px)]">
-          <el-scrollbar>
-            <el-col
-              :span="20"
-              :offset="2"
-            >
-              <slot />
-            </el-col>
-          </el-scrollbar>
-        </el-main>
-      </el-container>
-    </div>
+  <div
+    class="mobile-layout min-h-screen bg-linear-to-b from-background via-background to-muted/50 text-foreground"
+  >
+    <slot />
   </div>
 </template>
 
-<style lang="scss" scoped>
-.el-main {
-    padding: 2px;
+<style scoped>
+.mobile-layout :deep(.page-container) {
+  margin: 0;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
 }
 </style>
