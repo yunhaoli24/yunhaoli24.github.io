@@ -17,18 +17,20 @@
         </CardHeader>
         <CardContent class="space-y-2 text-base leading-relaxed">
           <p v-if="education.detail">{{ education.detail }}</p>
-          <p v-if="education.focus">{{ education.focus }}</p>
-          <p v-if="education.advisor" class="text-muted-foreground">
-            Advisor:
-            <a
-              class="text-primary underline-offset-2 hover:underline"
-              :href="education.advisor.url"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {{ education.advisor.title ? education.advisor.title + " " : ""
-              }}{{ education.advisor.name }}
+          <p v-if="education.advisor?.name && education.advisor?.url"
+            class="text-muted-foreground flex flex-wrap items-center gap-2">
+            <span>Advisor:</span>
+            <a class="text-blue-600 underline-offset-2 hover:underline dark:text-blue-400" :href="education.advisor.url"
+              target="_blank" rel="noreferrer">
+              {{ education.advisor.name }}
             </a>
+            <template v-if="education.honors?.length">
+              <span class="text-muted-foreground">·</span>
+              <span class="text-sm text-muted-foreground">Honors:</span>
+              <span class="flex flex-wrap items-center gap-1">
+                <Badge v-for="honor in education.honors" :key="honor" variant="outline">{{ honor }}</Badge>
+              </span>
+            </template>
           </p>
         </CardContent>
       </Card>
@@ -42,23 +44,20 @@ type Education = {
   degree: string;
   school: string;
   detail?: string;
-  focus?: string;
+  honors?: string[];
   advisor?: {
     name: string;
     url: string;
-    title?: string;
   };
 };
 
-const educationList = [
+const educationList: Education[] = [
   {
     period: "2025-Present",
     degree: "Doctor of Philosophy",
     school: "The Hong Kong Polytechnic University",
-    focus: "Medical Image Analysis, Computer Vision, and trustworthy AI systems for clinical imaging.",
     advisor: {
       name: "Harry Qin",
-      title: "Prof.",
       url: "https://www.polyu.edu.hk/sn/people/academic-staff/prof-harry-qin",
     },
   },
@@ -66,10 +65,9 @@ const educationList = [
     period: "2022-2025",
     degree: "Master of Artificial Intelligence",
     school: "GuangZhou University",
-    detail: "GPA 3.94/4 (National Scholarship, Outstanding School Graduates), co-authored peer-reviewed work on robust medical imaging models.",
+    honors: ["National Scholarship", "Outstanding School Graduates"],
     advisor: {
       name: "Yan Pang",
-      title: "Assoc. Prof.",
       url: "https://pangyan.me/",
     },
   },
@@ -77,7 +75,6 @@ const educationList = [
     period: "2018-2022",
     degree: "Bachelor in Computer Science",
     school: "Guilin University of Electronic Technology",
-    detail: "GPA 84/100",
   },
-] satisfies Education[];
+];
 </script>

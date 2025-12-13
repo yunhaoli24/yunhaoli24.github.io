@@ -11,22 +11,18 @@
     </header>
 
     <main class="page-container relative w-full space-y-14 py-10">
-      <div
-        aria-hidden="true"
-        class="pointer-events-none absolute inset-x-0 top-[-140px] h-56 bg-linear-to-b from-primary/15 via-transparent to-transparent blur-3xl"
-      ></div>
-      <div
-        aria-hidden="true"
-        class="pointer-events-none absolute right-10 top-28 h-64 w-64 rounded-full bg-primary/10 blur-3xl"
-      ></div>
+      <div aria-hidden="true"
+        class="pointer-events-none absolute inset-x-0 top-[-140px] h-56 bg-linear-to-b from-primary/15 via-transparent to-transparent blur-3xl">
+      </div>
+      <div aria-hidden="true"
+        class="pointer-events-none absolute right-10 top-28 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
 
       <About />
       <Publications />
-      <Experience />
-      <Education />
       <Skills />
+      <Education />
+      <Experience />
       <Honors />
-      <Patents />
 
       <Separator />
       <footer class="pb-8 text-center text-sm text-muted-foreground">
@@ -43,7 +39,6 @@ import Experience from '~/components/Experience.vue';
 import Skills from '~/components/Skills.vue';
 import Education from '~/components/Education.vue';
 import Honors from '~/components/Honors.vue';
-import Patents from '~/components/Patents.vue';
 const currentYear = computed(() => {
   const now = new Date()
   return now.getFullYear()

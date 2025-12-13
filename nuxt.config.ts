@@ -8,7 +8,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      title: "Yunhao Li",
       meta: [
         { charset: "utf-8" },
         { name: "title", content: `Yunhao Li` },
@@ -27,7 +26,7 @@ export default defineNuxtConfig({
         // { name: 'twitter:description', content: `` },
         {
           name: "twitter:image",
-          content: `https://yunhaoli.top/og_image.jpeg`,
+          content: `https://yunhaoli.top/imgs/profile.jpg`,
         },
         { name: "twitter:creator", content: `@YunhaoLi` },
       ],
