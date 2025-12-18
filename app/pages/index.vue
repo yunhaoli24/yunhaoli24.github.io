@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="flex h-screen flex-col overflow-hidden">
     <NuxtRouteAnnouncer />
-    <header class="sticky top-0 z-20 border-b bg-background/80 backdrop-blur">
+    <header class="z-20 border-b bg-background/80 backdrop-blur">
       <div class="page-container flex h-16 w-full items-center gap-6">
         <div class="text-lg font-semibold tracking-tight">Yunhao Li</div>
         <div class="ml-auto flex items-center gap-2">
@@ -10,24 +10,26 @@
       </div>
     </header>
 
-    <main class="page-container relative w-full space-y-14 py-10">
-      <div aria-hidden="true"
-        class="pointer-events-none absolute inset-x-0 top-[-140px] h-56 bg-linear-to-b from-primary/15 via-transparent to-transparent blur-3xl">
+    <main class="min-h-0 flex-1 overflow-y-auto">
+      <div class="page-container relative w-full space-y-14 py-10">
+        <div aria-hidden="true"
+          class="pointer-events-none absolute inset-x-0 -top-35 h-56 bg-linear-to-b from-primary/15 via-transparent to-transparent blur-3xl">
+        </div>
+        <div aria-hidden="true"
+          class="pointer-events-none absolute right-10 top-28 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
+
+        <About />
+        <Publications />
+        <Skills />
+        <Education />
+        <Experience />
+        <Honors />
+
+        <Separator />
+        <footer class="pb-8 text-center text-sm text-muted-foreground">
+          © 2018 - {{ currentYear }} Yunhao Li All Rights Reserved.
+        </footer>
       </div>
-      <div aria-hidden="true"
-        class="pointer-events-none absolute right-10 top-28 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
-
-      <About />
-      <Publications />
-      <Skills />
-      <Education />
-      <Experience />
-      <Honors />
-
-      <Separator />
-      <footer class="pb-8 text-center text-sm text-muted-foreground">
-        © 2018 - {{ currentYear }} Yunhao Li All Rights Reserved.
-      </footer>
     </main>
   </div>
 </template>

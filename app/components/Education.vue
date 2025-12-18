@@ -17,18 +17,29 @@
         </CardHeader>
         <CardContent class="space-y-2 text-base leading-relaxed">
           <p v-if="education.detail">{{ education.detail }}</p>
-          <p v-if="education.advisor?.name && education.advisor?.url"
-            class="text-muted-foreground flex flex-wrap items-center gap-2">
+          <p
+            v-if="education.advisor?.name && education.advisor?.url"
+            class="text-muted-foreground flex flex-wrap items-center gap-2"
+          >
             <span>Advisor:</span>
-            <a class="text-blue-600 underline-offset-2 hover:underline dark:text-blue-400" :href="education.advisor.url"
-              target="_blank" rel="noreferrer">
+            <a
+              class="text-blue-600 underline-offset-2 hover:underline dark:text-blue-400"
+              :href="education.advisor.url"
+              target="_blank"
+              rel="noreferrer"
+            >
               {{ education.advisor.name }}
             </a>
             <template v-if="education.honors?.length">
               <span class="text-muted-foreground">·</span>
               <span class="text-sm text-muted-foreground">Honors:</span>
               <span class="flex flex-wrap items-center gap-1">
-                <Badge v-for="honor in education.honors" :key="honor" variant="outline">{{ honor }}</Badge>
+                <Badge
+                  v-for="honor in education.honors"
+                  :key="honor"
+                  variant="outline"
+                  >{{ honor }}</Badge
+                >
               </span>
             </template>
           </p>
