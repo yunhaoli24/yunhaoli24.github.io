@@ -17,7 +17,7 @@
     ></div>
     <div class="flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
       <Card
-        class="relative w-full max-w-[260px] overflow-hidden border-none bg-transparent shadow-none md:flex-shrink-0"
+        class="relative w-full max-w-65 overflow-hidden border-none bg-transparent shadow-none md:shrink-0"
       >
         <CardContent class="p-0">
           <AspectRatio :ratio="1">
@@ -29,7 +29,7 @@
           </AspectRatio>
         </CardContent>
         <div
-          class="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent"
+          class="absolute inset-0 bg-linear-to-t from-background/70 via-transparent to-transparent"
         ></div>
       </Card>
       <div class="space-y-6">

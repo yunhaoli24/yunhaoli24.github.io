@@ -17,9 +17,7 @@
                 <Badge variant="secondary">{{ publication.year }}</Badge>
                 <Badge variant="outline">{{ publication.venueShort }}</Badge>
               </div>
-              <CardTitle class="text-xl leading-tight">
-                {{ publication.title }}
-              </CardTitle>
+              <CardTitle class="text-xl leading-tight"> {{ publication.title }} </CardTitle>.
               <CardDescription class="text-base text-foreground">
                 {{ publication.authors }}
               </CardDescription>
@@ -41,7 +39,7 @@
         <div class="px-6 pb-6 md:col-span-3 md:flex md:items-center md:justify-center md:pb-6">
           <AspectRatio
             :ratio="16 / 9"
-            class="w-full max-w-[360px] overflow-hidden rounded-lg border bg-muted/60 md:max-w-none"
+            class="w-full max-w-90 overflow-hidden rounded-lg border bg-muted/60 md:max-w-none"
           >
             <img
               :src="publication.image"
