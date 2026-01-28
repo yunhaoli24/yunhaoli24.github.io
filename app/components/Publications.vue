@@ -73,6 +73,15 @@ type Publication = {
 const publications: Publication[] = [
   {
     year: "2025",
+    title: "Understanding Surgical Triplet Videos Through Transferable Visual Models from Natural Language Supervision",
+    authors: "Yunhao Li, Aoying Wang, Qiong Wang, Jinpeng Hu, Ying Hu, Yan Pang.",
+    venue: "Chinese Conference on Pattern Recognition and Computer Vision",
+    venueShort: "PRCV",
+    image: "/imgs/TriClip.png",
+    links: [{ label: "Paper", href: "https://link.springer.com/chapter/10.1007/978-981-95-5764-6_38" }],
+  },
+  {
+    year: "2025",
     title: "SegTom: A 3D Volumetric Medical Image Segmentation Framework for Thoracoabdominal Multi-Organ Anatomical Structures",
     authors: "Yan Pang, Yunhao Li , Jiaming Liang, Hao Chen, Ying Hu, Qiong Wang.",
     venue: "Journal of Biomedical and Health Informatics",
