@@ -17,9 +17,9 @@
                 <Badge variant="secondary">{{ publication.year }}</Badge>
                 <Badge variant="outline">{{ publication.venueShort }}</Badge>
               </div>
-              <CardTitle class="text-xl leading-tight"> {{ publication.title }} </CardTitle>.
+              <CardTitle class="text-xl leading-tight"> {{ publication.title }} </CardTitle>
               <CardDescription class="text-base text-foreground">
-                {{ publication.authors }}
+                <component :is="formatAuthors(publication.authors)" />
               </CardDescription>
             </div>
           </CardHeader>
@@ -55,6 +55,8 @@
 </template>
 
 <script setup lang="ts">
+import { h, Fragment } from "vue";
+
 type PublicationLink = {
   label: string;
   href: string;
@@ -68,6 +70,16 @@ type Publication = {
   venueShort: string;
   links: PublicationLink[];
   image: string;
+};
+
+const formatAuthors = (authors: string) => {
+  const parts = authors.split(/(Yunhao Li)/);
+  return () => h(Fragment, parts.map((part) => {
+    if (part === "Yunhao Li") {
+      return h("strong", { class: "font-bold" }, part);
+    }
+    return part;
+  }));
 };
 
 const publications: Publication[] = [
