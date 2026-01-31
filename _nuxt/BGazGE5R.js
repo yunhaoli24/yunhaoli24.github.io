@@ -1,0 +1,1 @@
+import{F as e,R as t,t as n,x as r}from"./Cqi2lawC.js";var i={},a={class:`desktop-layout min-h-screen bg-linear-to-b from-background via-background to-muted/50 text-foreground`};function o(n,i){return e(),r(`div`,a,[t(n.$slots,`default`,{},void 0,!0)])}var s=n(i,[[`render`,o],[`__scopeId`,`data-v-cebf89a2`]]);export{s as default};
