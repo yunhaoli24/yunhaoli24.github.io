@@ -157,24 +157,6 @@ const publications: Publication[] = [
       { label: "Paper", href: "https://ieeexplore.ieee.org/abstract/document/10288609/" },
       { label: "Code", href: "https://github.com/deepang-ai/Slim-UNETR" },
     ],
-  },
-  {
-    year: "2023",
-    title: "CAM-PC: A novel method for camouflaging point clouds to counter adversarial deception in remote sensing",
-    authors: "Bo Wei, Teng Huang, Xi Zhang, Jiaming Liang, Yunhao Li , Cong Cao, Dan Li, Yongfeng Chen, Huagang Xiong, Feng Jiang, Xiqiu Zhang.",
-    venue: "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
-    venueShort: "IEEE J-STARS",
-    image: "/imgs/Cam-PC.png",
-    links: [{ label: "Paper", href: "https://ieeexplore.ieee.org/abstract/document/10285331/" }],
-  },
-  {
-    year: "2023",
-    title: "AgileNet: A Rapid and Efficient Breast Lesion Segmentation Method for Medical Image Analysis",
-    authors: "Jiaming Liang, Teng Huang, Dan Li, Ziyu Ding, Yunhao Li , Lin Huang, Qiong Wang, Xi Zhang.",
-    venue: "Chinese Conference on Pattern Recognition and Computer Vision",
-    venueShort: "PRCV",
-    image: "/imgs/AgileNet.png",
-    links: [{ label: "Paper", href: "https://link.springer.com/chapter/10.1007/978-981-99-8469-5_33" }],
-  },
+  }
 ];
 </script>
