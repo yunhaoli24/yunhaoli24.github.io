@@ -162,5 +162,6 @@ const contributions = [
   { label: "LlamaIndex", href: "https://github.com/run-llama/llama_index" },
   { label: "LLaMA-Factory", href: "https://github.com/hiyouga/LLaMA-Factory" },
   { label: "Chinese-LLaMA-Alpaca", href: "https://github.com/ymcui/Chinese-LLaMA-Alpaca" },
+  { label: "MONAI", href: "https://github.com/Project-MONAI/MONAI" },
 ];
 </script>

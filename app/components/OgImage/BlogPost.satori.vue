@@ -12,7 +12,8 @@ const props = withDefaults(defineProps<{
 
 <template>
   <div
-    class="relative flex h-full w-full items-center overflow-hidden rounded-4xl bg-linear-to-br from-[#0b1220] via-[#0f172a] to-[#0e172d] px-16 py-16 text-white"
+    class="relative flex h-full w-full items-center overflow-hidden rounded-4xl px-16 py-16 text-white"
+    style="background: linear-gradient(135deg, #0b1220 0%, #0f172a 52%, #0e172d 100%);"
   >
     <div class="absolute inset-0 flex opacity-60">
       <div
@@ -26,10 +27,11 @@ const props = withDefaults(defineProps<{
       />
     </div>
 
-    <div class="relative z-10 flex w-full flex-col gap-8">
+    <div class="relative flex w-full flex-col gap-8">
       <div class="flex max-w-[82%] flex-col gap-6">
         <div
-          class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-sm font-semibold tracking-[0.12em] uppercase"
+          class="flex items-center gap-3 rounded-full bg-white/10 px-5 py-2 text-sm font-semibold tracking-[0.12em] uppercase"
+          style="border: 1px solid rgba(255, 255, 255, 0.15); align-self: flex-start;"
         >
           <span
             class="block h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_0_6px_rgba(16,185,129,0.18)]"

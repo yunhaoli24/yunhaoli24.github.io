@@ -2,6 +2,9 @@
 import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   modules: ["shadcn-nuxt", "@nuxtjs/color-mode", "@nuxtjs/seo", "@nuxtjs/device"],
+  experimental: {
+    serverAppConfig: false,
+  },
   app: {
     // head
     head: {
@@ -53,6 +56,12 @@ export default defineNuxtConfig({
   site: {
     url: "https://yunhaoli.top",
     name: "Yunhao Li",
+  },
+  seo: {
+    treeShakeUseSeoMeta: false,
+  },
+  ogImage: {
+    zeroRuntime: true,
   },
   css: ["~/assets/css/tailwind.css"],
   vite: {
