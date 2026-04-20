@@ -1,0 +1,1 @@
+import{U as e,_ as t,z as n}from"./DqK5dLNM.js";import{t as r}from"./BGXhqWz4.js";var i={},a={class:`desktop-layout min-h-screen bg-linear-to-b from-background via-background to-muted/50 text-foreground`};function o(r,i){return n(),t(`div`,a,[e(r.$slots,`default`,{},void 0,!0)])}var s=r(i,[[`render`,o],[`__scopeId`,`data-v-cebf89a2`]]);export{s as default};
