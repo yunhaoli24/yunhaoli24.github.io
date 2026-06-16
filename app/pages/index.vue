@@ -23,6 +23,7 @@
 
         <About />
         <Publications />
+        <AcademicService />
         <Skills />
         <Education />
         <Experience />
@@ -40,6 +41,7 @@
 <script setup lang="ts">
 import About from '~/components/About.vue';
 import Publications from '~/components/Publications.vue';
+import AcademicService from '~/components/AcademicService.vue';
 import Experience from '~/components/Experience.vue';
 import Skills from '~/components/Skills.vue';
 import Education from '~/components/Education.vue';

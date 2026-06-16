@@ -84,6 +84,15 @@ const formatAuthors = (authors: string) => {
 
 const publications: Publication[] = [
   {
+    year: "2026",
+    title: "OT-Coupled Flow: Towards Realistic TEE Simulation via Unpaired Cross-Modality Translation with Anatomical Consistency",
+    authors: "Yunhao Li, Yidan Feng, Ho-On Alston Conrad Chiu, Simon Cheung-Chi Lam, Yan Pang, Qiong Wang, Chun-Ka Wong, Jing Qin.",
+    venue: "Medical Image Computing and Computer Assisted Intervention (Accepted)",
+    venueShort: "MICCAI",
+    image: "/imgs/OTC-Flow.png",
+    links: [],
+  },
+  {
     year: "2025",
     title: "Understanding Surgical Triplet Videos Through Transferable Visual Models from Natural Language Supervision",
     authors: "Yunhao Li, Aoying Wang, Qiong Wang, Jinpeng Hu, Ying Hu, Yan Pang.",
