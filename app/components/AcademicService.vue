@@ -46,6 +46,7 @@ const visibleServiceGroups: ServiceGroup[] = [
     items: [
       "Chinese Conference on Pattern Recognition and Computer Vision (PRCV)",
       "International Joint Conference on Neural Networks (IJCNN)",
+      "International Conference on Image and Graphics (IJCG)",
     ],
   },
 ];
