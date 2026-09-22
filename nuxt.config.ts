@@ -12,7 +12,6 @@ export default defineNuxtConfig({
         lang: "en",
       },
       meta: [
-        { charset: "utf-8" },
         { name: "title", content: `Yunhao Li` },
         {
           name: "description",
@@ -23,7 +22,6 @@ export default defineNuxtConfig({
           name: "og:image",
           content: `https://yunhaoli.top/imgs/profile.jpg`,
         },
-        { name: "og:url", content: `https://yunhaoli.top` },
         // { name: 'twitter:card', content: `` },
         { name: "twitter:title", content: `Yunhao Li` },
         // { name: 'twitter:description', content: `` },

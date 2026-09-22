@@ -80,7 +80,7 @@
 
 <script setup lang="ts">
 import type { Component } from "vue";
-import { Github, GraduationCap, IdCard, Mail } from "lucide-vue-next";
+import { Code2, GraduationCap, IdCard, Mail } from "@lucide/vue";
 
 type SocialLink = {
   label: string;
@@ -95,7 +95,7 @@ const socialLinks = [
     label: "GitHub",
     href: "https://github.com/yunhaoli24",
     note: "Code for research ideas, experiments, and open-source contributions.",
-    icon: Github,
+    icon: Code2,
     target: "_blank",
   },
   {

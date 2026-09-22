@@ -69,7 +69,7 @@ const educationList: Education[] = [
     school: "The Hong Kong Polytechnic University",
     advisor: {
       name: "Harry Qin",
-      url: "https://www.polyu.edu.hk/sn/people/academic-staff/prof-harry-qin",
+      url: "https://research.polyu.edu.hk/en/persons/jing-qin/",
     },
   },
   {

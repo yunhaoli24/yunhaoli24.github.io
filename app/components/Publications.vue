@@ -85,6 +85,15 @@ const formatAuthors = (authors: string) => {
 const publications: Publication[] = [
   {
     year: "2026",
+    title: "ZonoSeg: A Zonal-aware Prostate Segmentation Framework on 3D MRI Images",
+    authors: "Yunhao Li, Aoying Wang, Qiong Wang, Ying Hu, Jing Qin, Yan Pang.",
+    venue: "IEEE Transactions on Medical Imaging (Accepted)",
+    venueShort: "TMI",
+    image: "/imgs/zonoseg.png",
+    links: [],
+  },
+  {
+    year: "2026",
     title: "OT-Coupled Flow: Towards Realistic TEE Simulation via Unpaired Cross-Modality Translation with Anatomical Consistency",
     authors: "Yunhao Li, Yidan Feng, Ho-On Alston Conrad Chiu, Simon Cheung-Chi Lam, Yan Pang, Qiong Wang, Chun-Ka Wong, Jing Qin.",
     venue: "Medical Image Computing and Computer Assisted Intervention (Accepted)",
